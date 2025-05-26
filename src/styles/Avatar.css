@@ -1,0 +1,19 @@
+#avatarContainer{
+    position: absolute;
+    margin: auto;
+    width: 1024px;
+    height: 1024px;
+}
+
+#background{
+    position: absolute;
+    bottom: 1024px;
+    right: 1024px;
+}
+
+#base{
+    position: absolute;
+    width: 1024px;
+    height: 1024px;
+    background-image: url("/public/images/avatar/baseFace.png");
+}
