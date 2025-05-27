@@ -1,8 +1,8 @@
 #avatarContainer{
     position: absolute;
     margin: auto;
-    width: 1024px;
-    height: 1024px;
+    width: 1070px;
+    height: 1070px;
 }
 
 #background{
@@ -16,4 +16,29 @@
     width: 1024px;
     height: 1024px;
     background-image: url("/public/images/avatar/baseFace.png");
+}
+
+#shirt{
+    position: absolute;
+    width: 1024px;
+    height: 1024px;
+}
+
+.shirt1{
+    background-image: url("/public/images/avatar/shirts/blue.png");
+}
+
+.shirt2{
+    background-image: url("/public/images/avatar/shirts/red.png");
+}
+
+.shirt3{
+    background-image: url("/public/images/avatar/shirts/green.png");
+}
+
+#nextshirt{
+    position: absolute;
+    left: 900px;
+    top: 750px;
+    background-image: url("/public/images/avatar/arrow.png");
 }
