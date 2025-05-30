@@ -1,0 +1,34 @@
+.texting-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.9);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease;
+  z-index: 100;
+}
+
+.texting-container.zoomed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.phone-frame-texting {
+  width: 350px;
+  height: 700px;
+  /* Rest of your phone frame styles */
+}
+
+.back-button {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+  /* Rest of your button styles */
+}

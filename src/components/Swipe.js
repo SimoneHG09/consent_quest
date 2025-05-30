@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Swipe.css';
+import Texting from './Texting';
 
 const Swipe = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [transitionDirection, setTransitionDirection] = useState(null);
-  const [swipeDisabled, setSwipeDisabled] = useState(false);
+  const [showTexting, setShowTexting] = useState(false);
   
   const cards = [
     { 
@@ -20,21 +21,18 @@ const Swipe = () => {
     { 
       id: 3, 
       image: "/images/cards/swipe_3.png", 
-      text: 'Third Card Text' 
+      text: 'Swipe right to text →' // Indicate this is the texting trigger
     },
   ];
 
   const handleSwipe = (direction) => {
-    if (swipeDisabled && direction < 0) return; // If swiping right is disabled
-    
     setTransitionDirection(direction > 0 ? 'left' : 'right');
     
     setTimeout(() => {
       if (direction < 0) {
-        // Swipe right - disable further swiping
-        setSwipeDisabled(true);
+        setShowTexting(true);
       } else {
-        // Swipe left - normal card navigation
+        // Normal swipe behavior
         setCurrentIndex((prev) => {
           const newIndex = prev + direction;
           if (newIndex < 0) return cards.length - 1;
@@ -48,7 +46,7 @@ const Swipe = () => {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'ArrowRight' && !swipeDisabled) {
+      if (e.key === 'ArrowRight') {
         handleSwipe(-1); // Swipe right
       } else if (e.key === 'ArrowLeft') {
         handleSwipe(1); // Swipe left
@@ -57,7 +55,11 @@ const Swipe = () => {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [swipeDisabled]);
+  }, [currentIndex]);
+
+  if (showTexting) {
+    return <Texting onBack={() => setShowTexting(false)} />;
+  }
 
   return (
     <div className="swipeContainer">
@@ -75,7 +77,9 @@ const Swipe = () => {
         </div>
       </div>
       <div className="instructions">
-        {swipeDisabled ? "Reached the end" : "Use ← to go back, → to continue"}
+        {currentIndex === cards.length - 1 
+          ? "Swipe right to start texting" 
+          : "Use ← and → arrow keys to swipe"}
       </div>
     </div>
   );

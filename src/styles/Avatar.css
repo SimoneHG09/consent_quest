@@ -1,44 +1,103 @@
-#avatarContainer{
-    position: absolute;
-    margin: auto;
-    width: 1070px;
-    height: 1070px;
+.avatarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #a6eaf7;
+  padding: 20px;
+  position: relative;
 }
 
-#background{
-    position: absolute;
-    bottom: 1024px;
-    right: 1024px;
+.phone-container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
 }
 
-#base{
-    position: absolute;
-    width: 1024px;
-    height: 1024px;
-    background-image: url("/public/images/avatar/baseFace.png");
+.phone-frame {
+  width: 750px;
+  height: auto;
+  z-index: 1;
+  position: relative;
 }
 
-#shirt{
-    position: absolute;
-    width: 1024px;
-    height: 1024px;
+.screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 79%;
+  background: white;
+  overflow: hidden;
+  z-index: 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.shirt1{
-    background-image: url("/public/images/avatar/shirts/blue.png");
+.face-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.shirt2{
-    background-image: url("/public/images/avatar/shirts/red.png");
+#base {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background-image: url("/public/images/avatar/baseFace.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.shirt3{
-    background-image: url("/public/images/avatar/shirts/green.png");
+#shirt {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-#nextshirt{
-    position: absolute;
-    left: 900px;
-    top: 750px;
-    background-image: url("/public/images/avatar/arrow.png");
+#nextScreen{
+top: 90%;
+}
+
+.shirt1 {
+  background-image: url("/public/images/avatar/shirts/blue.png");
+}
+
+.shirt2 {
+  background-image: url("/public/images/avatar/shirts/red.png");
+}
+
+.shirt3 {
+  background-image: url("/public/images/avatar/shirts/green.png");
+}
+
+.arrow-button {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  width: 100px;
+  height: 100px;
+  background-image: url("/public/images/avatar/arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow-button:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
 }
