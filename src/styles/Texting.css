@@ -1,34 +1,110 @@
-.texting-container {
+/* Base Styling */
+.pixel-texting-screen {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  background: #222;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background: rgba(0,0,0,0.9);
-  opacity: 0;
-  transform: scale(0.8);
-  transition: all 0.5s ease;
-  z-index: 100;
+  justify-content: center;
+  image-rendering: pixelated;
 }
 
-.texting-container.zoomed {
-  opacity: 1;
-  transform: scale(1);
+/* Centered Conversation Container */
+.pixel-conversation-container {
+  width: 90%;
+  max-width: 600px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: #e0e0e0;
+  box-shadow: 0 0 0 8px #333;
 }
 
-.phone-frame-texting {
-  width: 350px;
-  height: 700px;
-  /* Rest of your phone frame styles */
+/* Conversation Area */
+.pixel-conversation {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.back-button {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  z-index: 10;
-  /* Rest of your button styles */
+/* Message Bubbles */
+.pixel-message {
+  max-width: 80%;
+  margin: 10px 0;
+}
+
+.pixel-message.me {
+  align-self: flex-end;
+}
+
+.pixel-message.them {
+  align-self: flex-start;
+}
+
+.pixel-bubble {
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 1.4;
+  border: 3px solid;
+  position: relative;
+}
+
+.pixel-message.me .pixel-bubble {
+  background: #aaffaa;
+  border-color: #55aa55;
+  color: #224422;
+}
+
+.pixel-message.them .pixel-bubble {
+  background: #ffffff;
+  border-color: #aaaaaa;
+  color: #333333;
+}
+
+.pixel-time {
+  font-size: 10px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Options Container */
+.pixel-options-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 15px;
+  background: #555;
+}
+
+.pixel-option-button {
+  background: #ffcc66;
+  border: 3px solid #cc9933;
+  color: #553300;
+  padding: 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.pixel-option-button:hover {
+  background: #ffdd88;
+}
+
+.pixel-option-button:active {
+  transform: translateY(2px);
+}
+
+/* Animations */
+@keyframes pixel-pop {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.pixel-message {
+  animation: pixel-pop 0.3s ease-out;
 }

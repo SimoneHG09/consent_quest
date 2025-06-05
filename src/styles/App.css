@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.points-display {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.7);
+  color: #ffcc00;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 1000;
+}
