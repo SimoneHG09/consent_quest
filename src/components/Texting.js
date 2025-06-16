@@ -1,72 +1,77 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Texting.css';
 import {usePoints} from "./Points"
-//import conversationData from '../data/conversation.json'; // Future JSON import
-
+import conversationData from '../desicions/test1.json'; // Future JSON import
 const Texting = ({ onBack }) => {
+  const [currentNodeId, setCurrentNodeId] = useState('opening');
   const [conversation, setConversation] = useState([]);
   const [currentOptions, setCurrentOptions] = useState([]);
-  const { points, addPoints } = usePoints();
+  const { addPoints } = usePoints();
 
-  // Load initial conversation from JSON (future implementation)
+  // Initialize or update conversation when node changes
   useEffect(() => {
-    // For now, using hardcoded starter message
-    setConversation([{
-      id: 1, 
-      text: "HEY THERE! READY TO CHAT?", 
-      sender: 'them',
-      time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-    }]);
+    const node = conversationData[currentNodeId];
     
-    setCurrentOptions([
-      { id: 1, text: "SURE!", next: "positiveResponse" },
-      { id: 2, text: "NOT NOW", next: "negativeResponse" }
-    ]);
-  }, []);
+    if (!node) {
+      console.error(`Node ${currentNodeId} not found in conversation data`);
+      return;
+    }
+
+    // Add system message if conversation is empty
+    if (conversation.length === 0) {
+      setConversation([{
+        id: 1,
+        text: node.message,
+        sender: 'them',
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      }]);
+    }
+
+    setCurrentOptions(node.options || []);
+  }, [currentNodeId]);
 
   const handleSelectOption = (option) => {
-    // Add user's response
-    if (option.id === 1) addPoints(10); // Good answer
-    if (option.id === 2) addPoints(5);  // Neutral answer
-    setConversation(prev => [
-      ...prev,
-      {
-        id: prev.length + 1,
-        text: option.text,
-        sender: 'me',
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-      }
-    ]);
+    // Add user's message
+    const userMessage = {
+      id: conversation.length + 1,
+      text: option.text,
+      sender: 'me',
+      time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+    };
 
-    // Generate reply (will use JSON later)
+    // Update points
+    if (option.points) {
+      addPoints(option.points);
+    }
+
+    // Update conversation
+    setConversation(prev => [...prev, userMessage]);
+
+    // Handle next node after delay
     setTimeout(() => {
-      const responses = {
-        positiveResponse: {
-          text: "AWESOME! WHAT'S NEW?",
-          options: [
-            { id: 3, text: "NOT MUCH", next: "neutral" },
-            { id: 4, text: "LOTS TO SHARE!", next: "excited" }
-          ]
-        },
-        negativeResponse: {
-          text: "OKAY, CATCH YOU LATER!",
-          options: []
+      if (option.next) {
+        const nextNode = conversationData[option.next];
+        
+        if (nextNode) {
+          // Add system reply
+          setConversation(prev => [
+            ...prev,
+            {
+              id: prev.length + 2,
+              text: nextNode.message,
+              sender: 'them',
+              time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+            }
+          ]);
+          
+          setCurrentNodeId(option.next);
+        } else {
+          console.error(`Next node ${option.next} not found`);
+          onBack(); // Exit if path is broken
         }
-      };
-
-      const response = responses[option.next];
-      
-      if (response) {
-        setConversation(prev => [
-          ...prev,
-          {
-            id: prev.length + 1,
-            text: response.text,
-            sender: 'them',
-            time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-          }
-        ]);
-        setCurrentOptions(response.options);
+      } else {
+        // End of conversation
+        onBack();
       }
     }, 800);
   };
@@ -74,7 +79,6 @@ const Texting = ({ onBack }) => {
   return (
     <div className="pixel-texting-screen">
       <div className="pixel-conversation-container">
-        {/* Conversation Area */}
         <div className="pixel-conversation">
           {conversation.map((message) => (
             <div 
@@ -87,7 +91,6 @@ const Texting = ({ onBack }) => {
           ))}
         </div>
 
-        {/* Options */}
         {currentOptions.length > 0 && (
           <div className="pixel-options-container">
             {currentOptions.map((option) => (
@@ -102,6 +105,10 @@ const Texting = ({ onBack }) => {
           </div>
         )}
       </div>
+      
+      <button className="pixel-back-button" onClick={onBack}>
+        ← BACK
+      </button>
     </div>
   );
 };
