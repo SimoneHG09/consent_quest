@@ -1,15 +1,21 @@
+
+
 .avatarContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
   background-color: #a6eaf7;
   padding: 20px;
-  position: relative;
 }
 
-.phone-container {
+.arrowContainer {
+  position: relative;
+  width: 750px;
+  height: 750px;
+}
+
+.phoneContainer {
   position: relative;
   width: fit-content;
   height: fit-content;
@@ -18,8 +24,7 @@
 .phone-frame {
   width: 750px;
   height: auto;
-  z-index: 1;
-  position: relative;
+  display: block;
 }
 
 .screen {
@@ -30,40 +35,68 @@
   width: 60%;
   height: 79%;
   background: white;
-  overflow: hidden;
-  z-index: 0;
+  overflow: visible;
+  z-index: 1;
   border-radius: 5px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  padding-top: 20px;
+}
+.screenTitle {
+  position: absolute; 
+  font-size: 2rem;
+  text-align: center;
+  top: 20px; 
+  z-index: 2;
 }
 
-.face-container {
+.faceContainer {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+  margin-top: 3rem; 
 }
 
-#base {
-  position: absolute;
-  width: 80%;
-  height: 80%;
-  background-image: url("/public/images/avatar/baseFace.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#shirt {
+#base, #shirt, #hair {
   position: absolute;
   width: 80%;
   height: 80%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.base1{
+  background-image: url("/public/images/avatar/face/BaseFace.png");
+}
+
+.base2{
+  background-image: url("/public/images/avatar/face/baseFace1.png");
+}
+
+.base3{
+  background-image: url("/public/images/avatar/face/baseFace2.png");
+}
+
+.base4{
+  background-image: url("/public/images/avatar/face/baseFace3.png");
+}
+
+.base5{
+  background-image: url("/public/images/avatar/face/baseFace4.png");
+}
+
+.base6{
+  background-image: url("/public/images/avatar/face/baseFace5.png");
+}
+
+.base7{
+  background-image: url("/public/images/avatar/face/baseFace6.png");
 }
 
 #nextScreen{
@@ -82,22 +115,77 @@ top: 90%;
   background-image: url("/public/images/avatar/shirts/green.png");
 }
 
-.arrow-button {
+.arrowButton {  
   position: absolute;
-  right: 50px;
-  bottom: 50px;
   width: 100px;
   height: 100px;
-  background-image: url("/public/images/avatar/arrow.png");
   background-size: contain;
-  background-repeat: no-repeat;
   background-color: transparent;
   border: none;
   cursor: pointer;
   z-index: 10;
+
+  --btn-image: url("/public/images/avatar/arrow.png");
+  --btn-bottom: 300px;
+  --btn-right:50px;
+  background-image: var(--btn-image);
+  bottom: var(--btn-bottom);
+  right: var(--btn-right);
+
 }
 
-.arrow-button:hover {
+.arrowButton.hairLeft{
+  --btn-image:url("/public/images/avatar/arrowLeft.png");
+  --btn-bottom: 380px;
+  --btn-right:600px;
+}
+
+.arrowButton.hairRight {
+  --btn-bottom: 380px;
+  --btn-right:50px;
+}
+
+.arrowButton.shirtsLeft{
+  --btn-image:url("/public/images/avatar/arrowLeft.png");
+  --btn-bottom: 220px;
+  --btn-right:600px;
+}
+.arrowButton.shirtsRight {
+  --btn-bottom: 220px;
+  --btn-right:50px;
+}
+
+.arrowButton.facesLeft{
+  --btn-image:url("/public/images/avatar/arrowLeft.png");
+  --btn-bottom: 300px;
+  --btn-right:600px;
+}
+
+.arrowButton.facesRight {
+  --btn-bottom: 300px;
+  --btn-right:50px;
+}
+
+.arrowButton:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+.nextScreen{
+  position: absolute;
+  right: 225px;
+  bottom: 100px;
+  width: 100px;
+  height: 50px;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  font-size: 1.2rem;
+}
+
+.nextScreen:hover {
   transform: scale(1.1);
   transition: transform 0.2s ease;
 }
