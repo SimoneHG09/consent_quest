@@ -1,4 +1,4 @@
-
+/*'Divs in order outer to inner*/
 
 .avatarContainer {
   display: flex;
@@ -6,13 +6,11 @@
   align-items: center;
   min-height: 100vh;
   background-color: #a6eaf7;
-  padding: 20px;
 }
 
 .arrowContainer {
   position: relative;
   width: 750px;
-  height: 750px;
 }
 
 .phoneContainer {
@@ -21,11 +19,18 @@
   height: fit-content;
 }
 
-.phone-frame {
-  width: 750px;
-  height: auto;
-  display: block;
+.faceContainer {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin-top: 3rem; 
 }
+
+
 
 .screen {
   position: absolute;
@@ -43,6 +48,16 @@
   align-items: center;
   padding-top: 20px;
 }
+
+/*Phone frame*/
+
+.phone-frame {
+  width: 750px;
+  height: auto;
+  display: block;
+}
+
+/*Text*/
 .screenTitle {
   position: absolute; 
   font-size: 2rem;
@@ -51,16 +66,7 @@
   z-index: 2;
 }
 
-.faceContainer {
-  position: relative;
-  width: 90%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  margin-top: 3rem; 
-}
+/*Character Choices*/
 
 #base, #shirt, #hair {
   position: absolute;
@@ -72,48 +78,144 @@
 }
 
 .base1{
-  background-image: url("/public/images/avatar/face/BaseFace.png");
+  background-image: url("/public/images/avatar/faces/face1.png");
 }
 
 .base2{
-  background-image: url("/public/images/avatar/face/baseFace1.png");
+  background-image: url("/public/images/avatar/faces/face2.png");
 }
 
 .base3{
-  background-image: url("/public/images/avatar/face/baseFace2.png");
+  background-image: url("/public/images/avatar/faces/face3.png");
 }
 
 .base4{
-  background-image: url("/public/images/avatar/face/baseFace3.png");
+  background-image: url("/public/images/avatar/faces/face4.png");
 }
 
 .base5{
-  background-image: url("/public/images/avatar/face/baseFace4.png");
+  background-image: url("/public/images/avatar/faces/face5.png");
 }
 
 .base6{
-  background-image: url("/public/images/avatar/face/baseFace5.png");
+  background-image: url("/public/images/avatar/faces/face6.png");
 }
 
 .base7{
-  background-image: url("/public/images/avatar/face/baseFace6.png");
+  background-image: url("/public/images/avatar/faces/face7.png");
 }
 
-#nextScreen{
-top: 90%;
+.hair1{
+  background-image: url(/public/images/avatar/hair/hair1.png);
+}
+
+.hair2{
+  background-image: url(/public/images/avatar/hair/hair2.png);
+}
+
+.hair3{
+  background-image: url(/public/images/avatar/hair/hair3.png);
+}
+
+.hair4{
+  background-image: url(/public/images/avatar/hair/hair4.png);
+}
+
+.hair5{
+  background-image: url(/public/images/avatar/hair/hair5.png);
+}
+
+.hair6{
+  background-image: url(/public/images/avatar/hair/hair6.png);
+}
+
+.hair7{
+  background-image: url(/public/images/avatar/hair/hair7.png);
+}
+
+.hair8{
+  background-image: url(/public/images/avatar/hair/hair8.png);
+}
+
+.hair9{
+  background-image: url(/public/images/avatar/hair/hair9.png);
+}
+
+.hair10{
+  background-image: url(/public/images/avatar/hair/hair10.png);
+}
+
+.hair11{
+  background-image: url(/public/images/avatar/hair/hair11.png);
+}
+
+.hair12{
+  background-image: url(/public/images/avatar/hair/hair12.png);
+}
+
+.hair13{
+  background-image: url(/public/images/avatar/hair/hair13.png);
+}
+
+.hair14{
+  background-image: url(/public/images/avatar/hair/hair14.png);
+}
+
+.hair15{
+  background-image: url(/public/images/avatar/hair/hair15.png);
+}
+
+.hair16{
+  background-image: url(/public/images/avatar/hair/hair16.png);
+}
+
+.hair17{
+  background-image: url(/public/images/avatar/hair/hair17.png);
+}
+
+.hair18{
+  background-image: url(/public/images/avatar/hair/hair18.png);
+}
+
+.hair19{
+  background-image: url(/public/images/avatar/hair/hair19.png);
 }
 
 .shirt1 {
-  background-image: url("/public/images/avatar/shirts/blue.png");
+  background-image: url("/public/images/avatar/shirts/shirt1.png");
 }
 
 .shirt2 {
-  background-image: url("/public/images/avatar/shirts/red.png");
+  background-image: url("/public/images/avatar/shirts/shirt2.png");
 }
-
 .shirt3 {
-  background-image: url("/public/images/avatar/shirts/green.png");
+  background-image: url("/public/images/avatar/shirts/shirt3.png");
 }
+.shirt4 {
+  background-image: url("/public/images/avatar/shirts/shirt4.png");
+}
+.shirt5 {
+  background-image: url("/public/images/avatar/shirts/shirt5.png");
+}
+.shirt6 {
+  background-image: url("/public/images/avatar/shirts/shirt6.png");
+}
+.shirt7 {
+  background-image: url("/public/images/avatar/shirts/shirt7.png");
+}
+.shirt8 {
+  background-image: url("/public/images/avatar/shirts/shirt8.png");
+}
+.shirt9 {
+  background-image: url("/public/images/avatar/shirts/shirt9.png");
+}
+.shirt10 {
+  background-image: url("/public/images/avatar/shirts/shirt10.png");
+}
+.shirt11 {
+  background-image: url("/public/images/avatar/shirts/shirt11.png");
+}
+/*Buttons*/
 
 .arrowButton {  
   position: absolute;
