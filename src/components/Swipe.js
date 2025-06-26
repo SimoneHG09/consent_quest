@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Swipe.css';
 import Texting from './Texting';
+import Frame from './Frame.js';
 
 const Swipe = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -10,19 +11,14 @@ const Swipe = () => {
   const cards = [
     { 
       id: 1, 
-      image: "/images/cards/swipe_1.png",
-      text: 'First Card Text' 
+      image: "/images/cards/card1.png",
+      text: 'Steve, 28' 
     },
     { 
       id: 2, 
-      image: "/images/cards/swipe_2.png", 
-      text: 'Second Card Text' 
-    },
-    { 
-      id: 3, 
-      image: "/images/cards/swipe_3.png", 
-      text: 'Swipe right to text →' // Indicate this is the texting trigger
-    },
+      image: "/images/cards/card2.png", 
+      text: 'Bob, 20' 
+    }
   ];
 
   const handleSwipe = (direction) => {
@@ -63,9 +59,7 @@ const Swipe = () => {
 
   return (
     <div className="swipeContainer">
-      <div className="phone-container">
-        <img src="/images/cards/phone.png" alt="Phone frame" className="phone-frame" />
-        <div className="screen">
+     <Frame>
           <div className={`card ${transitionDirection ? `slide-${transitionDirection}` : ''}`}>
             <img 
               src={cards[currentIndex].image} 
@@ -74,8 +68,7 @@ const Swipe = () => {
             />
             <div className="card-text">{cards[currentIndex].text}</div>
           </div>
-        </div>
-      </div>
+      </Frame>
       <div className="instructions">
         {currentIndex === cards.length - 1 
           ? "Swipe right to start texting" 

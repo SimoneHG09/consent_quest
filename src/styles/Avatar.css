@@ -13,12 +13,6 @@
   width: 750px;
 }
 
-.phoneContainer {
-  position: relative;
-  width: fit-content;
-  height: fit-content;
-}
-
 .faceContainer {
   position: relative;
   width: 90%;
@@ -28,33 +22,6 @@
   align-items: center;
   z-index: 1;
   margin-top: 3rem; 
-}
-
-
-
-.screen {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: 79%;
-  background: white;
-  overflow: visible;
-  z-index: 1;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
-}
-
-/*Phone frame*/
-
-.phone-frame {
-  width: 750px;
-  height: auto;
-  display: block;
 }
 
 /*Text*/
@@ -211,7 +178,7 @@
 }
 .shirt10 {
   background-image: url("/public/images/avatar/shirts/shirt10.png");
-}
+} 
 .shirt11 {
   background-image: url("/public/images/avatar/shirts/shirt11.png");
 }

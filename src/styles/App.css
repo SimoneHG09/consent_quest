@@ -40,11 +40,13 @@
 .points-display {
   position: fixed;
   top: 20px;
-  right: 20px;
-  background: rgba(0,0,0,0.7);
-  color: #ffcc00;
+  left: 75%;
+  transform: translateX(-50%);
+  background: rgb(64,61,88);
+  color: rgb(219, 213, 110);
   padding: 10px 20px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 18px;
   z-index: 1000;
+  text-align: center;
 }

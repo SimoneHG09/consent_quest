@@ -1,5 +1,6 @@
 import "../styles/Avatar.css";
 import React, { useState } from "react";
+import Frame from './Frame.js';
 
 function Avatar({onContinue}) {
     const [avatarState, setAvatarState] = useState({
@@ -39,17 +40,14 @@ function Avatar({onContinue}) {
     return (
         <div className="avatarContainer">
             <div className="arrowContainer">
-                <div className="phoneContainer">
-                <img src="/images/cards/phone.png" alt="Phone frame" className="phone-frame" />
-                <div className="screen">
-                     <div className="screenTitle">Choose your Character</div>
+                <Frame>
+                    <div className="screenTitle">Choose your Character</div>
                     <div className="faceContainer">
-                    <div id="base" className={`base${avatarState.faces.current + 1}`}></div>
-                    <div id="shirt" className={`shirt${avatarState.shirts.current + 1}`}></div>
-                    <div id="hair" className={`hair${avatarState.hair.current + 1}`}></div>
-                    </div>   
-                </div>
-            </div>
+                        <div id="base" className={`base${avatarState.faces.current + 1}`}></div>
+                        <div id="shirt" className={`shirt${avatarState.shirts.current + 1}`}></div>
+                        <div id="hair" className={`hair${avatarState.hair.current + 1}`}></div>
+                    </div>
+                </Frame>
                 <button className="nextScreen" onClick={onContinue}>Continue</button>
                 <button 
                     className="arrowButton hairLeft" 
