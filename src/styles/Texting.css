@@ -4,24 +4,22 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
-  background: #222;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  image-rendering: pixelated;
+  background: #9590A8;
 }
 
 /* Centered Conversation Container */
 .pixel-conversation-container {
   width: 90%;
-  max-width: 600px;
-  height: 70vh;
+  max-width: 800px;
+  height:80%;
   display: flex;
   flex-direction: column;
-  background: #e0e0e0;
-  box-shadow: 0 0 0 8px #333;
+  background: #9590A8;
 }
 
 /* Conversation Area */
@@ -51,25 +49,19 @@
   padding: 12px 16px;
   font-size: 14px;
   line-height: 1.4;
-  border: 3px solid;
   position: relative;
 }
 
 .pixel-message.me .pixel-bubble {
-  background: #aaffaa;
-  border-color: #55aa55;
-  color: #224422;
+  background: #dbd56e;
 }
 
 .pixel-message.them .pixel-bubble {
   background: #ffffff;
-  border-color: #aaaaaa;
-  color: #333333;
 }
 
 .pixel-time {
   font-size: 10px;
-  color: #666;
   margin-top: 4px;
 }
 
@@ -77,34 +69,27 @@
 .pixel-options-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  padding: 15px;
-  background: #555;
+  gap: 15px;
+  padding: 20px;
+  background: #403d58;
+  border: none;
 }
 
 .pixel-option-button {
-  background: #ffcc66;
-  border: 3px solid #cc9933;
-  color: #553300;
-  padding: 12px;
+  background: #92e2de;
+  padding: 15px;
   font-size: 12px;
   cursor: pointer;
+  border: none;
 }
 
 .pixel-option-button:hover {
-  background: #ffdd88;
+  background: #dbd56e;
 }
 
 .pixel-option-button:active {
   transform: translateY(2px);
 }
 
-/* Animations */
-@keyframes pixel-pop {
-  0% { transform: scale(0.9); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
 
-.pixel-message {
-  animation: pixel-pop 0.3s ease-out;
-}
+

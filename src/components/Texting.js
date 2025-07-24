@@ -105,10 +105,6 @@ const Texting = ({ onBack }) => {
           </div>
         )}
       </div>
-      
-      <button className="pixel-back-button" onClick={onBack}>
-        ← BACK
-      </button>
     </div>
   );
 };

@@ -3,30 +3,33 @@ import { PointsProvider, usePoints } from './Points';
 import Avatar from './Avatar';
 import Swipe from './Swipe';
 import Texting from './Texting';
+import StartScreen from "./StartScreen";
 import '../styles/App.css';
 
 function App() {
-  const [currentView, setCurrentView] = useState('avatar');
+  const [currentView, setCurrentView] = useState('startScreen');
 
   return (
     <PointsProvider>
       <div className="app">
+
+        {currentView === 'startScreen' && (
+          <StartScreen onContinue={() => setCurrentView('avatar')} />
+        )}
+
         {currentView === 'avatar' && (
           <Avatar onContinue={() => setCurrentView('swipe')} />
         )}
         
         {currentView === 'swipe' && (
+          <>
           <Swipe 
             onEnterTexting={() => setCurrentView('texting')}
-            onBack={() => setCurrentView('avatar')}
           />
+          <PointsDisplay />
+          </>
         )}
         
-        {currentView === 'texting' && (
-          <Texting onBack={() => setCurrentView('swipe')} />
-        )}
-
-        <PointsDisplay />
       </div>
     </PointsProvider>
   );
