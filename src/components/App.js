@@ -6,6 +6,8 @@ import Texting from './Texting';
 import StartScreen from "./StartScreen";
 import '../styles/App.css';
 
+
+
 function App() {
   const [currentView, setCurrentView] = useState('startScreen');
 
@@ -23,7 +25,7 @@ function App() {
         
         {currentView === 'swipe' && (
           <>
-          <Swipe 
+          <Swipe
             onEnterTexting={() => setCurrentView('texting')}
           />
           <PointsDisplay />

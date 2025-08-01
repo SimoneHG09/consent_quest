@@ -45,9 +45,9 @@
 
 .text{
   text-align: left;
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
-.tDiv{
+.textContainer{
   width: 50%;
 }

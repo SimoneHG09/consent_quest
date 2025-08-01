@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/Frame.css';
 
-const Frame = ({ children, className = '', style = {} }) => {
+function Frame ({ children, className = '' }) {
   return (
-    <div className={`phoneContainer ${className}`} style={style}>
+    <div className={`phoneContainer ${className}`}>
       <img 
         src="/images/cards/phone.png" 
         alt="Decorative frame" 

@@ -2,6 +2,12 @@ import "../styles/Avatar.css";
 import React, { useState } from "react";
 import Frame from './Frame.js';
 
+const hair = React.createContext(); 
+const face = React.createContext(); 
+const shirt = React.createContext(); 
+
+//TODO Context API Video
+
 function Avatar({onContinue}) {
     const [avatarState, setAvatarState] = useState({
         shirts: { current: 0, total: 10 },

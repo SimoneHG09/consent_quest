@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/Swipe.css';
-import Texting from './Texting';
+import '../styles/Quiz.css';
 import Frame from './Frame.js';
+import Avatar from './Avatar.js';
 
 function Swipe() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [transitionDirection, setTransitionDirection] = useState(null);
-  const [showTexting, setShowTexting] = useState(false);
+  const [showRestart, setShowRestart] = useState(false);
+  const [showBadges, setShowBadges] = useState(false);
 
-      const cards = [
+      const questions = [
     { 
       id: 1, 
-      image: "/images/cards/card1.png",
-      text: 'Steve, 28' 
+      text: 'Steve, 28',
+      correct: "n"
     },
     { 
       id: 2, 
-      image: "/images/cards/card2.png", 
-      text: 'Bob, 20' 
+      text: 'Bob, 20' , 
+      correct: "y"
     }
   ];
 
@@ -26,16 +27,20 @@ function Swipe() {
     
     setTimeout(() => {
       if (direction < 0) {
-        setShowTexting(true);
+        if(questions[currentIndex].correct="n"){
+
+        }
       } else {
-        // Normal swipe behavior
-        setCurrentIndex((prev) => {
-          const newIndex = prev + direction;
-          if (newIndex < 0) return cards.length - 1;
-          if (newIndex >= cards.length) return 0;
-          return newIndex;
-        });
-      }
+         if(questions[currentIndex].correct="y"){
+
+        }
+    }
+    setCurrentIndex((prev) => {
+        const newIndex = prev + 1;
+        if (newIndex >= cards.length && turn>=2) setShowRestart(true);
+        if (newIndex >= cards.length && turn < 2) setShowBadges(true);
+        return newIndex;
+    });
       setTransitionDirection(null);
     }, 300);
   };

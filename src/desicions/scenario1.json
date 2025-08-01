@@ -1,0 +1,453 @@
+{
+  "opening": {
+    "message": "Hey you \ud83d\udc40 What brings you on here tonight?",
+    "options": [
+      {
+        "id": 1,
+        "text": "Looking to vibe and see where it goes \ud83d\ude0f",
+        "points": 7,
+        "next": "msg2_1"
+      },
+      {
+        "id": 2,
+        "text": "Just bored, not expecting much tbh.",
+        "points": 4,
+        "next": "msg2_2"
+      },
+      {
+        "id": 3,
+        "text": "Honestly? Down to meet someone fun *and* respectful.",
+        "points": 10,
+        "next": "msg2_3"
+      },
+      {
+        "id": 4,
+        "text": "Lol depends, you sending pics or what?",
+        "points": 1,
+        "next": "ghosted"
+      }
+    ]
+  },
+  "msg2_1": {
+    "message": "I like that energy \ud83d\ude0c How do you feel about setting some boundaries early on?",
+    "options": [
+      {
+        "id": 1,
+        "text": "Definitely. Gotta be clear about what\u2019s cool and what\u2019s not.",
+        "points": 10,
+        "next": "msg3_1_1"
+      },
+      {
+        "id": 2,
+        "text": "Sure, but let\u2019s not kill the vibe, yeah?",
+        "points": 5,
+        "next": "msg3_1_2"
+      },
+      {
+        "id": 3,
+        "text": "Eh, we\u2019ll figure it out as we go.",
+        "points": 3,
+        "next": "msg3_1_3"
+      },
+      {
+        "id": 4,
+        "text": "Why so serious? It's just chat.",
+        "points": 0,
+        "next": "declined"
+      }
+    ]
+  },
+  "msg2_2": {
+    "message": "Haha fair. But just so we\u2019re clear, I like to keep things respectful. Cool with that?",
+    "options": [
+      {
+        "id": 1,
+        "text": "Of course. Respect goes a long way.",
+        "points": 8,
+        "next": "msg3_2_1"
+      },
+      {
+        "id": 2,
+        "text": "Yeah, I guess. If that\u2019s your thing.",
+        "points": 4,
+        "next": "msg3_2_2"
+      },
+      {
+        "id": 3,
+        "text": "I mean\u2026 sure, as long as it\u2019s still fun.",
+        "points": 5,
+        "next": "msg3_2_3"
+      },
+      {
+        "id": 4,
+        "text": "Don\u2019t worry, I won\u2019t bite... unless you want me to \ud83d\ude09",
+        "points": 2,
+        "next": "msg3_2_4"
+      }
+    ]
+  },
+  "msg2_3": {
+    "message": "Ooo I like someone who knows what they want. Can we talk about consent before things get flirty?",
+    "options": [
+      {
+        "id": 1,
+        "text": "Absolutely. Consent makes everything hotter.",
+        "points": 10,
+        "next": "msg3_3_1"
+      },
+      {
+        "id": 2,
+        "text": "Sure thing. Just ask and I\u2019ll be honest.",
+        "points": 8,
+        "next": "msg3_3_2"
+      },
+      {
+        "id": 3,
+        "text": "If it\u2019s mutual, does it really need to be said?",
+        "points": 3,
+        "next": "msg3_3_3"
+      },
+      {
+        "id": 4,
+        "text": "If you say no, I\u2019ll stop. That\u2019s enough, right?",
+        "points": 1,
+        "next": "declined"
+      }
+    ]
+  },
+  "msg3_1_1": {
+    "message": "That\u2019s the kind of mindset I like \ud83e\udef6 What do you think about exchanging pics?",
+    "options": [
+      {
+        "id": 1,
+        "text": "Only if you\u2019re comfy too. I ask first, always.",
+        "points": 10,
+        "next": "meet_up"
+      },
+      {
+        "id": 2,
+        "text": "If we both want to, I\u2019m into it.",
+        "points": 7,
+        "next": "online_finish"
+      },
+      {
+        "id": 3,
+        "text": "I'll send one if you send one first \ud83d\ude09",
+        "points": 4,
+        "next": "ghosted"
+      },
+      {
+        "id": 4,
+        "text": "Don\u2019t ask, just surprise me \ud83d\ude0f",
+        "points": 1,
+        "next": "declined"
+      }
+    ]
+  },
+  "ghosted": {
+    "message": "You\u2019ve been left on read \ud83d\udc7b Maybe try being more respectful next time?",
+    "options": []
+  },
+  "declined": {
+    "message": "Hey \u2013 I don\u2019t think we\u2019re on the same page. Take care \u270c\ufe0f",
+    "options": []
+  },
+  "online_finish": {
+    "message": "I\u2019m vibing this convo \ud83d\udcac Let\u2019s keep chatting online a bit longer.",
+    "options": []
+  },
+  "meet_up": {
+    "message": "You\u2019re a good communicator \ud83d\ude0a I\u2019d be down to meet \u2013 let\u2019s keep it respectful and chill.",
+    "options": []
+  },
+  "msg3_1_2": {
+    "message": "Ok fair enough \ud83d\ude05 Just wanna make sure we\u2019re on the same page. What are you into?",
+    "options": [
+      {
+        "id": 1,
+        "text": "Let\u2019s chat first, then see what clicks.",
+        "points": 7,
+        "next": "online_finish"
+      },
+      {
+        "id": 2,
+        "text": "You tell me yours first \ud83d\ude09",
+        "points": 4,
+        "next": "msg4_generic"
+      },
+      {
+        "id": 3,
+        "text": "If I say everything, does that scare you? \ud83d\ude08",
+        "points": 3,
+        "next": "declined"
+      },
+      {
+        "id": 4,
+        "text": "Skip the chat, let\u2019s just meet.",
+        "points": 2,
+        "next": "ghosted"
+      }
+    ]
+  },
+  "msg3_1_3": {
+    "message": "Hmm. I get it, but miscommunication can ruin the vibe too \ud83d\ude2c Wanna keep talking?",
+    "options": [
+      {
+        "id": 1,
+        "text": "Yeah, happy to clarify stuff if needed.",
+        "points": 7,
+        "next": "msg4_generic"
+      },
+      {
+        "id": 2,
+        "text": "Only if it stays chill, no lectures.",
+        "points": 3,
+        "next": "declined"
+      },
+      {
+        "id": 3,
+        "text": "Sure. But only if you\u2019re into what I\u2019m into \ud83d\ude09",
+        "points": 5,
+        "next": "ghosted"
+      },
+      {
+        "id": 4,
+        "text": "Nah I\u2019m good. Later.",
+        "points": 0,
+        "next": "declined"
+      }
+    ]
+  },
+  "msg3_2_1": {
+    "message": "Love to hear that \u2764\ufe0f Wanna keep it text for now or maybe meet up?",
+    "options": [
+      {
+        "id": 1,
+        "text": "Let\u2019s keep chatting first.",
+        "points": 8,
+        "next": "online_finish"
+      },
+      {
+        "id": 2,
+        "text": "I\u2019d be into meeting up if you are.",
+        "points": 9,
+        "next": "meet_up"
+      },
+      {
+        "id": 3,
+        "text": "Let\u2019s swap pics and decide \ud83d\ude09",
+        "points": 6,
+        "next": "msg4_generic"
+      },
+      {
+        "id": 4,
+        "text": "Only if you host.",
+        "points": 3,
+        "next": "ghosted"
+      }
+    ]
+  },
+  "msg3_2_2": {
+    "message": "Mmm okay \ud83d\ude10 Respect is kinda a must for me. What would a fun convo look like to you?",
+    "options": [
+      {
+        "id": 1,
+        "text": "Playful, cheeky but not pushy.",
+        "points": 7,
+        "next": "msg4_generic"
+      },
+      {
+        "id": 2,
+        "text": "We just vibe and flirt hard.",
+        "points": 5,
+        "next": "ghosted"
+      },
+      {
+        "id": 3,
+        "text": "You lead, I\u2019ll follow.",
+        "points": 4,
+        "next": "declined"
+      },
+      {
+        "id": 4,
+        "text": "Ugh you ask a lot of questions.",
+        "points": 0,
+        "next": "declined"
+      }
+    ]
+  },
+  "msg3_2_3": {
+    "message": "Fair enough \ud83d\ude0c You down for honest convo about what we want?",
+    "options": [
+      {
+        "id": 1,
+        "text": "Absolutely, honesty is sexy.",
+        "points": 9,
+        "next": "meet_up"
+      },
+      {
+        "id": 2,
+        "text": "Yeah, just don\u2019t make it awkward \ud83d\ude05",
+        "points": 6,
+        "next": "online_finish"
+      },
+      {
+        "id": 3,
+        "text": "Let\u2019s skip to the good stuff.",
+        "points": 3,
+        "next": "ghosted"
+      },
+      {
+        "id": 4,
+        "text": "You thinking what I\u2019m thinking? \ud83d\ude0f",
+        "points": 4,
+        "next": "msg4_generic"
+      }
+    ]
+  },
+  "msg3_2_4": {
+    "message": "Haha cute, but let\u2019s stay respectful here \ud83d\ude05",
+    "options": [
+      {
+        "id": 1,
+        "text": "You\u2019re right. My bad!",
+        "points": 6,
+        "next": "msg4_generic"
+      },
+      {
+        "id": 2,
+        "text": "Didn\u2019t mean it like that \ud83d\ude05",
+        "points": 4,
+        "next": "ghosted"
+      },
+      {
+        "id": 3,
+        "text": "Come on, don\u2019t be so uptight.",
+        "points": 1,
+        "next": "declined"
+      },
+      {
+        "id": 4,
+        "text": "Okay okay \ud83d\ude07 Let\u2019s keep it PG\u2026 for now.",
+        "points": 7,
+        "next": "online_finish"
+      }
+    ]
+  },
+  "msg3_3_1": {
+    "message": "Oof. That answer got me smiling \ud83d\ude0a Wanna keep talking or take it off the app?",
+    "options": [
+      {
+        "id": 1,
+        "text": "Let\u2019s move to another app.",
+        "points": 9,
+        "next": "meet_up"
+      },
+      {
+        "id": 2,
+        "text": "Still feeling this convo here.",
+        "points": 8,
+        "next": "online_finish"
+      },
+      {
+        "id": 3,
+        "text": "I\u2019ll give you my number if you\u2019re serious.",
+        "points": 7,
+        "next": "meet_up"
+      },
+      {
+        "id": 4,
+        "text": "Only if you send a pic first \ud83d\ude09",
+        "points": 2,
+        "next": "ghosted"
+      }
+    ]
+  },
+  "msg3_3_2": {
+    "message": "That\u2019s a solid start. Consent is \ud83d\udd11. Want to chat fantasies?",
+    "options": [
+      {
+        "id": 1,
+        "text": "Only if you\u2019re comfy too.",
+        "points": 9,
+        "next": "msg4_generic"
+      },
+      {
+        "id": 2,
+        "text": "I\u2019m open if you are.",
+        "points": 7,
+        "next": "online_finish"
+      },
+      {
+        "id": 3,
+        "text": "Sure, but I\u2019m not into anything too freaky.",
+        "points": 5,
+        "next": "msg4_generic"
+      },
+      {
+        "id": 4,
+        "text": "Let\u2019s just surprise each other \ud83d\ude0f",
+        "points": 3,
+        "next": "declined"
+      }
+    ]
+  },
+  "msg3_3_3": {
+    "message": "Hmm\u2026 that\u2019s how things get messy. I like it clear.",
+    "options": [
+      {
+        "id": 1,
+        "text": "You\u2019re right. Better safe than sorry.",
+        "points": 8,
+        "next": "msg4_generic"
+      },
+      {
+        "id": 2,
+        "text": "I get it. Want to start over?",
+        "points": 6,
+        "next": "online_finish"
+      },
+      {
+        "id": 3,
+        "text": "Fine, we can talk about it.",
+        "points": 5,
+        "next": "msg4_generic"
+      },
+      {
+        "id": 4,
+        "text": "You\u2019re making this weird.",
+        "points": 1,
+        "next": "declined"
+      }
+    ]
+  },
+  "msg4_generic": {
+    "message": "This has been fun \ud83d\ude0a Wanna keep chatting or take it further?",
+    "options": [
+      {
+        "id": 1,
+        "text": "I\u2019d like to meet in person if you\u2019re down.",
+        "points": 9,
+        "next": "meet_up"
+      },
+      {
+        "id": 2,
+        "text": "Let\u2019s stick to chatting for now.",
+        "points": 7,
+        "next": "online_finish"
+      },
+      {
+        "id": 3,
+        "text": "Let\u2019s swap some pics first and see \ud83d\ude09",
+        "points": 5,
+        "next": "ghosted"
+      },
+      {
+        "id": 4,
+        "text": "Only if we skip the small talk.",
+        "points": 3,
+        "next": "declined"
+      }
+    ]
+  }
+}
