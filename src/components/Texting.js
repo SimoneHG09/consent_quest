@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react';
 import '../styles/Texting.css';
 import {usePoints} from "./Points"
 import conversationData from '../desicions/test1.json'; // Future JSON import
+import Quiz from "./Quiz"
+
 const Texting = ({ onBack }) => {
   const [currentNodeId, setCurrentNodeId] = useState('opening');
   const [conversation, setConversation] = useState([]);
   const [currentOptions, setCurrentOptions] = useState([]);
   const { addPoints } = usePoints();
+  const [showQuiz, setShowQuiz] = useState(false);
 
   // Initialize or update conversation when node changes
   useEffect(() => {
@@ -16,6 +19,10 @@ const Texting = ({ onBack }) => {
       console.error(`Node ${currentNodeId} not found in conversation data`);
       return;
     }
+
+      if (!node.options || node.options.length === 0) {
+    setTimeout(() => setShowQuiz(true), 1000); 
+  }
 
     // Add system message if conversation is empty
     if (conversation.length === 0) {
@@ -53,6 +60,7 @@ const Texting = ({ onBack }) => {
         const nextNode = conversationData[option.next];
         
         if (nextNode) {
+          console.log("there is a next node");
           // Add system reply
           setConversation(prev => [
             ...prev,
@@ -66,15 +74,18 @@ const Texting = ({ onBack }) => {
           
           setCurrentNodeId(option.next);
         } else {
-          console.error(`Next node ${option.next} not found`);
           onBack(); // Exit if path is broken
         }
       } else {
-        // End of conversation
-        onBack();
+       setShowQuiz(true);
       }
     }, 800);
   };
+
+  if (showQuiz) {
+    console.log("No next node; showing quiz");
+    return <Quiz onBack={() => setShowQuiz(false)} />;
+  }
 
   return (
     <div className="pixel-texting-screen">
@@ -105,6 +116,8 @@ const Texting = ({ onBack }) => {
           </div>
         )}
       </div>
+        
+
     </div>
   );
 };

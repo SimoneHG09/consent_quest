@@ -1,101 +1,104 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Quiz.css';
 import Frame from './Frame.js';
-import Avatar from './Avatar.js';
+import Badge from "./Badge.js";
+import {usePoints} from "./Points";
+import quizData from "../desicions/quiz.json";
 
-function Swipe() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+function Quiz({ onBack }) {
+  const [currentQuestionId, setCurrentQuestionId] = useState('1'); 
+  const [currentQuestion, setCurrentQuestion] = useState(null);
+  const [correctAnswer, setCorrectAnswer]= useState(true);
   const [transitionDirection, setTransitionDirection] = useState(null);
-  const [showRestart, setShowRestart] = useState(false);
   const [showBadges, setShowBadges] = useState(false);
+  const { addPoints } = usePoints();
 
-      const questions = [
-    { 
-      id: 1, 
-      text: 'Steve, 28',
-      correct: "n"
-    },
-    { 
-      id: 2, 
-      text: 'Bob, 20' , 
-      correct: "y"
-    }
-  ];
-
-  const handleSwipe = (direction) => {
-    setTransitionDirection(direction > 0 ? 'left' : 'right');
+  useEffect(() => {
+    const question = quizData[currentQuestionId];
     
-    setTimeout(() => {
-      if (direction < 0) {
-        if(questions[currentIndex].correct="n"){
-
-        }
-      } else {
-         if(questions[currentIndex].correct="y"){
-
-        }
+    if (!question) {
+      console.error(`Question ${currentQuestionId} not found`);
+      setShowBadges(true);
+      return;
     }
-    setCurrentIndex((prev) => {
-        const newIndex = prev + 1;
-        if (newIndex >= cards.length && turn>=2) setShowRestart(true);
-        if (newIndex >= cards.length && turn < 2) setShowBadges(true);
-        return newIndex;
-    });
-      setTransitionDirection(null);
-    }, 300);
-  };
 
+    setCurrentQuestion(question);
+    setCorrectAnswer(true);
+  }, [currentQuestionId]);
+
+ const handleSwipe = (direction) => {
+  setTransitionDirection(direction > 0 ? 'left' : 'right');
+
+  setTimeout(() => {
+    const isCorrect = 
+      (direction < 0 && currentQuestion.correct === "y") || 
+      (direction >= 0 && currentQuestion.correct === "n");
+
+    if (isCorrect) {
+      addPoints(currentQuestion.points);
+      // Move to next question immediately if correct
+      goToNextQuestion();
+    } else {
+      setCorrectAnswer(false);
+      // Show explanation for 2 seconds, then move to next question
+      setTimeout(goToNextQuestion, 2000);
+    }
+  }, 300);
+};
+
+// Helper function to handle question transition
+const goToNextQuestion = () => {
+  if (currentQuestion.next) {
+    setCurrentQuestionId(currentQuestion.next);
+  } else {
+    setShowBadges(true);
+  }
+  setTransitionDirection(null);
+};
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'ArrowRight') {
-        handleSwipe(-1); // Swipe right
+        handleSwipe(-1); 
       } else if (e.key === 'ArrowLeft') {
-        handleSwipe(1); // Swipe left
+        handleSwipe(1); 
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentIndex]);
-
-  if (showTexting) {
-    return <Texting onBack={() => setShowTexting(false)} />;
+  }, [currentQuestion]); 
+  
+  if (showBadges) {
+    return <Badge onBack={onBack} />;
   }
 
-  if (cards.length === 0) {
-    return <div>No cards available</div>;
+  if (!currentQuestion) {
+    return <div>Loading questions...</div>;
   }
 
   return (
     <div className="swipeContainer">
-     <Frame>
-          <div className={`card ${transitionDirection ? `slide-${transitionDirection}` : ''}`}>
-            <img 
-              src={cards[currentIndex].image} 
-              alt={`Card ${currentIndex + 1}`} 
-              className="card-image"
-            />
-            <div className='textAlign'>
-               <img
+      <Frame>
+        <div className={`card ${transitionDirection ? `slide-${transitionDirection}` : ''}`}>
+          <div className="question">{currentQuestion.text}</div>
+            <img
               src='/images/cards/cross.png'
               className='cardCross'
               />
-            <div className="cardText">{cards[currentIndex].text}</div>
-              <img
+            <img
               src='/images/cards/heart.png'
               className='cardHeart'
               />
-            </div>
-            
-          </div>
+        </div>
+        {!correctAnswer && <div className="explanation"> {currentQuestion.explanation}</div>}
       </Frame>
       <div className="instructions">
-        {currentIndex === cards.length - 1 
-          ? "Swipe right to start texting" 
-          : "Use ← and → arrow keys to swipe"}
+        {currentQuestion.next 
+          ? "Use ← and → arrow keys to answer" 
+          : "Last Question"}
       </div>
     </div>
   );
 };
 
-export default Swipe;
+export default Quiz;

@@ -4,6 +4,7 @@ import Avatar from './Avatar';
 import Swipe from './Swipe';
 import Texting from './Texting';
 import StartScreen from "./StartScreen";
+import Quiz from "./Quiz";
 import '../styles/App.css';
 
 
@@ -28,10 +29,25 @@ function App() {
           <Swipe
             onEnterTexting={() => setCurrentView('texting')}
           />
-          <PointsDisplay />
           </>
         )}
-        
+
+        {currentView === 'texting' && (
+          <>
+          <Texting
+            onEnterDone={() => setCurrentView('quiz')}
+          />
+          </>
+          )}
+
+        {currentView === 'quiz' && (
+          <>
+          <Quiz
+            onBack={() => setCurrentView('badge')}
+          />
+          </>
+        )}
+        <PointsDisplay />
       </div>
     </PointsProvider>
   );

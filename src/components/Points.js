@@ -13,6 +13,8 @@ export const PointsProvider = ({ children }) => {
     setPoints(0);
   };
 
+  
+
   return (
     <Points.Provider value={{ points, addPoints, resetPoints }}>
       {children}

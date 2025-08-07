@@ -1,0 +1,29 @@
+{
+  "1": {
+    "text": "Is presuming consent without explicit agreement considered best practice?",
+    "correct": "n",
+    "points": 20,
+    "next": 2,
+    "explanation": "Consent should always be explicit, voluntary, and enthusiastic—never presumed."
+  },
+  "2": {
+    "text": "Does a non-response (being left on ‘read’) count as consent?",
+    "correct": "n",
+    "points": 20,
+    "next": 3,
+    "explanation": "Silence or non-response is NOT consent. Clear communication is key."
+  },
+  "3": {
+    "text": "Should consent be renegotiated when meeting in person, even if it was discussed online?",
+    "correct": "y",
+    "points": 20,
+    "next": 4,
+    "explanation": "Consent is continuous! Check in again in person, as comfort levels can change."
+  },
+  "4": {
+    "text": "Is it okay to pressure someone if they seem unsure but don’t say ‘no’ outright?",
+    "correct": "n",
+    "points": 20,
+    "explanation": "Pressure invalidates consent. Only an enthusiastic ‘yes’ means yes."
+  }
+}
