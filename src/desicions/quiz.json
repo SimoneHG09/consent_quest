@@ -1,29 +1,29 @@
 {
   "1": {
-    "text": "Is presuming consent without explicit agreement considered best practice?",
+    "text": "Is it okay to send a sexy pic if they haven’t replied to your last message?",
     "correct": "n",
-    "points": 20,
+    "points": 5,
     "next": 2,
-    "explanation": "Consent should always be explicit, voluntary, and enthusiastic—never presumed."
+    "explanation": "Consent must be explicit and continuous — silence is not consent."
   },
   "2": {
-    "text": "Does a non-response (being left on ‘read’) count as consent?",
-    "correct": "n",
-    "points": 20,
+    "text": "Can consent change after someone agrees to meet in person?",
+    "correct": "y",
+    "points": 5,
     "next": 3,
-    "explanation": "Silence or non-response is NOT consent. Clear communication is key."
+    "explanation": "Consent is ongoing and can be withdrawn at any time."
   },
   "3": {
-    "text": "Should consent be renegotiated when meeting in person, even if it was discussed online?",
-    "correct": "y",
-    "points": 20,
+    "text": "If someone says ‘maybe’, is that considered consent?",
+    "correct": "n",
+    "points": 5,
     "next": 4,
-    "explanation": "Consent is continuous! Check in again in person, as comfort levels can change."
+    "explanation": "Consent should be enthusiastic and clear — ‘maybe’ is not a yes."
   },
   "4": {
-    "text": "Is it okay to pressure someone if they seem unsure but don’t say ‘no’ outright?",
-    "correct": "n",
-    "points": 20,
-    "explanation": "Pressure invalidates consent. Only an enthusiastic ‘yes’ means yes."
+    "text": "Is it okay to ask directly if someone is into something before meeting?",
+    "correct": "y",
+    "points": 5,
+    "explanation": "Clear communication builds trust and ensures everyone is comfortable."
   }
 }

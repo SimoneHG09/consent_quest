@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Texting.css';
 import {usePoints} from "./Points"
-import conversationData from '../desicions/test1.json'; // Future JSON import
+import conversationData from '../desicions/scenario1.json'; // Future JSON import
 import Quiz from "./Quiz"
 
 const Texting = ({ onBack }) => {
