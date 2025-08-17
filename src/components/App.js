@@ -6,13 +6,14 @@ import Texting from './Texting';
 import StartScreen from "./StartScreen";
 import Quiz from "./Quiz";
 import '../styles/App.css';
-
+import { AvatarProvider } from './context/AvatarContext';
 
 
 function App() {
   const [currentView, setCurrentView] = useState('startScreen');
 
   return (
+    <AvatarProvider>
     <PointsProvider>
       <div className="app">
 
@@ -50,6 +51,7 @@ function App() {
         <PointsDisplay />
       </div>
     </PointsProvider>
+    </AvatarProvider>
   );
 }
 

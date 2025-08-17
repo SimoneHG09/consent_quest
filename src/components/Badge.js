@@ -19,14 +19,14 @@ function Badge() {
     let newBadge = "White";
     let newText = "Maybe try again..."
 
-    if (points > 95) {
+    if (points > 55) {
       newBadge = "Rainbow";
       newText = "Your an expert at this"
-    } else if (points > 90) {
+    } else if (points > 45) {
       newBadge = "Gold";
-    } else if (points > 50) {
+    } else if (points > 30) {
       newBadge = "Silver";
-    } else if (points > 20) {
+    } else if (points > 15) {
       newBadge = "Bronze";
     }
     

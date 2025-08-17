@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import '../styles/Texting.css';
-import {usePoints} from "./Points"
-import conversationData from '../desicions/scenario1.json'; // Future JSON import
-import Quiz from "./Quiz"
+import { usePoints } from "./Points";
+import conversationData from '../desicions/scenario1.json'; 
+import Quiz from "./Quiz";
+import { AvatarContext } from './context/AvatarContext.js';
 
 const Texting = ({ onBack }) => {
   const [currentNodeId, setCurrentNodeId] = useState('opening');
@@ -10,8 +11,8 @@ const Texting = ({ onBack }) => {
   const [currentOptions, setCurrentOptions] = useState([]);
   const { addPoints } = usePoints();
   const [showQuiz, setShowQuiz] = useState(false);
+  const {avatar}=useContext(AvatarContext);
 
-  // Initialize or update conversation when node changes
   useEffect(() => {
     const node = conversationData[currentNodeId];
     
@@ -20,11 +21,20 @@ const Texting = ({ onBack }) => {
       return;
     }
 
-      if (!node.options || node.options.length === 0) {
-    setTimeout(() => setShowQuiz(true), 1000); 
-  }
+    if (!node.options || node.options.length === 0) {
+      setTimeout(() => {
+        setConversation(prev => [
+          ...prev,
+          {
+            id: prev.length + 1,
+            text: "!",
+            sender: 'them',
+            time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+          }
+        ]);
+      }, 1000);
+    }
 
-    // Add system message if conversation is empty
     if (conversation.length === 0) {
       setConversation([{
         id: 1,
@@ -38,7 +48,6 @@ const Texting = ({ onBack }) => {
   }, [currentNodeId]);
 
   const handleSelectOption = (option) => {
-    // Add user's message
     const userMessage = {
       id: conversation.length + 1,
       text: option.text,
@@ -46,22 +55,17 @@ const Texting = ({ onBack }) => {
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     };
 
-    // Update points
     if (option.points) {
       addPoints(option.points);
     }
 
-    // Update conversation
     setConversation(prev => [...prev, userMessage]);
 
-    // Handle next node after delay
     setTimeout(() => {
       if (option.next) {
         const nextNode = conversationData[option.next];
         
         if (nextNode) {
-          console.log("there is a next node");
-          // Add system reply
           setConversation(prev => [
             ...prev,
             {
@@ -74,40 +78,57 @@ const Texting = ({ onBack }) => {
           
           setCurrentNodeId(option.next);
         } else {
-          onBack(); // Exit if path is broken
+          onBack(); 
         }
-      } else {
-       setShowQuiz(true);
       }
     }, 800);
   };
 
+  const handleExclamationClick = () => {
+    setShowQuiz(true);
+  };
+
   if (showQuiz) {
-    console.log("No next node; showing quiz");
     return <Quiz onBack={() => setShowQuiz(false)} />;
   }
 
   return (
-    <div className="pixel-texting-screen">
-      <div className="pixel-conversation-container">
-        <div className="pixel-conversation">
+    <div className="pixelTextingScreen">
+      <div className='avatar'>
+        <img className='avatar face' src={`/images/avatar/faces/face${avatar.faces.current}.png`}/>
+        <img className='avatar hair' src={`/images/avatar/hair/hair${avatar.hair.current}.png`}/>
+        <img className='avatar shirts' src={`/images/avatar/shirts/shirt${avatar.shirts.current}.png`}/>
+      </div>
+      <div className="pixelConversationContainer">
+        <div className="pixelConversation">
           {conversation.map((message) => (
             <div 
               key={message.id} 
-              className={`pixel-message ${message.sender}`}
+              className={`pixelMessage ${message.sender}`}
             >
-              <div className="pixel-bubble">{message.text}</div>
-              <div className="pixel-time">{message.time}</div>
+              {message.text === "!" ? (
+                <button
+                  className="pixelBubble ChangeScreenBubble"
+                  onClick={handleExclamationClick}
+                >
+                  !
+                </button>
+              ) : (
+                <div className="pixelBubble">
+                  {message.text}
+                </div>
+              )}
+              <div className="pixelTime">{message.time}</div>
             </div>
           ))}
         </div>
 
         {currentOptions.length > 0 && (
-          <div className="pixel-options-container">
+          <div className="pixelOptionsContainer">
             {currentOptions.map((option) => (
               <button
                 key={option.id}
-                className="pixel-option-button"
+                className="pixelOptionButton"
                 onClick={() => handleSelectOption(option)}
               >
                 {option.text}
@@ -116,8 +137,6 @@ const Texting = ({ onBack }) => {
           </div>
         )}
       </div>
-        
-
     </div>
   );
 };

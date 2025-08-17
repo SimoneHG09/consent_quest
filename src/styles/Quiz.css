@@ -42,6 +42,25 @@
   min-height: 300px; /* Ensure card has enough height for content and icons */
 }
 
+.backgroundExp {
+  position: fixed; /* Covers entire screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FC7753;
+  z-index: 1000; /* Ensures it appears above .screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explanation {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  max-width: 80%;
+}
 .cardHeart {
   position: absolute;
   bottom: 50px;
@@ -82,16 +101,6 @@
   padding-right: 25px;
 }
 
-.explanation {
-  font-size: 1rem;
-  background-color: #FC7753;
-  color: #666;
-  line-height: 1.5;
-  margin-top: 20px;
-  padding-left: 15px;
-  padding-right: 25px;
-  margin-bottom: 50px;
-}
 
 .instructions {
   font-size: 0.9rem;

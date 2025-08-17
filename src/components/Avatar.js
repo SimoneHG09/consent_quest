@@ -1,22 +1,13 @@
 import "../styles/Avatar.css";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Frame from './Frame.js';
+import { AvatarContext } from './context/AvatarContext.js';
 
-const hair = React.createContext(); 
-const face = React.createContext(); 
-const shirt = React.createContext(); 
-
-//TODO Context API Video
-
-function Avatar({onContinue}) {
-    const [avatarState, setAvatarState] = useState({
-        shirts: { current: 0, total: 10 },
-        faces: {current: 0, total: 7},
-        hair: {curren:0, total:19}
-    });
+function Avatar({ onContinue }) {
+    const { avatar, setAvatar } = useContext(AvatarContext);
 
     function next(item) {
-        setAvatarState(prevState => {
+        setAvatar(prevState => {
             const nextNum = prevState[item].current + 1;
             const newCurrent = nextNum < prevState[item].total ? nextNum : 0;
             return {
@@ -30,7 +21,7 @@ function Avatar({onContinue}) {
     }
 
     function last(item) {
-        setAvatarState(prevState => {
+        setAvatar(prevState => {
             const lastNum = prevState[item].current - 1;
             const newCurrent = lastNum >= 0 ? lastNum : prevState[item].total - 1;
             return {
@@ -49,9 +40,9 @@ function Avatar({onContinue}) {
                 <Frame>
                     <div className="screenTitle">Choose your Character</div>
                     <div className="faceContainer">
-                        <div id="base" className={`base${avatarState.faces.current + 1}`}></div>
-                        <div id="shirt" className={`shirt${avatarState.shirts.current + 1}`}></div>
-                        <div id="hair" className={`hair${avatarState.hair.current + 1}`}></div>
+                        <div id="base" className={`base${avatar.faces.current}`}></div>
+                        <div id="shirt" className={`shirt${avatar.shirts.current}`}></div>
+                        <div id="hair" className={`hair${avatar.hair.current}`}></div>
                     </div>
                 </Frame>
                 <button className="nextScreen" onClick={onContinue}>Continue</button>

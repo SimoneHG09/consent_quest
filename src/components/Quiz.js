@@ -41,7 +41,7 @@ function Quiz({ onBack }) {
     } else {
       setCorrectAnswer(false);
       // Show explanation for 2 seconds, then move to next question
-      setTimeout(goToNextQuestion, 2000);
+      setTimeout(goToNextQuestion, 5000);
     }
   }, 300);
 };
@@ -76,29 +76,41 @@ const goToNextQuestion = () => {
     return <div>Loading questions...</div>;
   }
 
-  return (
-    <div className="swipeContainer">
-      <Frame>
-        <div className={`card ${transitionDirection ? `slide-${transitionDirection}` : ''}`}>
-          <div className="question">{currentQuestion.text}</div>
-            <img
-              src='/images/cards/cross.png'
-              className='cardCross'
-              />
-            <img
-              src='/images/cards/heart.png'
-              className='cardHeart'
-              />
+// ... (keep all your existing imports and hooks)
+
+return (
+  <div className="swipeContainer">
+    <Frame>
+      <div className={`card ${transitionDirection ? `slide-${transitionDirection}` : ''}`}>
+        <div className="question">{currentQuestion.text}</div>
+        <div className="buttonContainer">
+          <button 
+            className="swipeButton crossButton"
+            onClick={() => handleSwipe(1)}
+          >
+            <img className="cross" src='/images/cards/cross.png' alt="No"/>
+          </button>
+          <button 
+            className="swipeButton heartButton"
+            onClick={() => handleSwipe(-1)}
+          >
+            <img className="heart" src='/images/cards/heart.png' alt="Yes"/>
+          </button>
         </div>
-        {!correctAnswer && <div className="explanation"> {currentQuestion.explanation}</div>}
-      </Frame>
-      <div className="instructions">
-        {currentQuestion.next 
-          ? "Use ← and → arrow keys to answer" 
-          : "Last Question"}
       </div>
+      {!correctAnswer && (
+        <div className="backgroundExp">
+          <div className="explanation">{currentQuestion.explanation}</div>
+        </div>
+      )}
+    </Frame>
+    <div className="instructions">
+      {currentQuestion.next 
+        ? "Use ← and → arrow keys to answer" 
+        : "Last Question"}
     </div>
-  );
+  </div>
+);
 };
 
 export default Quiz;
