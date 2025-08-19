@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import '../styles/Quiz.css';
 import Frame from './Frame.js';
 import Badge from "./Badge.js";
-import {usePoints} from "./Points";
+import {usePoints} from "./context/Points.js";
 import quizData from "../desicions/quiz.json";
 
 function Quiz({ onBack }) {
   const [currentQuestionId, setCurrentQuestionId] = useState('1'); 
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [correctAnswer, setCorrectAnswer]= useState(true);
+  const [wrongAnswer, setWrongAnswer]= useState(true);
   const [transitionDirection, setTransitionDirection] = useState(null);
   const [showBadges, setShowBadges] = useState(false);
   const { addPoints } = usePoints();
@@ -24,6 +25,7 @@ function Quiz({ onBack }) {
 
     setCurrentQuestion(question);
     setCorrectAnswer(true);
+    setWrongAnswer(true);
   }, [currentQuestionId]);
 
  const handleSwipe = (direction) => {
@@ -35,18 +37,16 @@ function Quiz({ onBack }) {
       (direction >= 0 && currentQuestion.correct === "n");
 
     if (isCorrect) {
+      setWrongAnswer(false);
       addPoints(currentQuestion.points);
-      // Move to next question immediately if correct
-      goToNextQuestion();
+      setTimeout(goToNextQuestion, 5000);
     } else {
       setCorrectAnswer(false);
-      // Show explanation for 2 seconds, then move to next question
       setTimeout(goToNextQuestion, 5000);
     }
   }, 300);
 };
 
-// Helper function to handle question transition
 const goToNextQuestion = () => {
   if (currentQuestion.next) {
     setCurrentQuestionId(currentQuestion.next);
@@ -76,10 +76,8 @@ const goToNextQuestion = () => {
     return <div>Loading questions...</div>;
   }
 
-// ... (keep all your existing imports and hooks)
-
 return (
-  <div className="swipeContainer">
+  <div className="swipeContainerQuiz">
     <Frame>
       <div className={`card ${transitionDirection ? `slide-${transitionDirection}` : ''}`}>
         <div className="question">{currentQuestion.text}</div>
@@ -100,6 +98,11 @@ return (
       </div>
       {!correctAnswer && (
         <div className="backgroundExp">
+          <div className="explanation">{currentQuestion.explanation}</div>
+        </div>
+      )}
+      {!wrongAnswer && (
+        <div className="backgroundCor">
           <div className="explanation">{currentQuestion.explanation}</div>
         </div>
       )}

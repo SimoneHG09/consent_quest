@@ -6,6 +6,7 @@
   align-items: center;
   min-height: 100vh;
   background-color: rgb(166, 234, 247);
+  z-index: 50;
 }
 
 .arrowContainer {
@@ -243,7 +244,7 @@
 .nextScreen{
   position: absolute;
   right: 225px;
-  bottom: 100px;
+  bottom: 200px;
   width: 100px;
   height: 50px;
   background-size: contain;

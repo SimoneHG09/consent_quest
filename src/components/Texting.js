@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
 import '../styles/Texting.css';
-import { usePoints } from "./Points";
+import { usePoints } from "./context/Points.js";
 import conversationData from '../desicions/scenario1.json'; 
 import Quiz from "./Quiz";
 import { AvatarContext } from './context/AvatarContext.js';
+import { SwipeCharacter } from './context/SwipeCharacter';
 
 const Texting = ({ onBack }) => {
   const [currentNodeId, setCurrentNodeId] = useState('opening');
@@ -12,6 +13,7 @@ const Texting = ({ onBack }) => {
   const { addPoints } = usePoints();
   const [showQuiz, setShowQuiz] = useState(false);
   const {avatar}=useContext(AvatarContext);
+  const { character } = useContext(SwipeCharacter);
 
   useEffect(() => {
     const node = conversationData[currentNodeId];
@@ -27,7 +29,7 @@ const Texting = ({ onBack }) => {
           ...prev,
           {
             id: prev.length + 1,
-            text: "!",
+            text: "Click to continue!",
             sender: 'them',
             time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
           }
@@ -94,11 +96,15 @@ const Texting = ({ onBack }) => {
 
   return (
     <div className="pixelTextingScreen">
-      <div className='avatar'>
-        <img className='avatar face' src={`/images/avatar/faces/face${avatar.faces.current}.png`}/>
-        <img className='avatar hair' src={`/images/avatar/hair/hair${avatar.hair.current}.png`}/>
-        <img className='avatar shirts' src={`/images/avatar/shirts/shirt${avatar.shirts.current}.png`}/>
-      </div>
+       <div className="character-display">
+      {character?.image && (
+        <img 
+          src={character.image} 
+          alt={character.name || 'Character'} 
+          className="character-image"
+        />
+      )}
+    </div>
       <div className="pixelConversationContainer">
         <div className="pixelConversation">
           {conversation.map((message) => (
@@ -106,12 +112,12 @@ const Texting = ({ onBack }) => {
               key={message.id} 
               className={`pixelMessage ${message.sender}`}
             >
-              {message.text === "!" ? (
+              {message.text === "Click to continue!" ? (
                 <button
                   className="pixelBubble ChangeScreenBubble"
                   onClick={handleExclamationClick}
                 >
-                  !
+                  Click to continue!
                 </button>
               ) : (
                 <div className="pixelBubble">
@@ -121,6 +127,11 @@ const Texting = ({ onBack }) => {
               <div className="pixelTime">{message.time}</div>
             </div>
           ))}
+        <div className='avatar'>
+        <img className='avatar face' src={`/images/avatar/faces/face${avatar.faces.current}.png`}/>
+        <img className='avatar hair' src={`/images/avatar/hair/hair${avatar.hair.current}.png`}/>
+        <img className='avatar shirts' src={`/images/avatar/shirts/shirt${avatar.shirts.current}.png`}/>
+      </div>
         </div>
 
         {currentOptions.length > 0 && (

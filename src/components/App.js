@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PointsProvider, usePoints } from './Points';
+import { PointsProvider, usePoints } from './context/Points';
 import Avatar from './Avatar';
 import Swipe from './Swipe';
 import Texting from './Texting';
@@ -7,6 +7,7 @@ import StartScreen from "./StartScreen";
 import Quiz from "./Quiz";
 import '../styles/App.css';
 import { AvatarProvider } from './context/AvatarContext';
+import { CharacterProvider } from './context/SwipeCharacter';
 
 
 function App() {
@@ -14,9 +15,9 @@ function App() {
 
   return (
     <AvatarProvider>
+    <CharacterProvider>
     <PointsProvider>
       <div className="app">
-
         {currentView === 'startScreen' && (
           <StartScreen onContinue={() => setCurrentView('avatar')} />
         )}
@@ -48,9 +49,11 @@ function App() {
           />
           </>
         )}
-        <PointsDisplay />
+        
       </div>
+      <PointsDisplay />
     </PointsProvider>
+    </CharacterProvider>
     </AvatarProvider>
   );
 }
@@ -64,5 +67,6 @@ const PointsDisplay = () => {
     </div>
   );
 };
+
 
 export default App;

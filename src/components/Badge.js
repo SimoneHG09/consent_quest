@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Confetti from 'react-confetti';
 import '../styles/Badge.css';
-import { usePoints } from './Points';
+import { usePoints } from './context/Points.js';
+import { AvatarContext } from './context/AvatarContext.js';
 
 function Badge() {
   const { points } = usePoints();
@@ -12,6 +13,7 @@ function Badge() {
     height: window.innerHeight,
   });
   const [runConfetti, setRunConfetti] = useState(true);
+  const {avatar}=useContext(AvatarContext);
 
   // Handle badge level
   useEffect(() => {
@@ -40,6 +42,7 @@ function Badge() {
 
   return (
     <div className="badge-screen">
+     
       <Confetti
         width={windowSize.width}
         height={windowSize.height}
@@ -50,12 +53,18 @@ function Badge() {
         drawShape={drawSquare}
       />
       
-      <div className="badge-container">
+      <div className="badgeContainer">
         <img 
           src={`/images/badges/badge${badge}.png`}
           alt={`${badge} Badge`}
           className="badge-image"
         />
+        <div className='avatarBadge'>
+        <img className='avatarBadge face' src={`/images/avatar/faces/face${avatar.faces.current}.png`}/>
+        <img className='avatarBadge hair' src={`/images/avatar/hair/hair${avatar.hair.current}.png`}/>
+        <img className='avatarBadge shirts' src={`/images/avatar/shirts/shirt${avatar.shirts.current}.png`}/>
+        </div>
+        You have {points}/60 points!
       </div>
     </div>
   );

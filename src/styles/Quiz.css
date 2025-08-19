@@ -1,55 +1,53 @@
-/* Phone frame styles (existing) */
-.phoneContainer {
-  position: relative;
-  width: fit-content;
-  height: fit-content;
-  z-index: 1;
-}
 
-.frameImage {
-  width: 750px;
-  height: auto;
-  z-index: 1;
-  position: relative;
-}
-
-.screen {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: 79%;
-  background: white;
-  overflow: hidden;
-  z-index: -1;
-  border-radius: 5px;
+.swipeContainerQuiz {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
+  text-align: center;
+  padding: 0; /* Changed from 20px 30px */
+  box-sizing: border-box;
+  overflow-y: auto;
+  justify-content: center; /* Changed from flex-start */
+  background-color: #a6eaf7;
 }
 
-/* Add these new styles to your existing CSS */
 .card {
-  position: relative; /* Add this to make absolute positioning work for child elements */
-  width: 100%;
+  position: relative;
+  width: 90%; /* Changed from 100% */
   background: white;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
   flex-grow: 1;
-  min-height: 300px; /* Ensure card has enough height for content and icons */
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .backgroundExp {
-  position: fixed; /* Covers entire screen */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: #FC7753;
-  z-index: 1000; /* Ensures it appears above .screen */
+  z-index: 1000; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundCor{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #DBD56E;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,19 +75,7 @@
   width: 50px;
 }
 
-/* Update the swipeContainer to ensure proper spacing */
-.swipeContainer {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px 30px;
-  box-sizing: border-box;
-  overflow-y: auto;
-  justify-content: flex-start; /* Changed from space-between to flex-start */
-}
+
 
 
 .question {
