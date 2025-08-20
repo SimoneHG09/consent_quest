@@ -1,6 +1,6 @@
 import '../styles/StartScreen.css';
 
-function StartScreen({onContinue}) {
+function StartScreen({onEnterAvatar}) {
   return (
     <div className="startScreenContainer">
       <h1 className="startScreenTitle">Instructions</h1>
@@ -16,7 +16,7 @@ function StartScreen({onContinue}) {
 
       <button 
         className="startScreenButton" 
-        onClick={onContinue}
+        onClick={onEnterAvatar}
       >
         START GAME
       </button>

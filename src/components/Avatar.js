@@ -2,9 +2,13 @@ import "../styles/Avatar.css";
 import React, { useState, useContext } from "react";
 import Frame from './Frame.js';
 import { AvatarContext } from './context/AvatarContext.js';
+import { usePoints } from './context/Points';
 
-function Avatar({ onContinue }) {
+function Avatar({ onEnterSwipe }) {
     const { avatar, setAvatar } = useContext(AvatarContext);
+    const {resetPoints} = usePoints();
+
+    resetPoints();
 
     function next(item) {
         setAvatar(prevState => {
@@ -45,7 +49,7 @@ function Avatar({ onContinue }) {
                         <div id="hair" className={`hair${avatar.hair.current}`}></div>
                     </div>
                 </Frame>
-                <button className="nextScreen" onClick={onContinue}>Continue</button>
+                <button className="nextScreen" onClick={onEnterSwipe}>Continue</button>
                 <button 
                     className="arrowButton hairLeft" 
                     onClick={() => last("hair")}

@@ -1,29 +1,29 @@
 {
   "1": {
-    "text": "Is it okay to send a sexy pic if they haven’t replied to your last message?",
+    "text": "Is it enough to ask for consent just once at the beginning of an interaction?",
     "correct": "n",
     "points": 5,
     "next": 2,
-    "explanation": "Consent must be explicit and continuous — silence is not consent."
+    "explanation": "Consent should be continuous and checked in on throughout the interaction, not just once."
   },
   "2": {
-    "text": "Can consent change after someone agrees to meet in person?",
-    "correct": "y",
-    "points": 5,
-    "next": 3,
-    "explanation": "Consent is ongoing and can be withdrawn at any time."
-  },
-  "3": {
-    "text": "If someone says ‘maybe’, is that considered consent?",
+    "text": "If someone doesn’t reply to your request before sending a picture, is that considered consent?",
     "correct": "n",
     "points": 5,
-    "next": 4,
-    "explanation": "Consent should be enthusiastic and clear — ‘maybe’ is not a yes."
+    "next": 3,
+    "explanation": "Silence or non-response does not equal consent. A clear 'yes' is needed."
   },
-  "4": {
-    "text": "Is it okay to ask directly if someone is into something before meeting?",
+  "3": {
+    "text": "Can consent be withdrawn at any time, even after an activity has started?",
     "correct": "y",
     "points": 5,
-    "explanation": "Clear communication builds trust and ensures everyone is comfortable."
+    "next": 4,
+    "explanation": "Yes, anyone can change their mind at any time, and that choice must be respected immediately."
+  },
+  "4": {
+    "text": "Is it important to talk about boundaries before meeting someone in person?",
+    "correct": "y",
+    "points": 5,
+    "explanation": "Yes, discussing boundaries beforehand sets expectations and makes the interaction safer and more enjoyable."
   }
 }

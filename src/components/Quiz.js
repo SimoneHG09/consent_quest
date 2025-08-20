@@ -4,25 +4,19 @@ import Frame from './Frame.js';
 import Badge from "./Badge.js";
 import {usePoints} from "./context/Points.js";
 import quizData from "../desicions/quiz.json";
+import { useRounds} from "./context/Rounds.js"
 
-function Quiz({ onBack }) {
+function Quiz({ onEnterBadge }) {
   const [currentQuestionId, setCurrentQuestionId] = useState('1'); 
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [correctAnswer, setCorrectAnswer]= useState(true);
   const [wrongAnswer, setWrongAnswer]= useState(true);
   const [transitionDirection, setTransitionDirection] = useState(null);
-  const [showBadges, setShowBadges] = useState(false);
   const { addPoints } = usePoints();
+  const {addRound}= useRounds();
 
   useEffect(() => {
     const question = quizData[currentQuestionId];
-    
-    if (!question) {
-      console.error(`Question ${currentQuestionId} not found`);
-      setShowBadges(true);
-      return;
-    }
-
     setCurrentQuestion(question);
     setCorrectAnswer(true);
     setWrongAnswer(true);
@@ -51,7 +45,8 @@ const goToNextQuestion = () => {
   if (currentQuestion.next) {
     setCurrentQuestionId(currentQuestion.next);
   } else {
-    setShowBadges(true);
+    addRound();
+    onEnterBadge();
   }
   setTransitionDirection(null);
 };
@@ -68,9 +63,6 @@ const goToNextQuestion = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [currentQuestion]); 
   
-  if (showBadges) {
-    return <Badge onBack={onBack} />;
-  }
 
   if (!currentQuestion) {
     return <div>Loading questions...</div>;
@@ -109,7 +101,7 @@ return (
     </Frame>
     <div className="instructions">
       {currentQuestion.next 
-        ? "Use ← and → arrow keys to answer" 
+        ? "Use the ← and → arrow keys or buttons to answer." 
         : "Last Question"}
     </div>
   </div>

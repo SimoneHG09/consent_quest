@@ -4,10 +4,9 @@ import Texting from './Texting';
 import Frame from './Frame';
 import { SwipeCharacter } from './context/SwipeCharacter';
 
-function Swipe() {
+function Swipe({onEnterTexting}) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [transitionDirection, setTransitionDirection] = useState(null);
-  const [showTexting, setShowTexting] = useState(false);
   const { character, setCharacter } = useContext(SwipeCharacter);
 
   const cards = [
@@ -20,7 +19,7 @@ const handleSwipe = (direction) => {
     
     setTimeout(() => {
       if (direction < 0) { 
-        setShowTexting(true);
+         onEnterTexting();
         const currentCard = cards[currentIndex];
         setCharacter({
         image: currentCard.image,
@@ -46,9 +45,6 @@ const handleSwipe = (direction) => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  if (showTexting) {
-    return <Texting onBack={() => setShowTexting(false)} />;
-  }
 
   return (
     <div className="swipeContainer">
@@ -80,8 +76,8 @@ const handleSwipe = (direction) => {
       </Frame>
       <div className="instructions">
         {currentIndex === cards.length - 1 
-          ? "Press → or click × to start texting" 
-          : "Press ← or click ♥ to see next profile"}
+          ? "Use the ← and → arrow keys or buttons to swipe."
+          : "Swipe right to start texting."}
       </div>
     </div>
   );

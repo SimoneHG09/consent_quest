@@ -1,424 +1,378 @@
 {
-    "opening": {
-        "message": "\ud83d\udc4b Hey you! Cute profile \ud83d\ude09 Sooo... what brings you here tonight?",
-        "options": [
-            {
-                "id": 1,
-                "text": "Just browsing, seeing what\u2019s out there. You?",
-                "points": 2,
-                "next": "browsing_response"
-            },
-            {
-                "id": 2,
-                "text": "Looking for a fun time... maybe with you \ud83d\ude0f",
-                "points": 4,
-                "next": "flirty_response"
-            },
-            {
-                "id": 3,
-                "text": "Honestly? Kinda bored. But you seem cool!",
-                "points": 3,
-                "next": "bored_response"
-            },
-            {
-                "id": 4,
-                "text": "Just downloaded this, no idea what I\u2019m doing lol",
-                "points": 1,
-                "next": "newbie_response"
-            }
-        ]
-    },
-    "browsing_response": {
-        "message": "Haha same! Sometimes it's just nice to chat with someone cute \ud83d\udcac Sooo... what kinda chats you into?",
-        "options": [
-            {
-                "id": 5,
-                "text": "Something playful but respectful. I'm not in a rush.",
-                "points": 6,
-                "next": "respectful_chat"
-            },
-            {
-                "id": 6,
-                "text": "I like a bit of naughty banter if you\u2019re up for it \ud83d\ude09",
-                "points": 3,
-                "next": "naughty_banter"
-            },
-            {
-                "id": 7,
-                "text": "Honestly, I\u2019m more about real convos than just flirting.",
-                "points": 5,
-                "next": "real_convo"
-            },
-            {
-                "id": 8,
-                "text": "Anything really. Wanna swap pics?",
-                "points": 1,
-                "next": "swap_pics"
-            }
-        ]
-    },
-    "flirty_response": {
-        "message": "Ooh straight to the point huh? \ud83d\ude0f I like a man who knows what he wants. But hey, gotta ask\u2014what does fun mean to you?",
-        "options": [
-            {
-                "id": 9,
-                "text": "A cheeky convo to start... then see where it goes?",
-                "points": 5,
-                "next": "see_where_it_goes"
-            },
-            {
-                "id": 10,
-                "text": "I mean... some steamy pics wouldn\u2019t hurt \ud83d\ude1c",
-                "points": 2,
-                "next": "pics_consent"
-            },
-            {
-                "id": 11,
-                "text": "Honestly? A cuddle and some solid chats lol",
-                "points": 6,
-                "next": "cuddle_chats"
-            },
-            {
-                "id": 12,
-                "text": "Let\u2019s just meet up and skip the talking \ud83d\ude0f",
-                "points": 0,
-                "next": "skip_talking"
-            }
-        ]
-    },
-    "bored_response": {
-        "message": "Well lucky for you, I\u2019m a professional boredom buster \ud83d\ude0e You into deep convos, dirty jokes, or random memes?",
-        "options": [
-            {
-                "id": 13,
-                "text": "I\u2019m all about the deep convos tbh.",
-                "points": 6,
-                "next": "real_convo"
-            },
-            {
-                "id": 14,
-                "text": "Dirty jokes all day \ud83d\ude0f",
-                "points": 3,
-                "next": "naughty_banter"
-            },
-            {
-                "id": 15,
-                "text": "Memes are my love language \ud83d\ude02",
-                "points": 4,
-                "next": "memes_path"
-            },
-            {
-                "id": 16,
-                "text": "Depends\u2014what\u2019s in it for me? \ud83d\ude09",
-                "points": 1,
-                "next": "pics_consent"
-            }
-        ]
-    },
-    "newbie_response": {
-        "message": "Aww welcome to the jungle \ud83c\udf34 You\u2019ll fit in just fine. Wanna take it slow or dive into the deep end?",
-        "options": [
-            {
-                "id": 17,
-                "text": "Let\u2019s take it slow. Get to know each other first?",
-                "points": 7,
-                "next": "respectful_chat"
-            },
-            {
-                "id": 18,
-                "text": "Deep end baby. Hit me with your best line \ud83d\ude0f",
-                "points": 3,
-                "next": "naughty_banter"
-            },
-            {
-                "id": 19,
-                "text": "Slow is fine\u2026 but maybe some cute selfies? \ud83d\ude07",
-                "points": 4,
-                "next": "pics_consent"
-            },
-            {
-                "id": 20,
-                "text": "Honestly just looking for a hookup tbh.",
-                "points": 0,
-                "next": "skip_talking"
-            }
-        ]
-    },
-    "respectful_chat": {
-        "message": "That\u2019s honestly refreshing. So let\u2019s talk boundaries... what\u2019s something that\u2019s a definite no for you?",
-        "options": [
-            {
-                "id": 21,
-                "text": "Unsolicited pics. I like being asked first.",
-                "points": 10,
-                "next": "talk_consent"
-            },
-            {
-                "id": 22,
-                "text": "Being rushed into meeting. Let\u2019s vibe first.",
-                "points": 9,
-                "next": "talk_consent"
-            },
-            {
-                "id": 23,
-                "text": "People who ghost. Just be real with me.",
-                "points": 8,
-                "next": "talk_consent"
-            },
-            {
-                "id": 24,
-                "text": "Honestly not into anything super serious rn.",
-                "points": 5,
-                "next": "talk_consent"
-            }
-        ]
-    },
-    "naughty_banter": {
-        "message": "You cheeky thing \ud83d\ude08 But real talk\u2014are you cool with chatting about boundaries before we get spicy?",
-        "options": [
-            {
-                "id": 25,
-                "text": "Absolutely! Respect is hot \ud83d\udd25",
-                "points": 10,
-                "next": "talk_consent"
-            },
-            {
-                "id": 26,
-                "text": "I guess... but only if we *have* to \ud83d\ude2c",
-                "points": 4,
-                "next": "talk_consent"
-            },
-            {
-                "id": 27,
-                "text": "Hmm... I usually just go with the flow.",
-                "points": 3,
-                "next": "talk_consent"
-            },
-            {
-                "id": 28,
-                "text": "That sounds like a mood killer tbh \ud83d\ude05",
-                "points": 1,
-                "next": "ghosted"
-            }
-        ]
-    },
-    "real_convo": {
-        "message": "Love that. Can I ask\u2014how do you feel about consent stuff online? Is it something you usually talk about?",
-        "options": [
-            {
-                "id": 29,
-                "text": "Definitely. Clear consent is a must.",
-                "points": 10,
-                "next": "talk_consent"
-            },
-            {
-                "id": 30,
-                "text": "If it feels right, I go for it\u2026 but I try to read the room.",
-                "points": 6,
-                "next": "talk_consent"
-            },
-            {
-                "id": 31,
-                "text": "Not usually, I just wait for a \u2018yes\u2019 or \u2018no\u2019.",
-                "points": 4,
-                "next": "talk_consent"
-            },
-            {
-                "id": 32,
-                "text": "I don\u2019t really think about it much, tbh.",
-                "points": 1,
-                "next": "ghosted"
-            }
-        ]
-    },
-    "swap_pics": {
-        "message": "Woah there \ud83d\ude05 Can I ask first? I like when things feel mutual.",
-        "options": [
-            {
-                "id": 33,
-                "text": "Of course! You into asking for consent too?",
-                "points": 10,
-                "next": "talk_consent"
-            },
-            {
-                "id": 34,
-                "text": "Sure, just figured you\u2019d be cool with it!",
-                "points": 4,
-                "next": "talk_consent"
-            },
-            {
-                "id": 35,
-                "text": "Pics are kinda standard here though?",
-                "points": 3,
-                "next": "talk_consent"
-            },
-            {
-                "id": 36,
-                "text": "Ugh, never mind then \ud83d\ude44",
-                "points": 0,
-                "next": "ghosted"
-            }
-        ]
-    },
-    "talk_consent": {
-        "message": "Love that you\u2019re into talking about it. Consent is sexy, tbh. I like when things are clear, mutual, and ongoing \ud83d\udd04",
-        "options": [
-            {
-                "id": 37,
-                "text": "Same here. Enthusiastic and clear always \ud83d\udcaf",
-                "points": 10,
-                "next": "meet_up"
-            },
-            {
-                "id": 38,
-                "text": "Yeah, no grey areas. I always check in.",
-                "points": 9,
-                "next": "meet_up"
-            },
-            {
-                "id": 39,
-                "text": "Cool cool. So, we meeting up or? \ud83d\ude0f",
-                "points": 5,
-                "next": "ends_online"
-            },
-            {
-                "id": 40,
-                "text": "You\u2019re making it sound like a job interview lol",
-                "points": 1,
-                "next": "ghosted"
-            }
-        ]
-    },
-    "meet_up": {
-        "message": "You\u2019re giving respectful, hot, and thoughtful vibes \ud83d\ude0d Wanna grab a drink and see where the night takes us?",
-        "options": []
-    },
-    "ends_online": {
-        "message": "Let\u2019s keep chatting for now. You\u2019re fun, and I\u2019m vibing, but let\u2019s not rush it \ud83d\udcac\u2728",
-        "options": []
-    },
-    "ghosted": {
-        "message": "*You\u2019ve been unmatched.* \u274c Maybe next time bring a bit more respect to the convo.",
-        "options": []
-    },
-    "skip_talking": {
-        "message": "Hmm... I\u2019m more into guys who take their time and check in. Take care \u270c\ufe0f",
-        "options": []
-    },
-    "pics_consent": {
-        "message": "I don\u2019t mind sharing pics, but I always ask first. You cool with that?",
-        "options": [
-            {
-                "id": 41,
-                "text": "Totally! Asking is sexy \ud83d\ude0f",
-                "points": 8,
-                "next": "talk_consent"
-            },
-            {
-                "id": 42,
-                "text": "Yeah yeah, just send already \ud83d\ude05",
-                "points": 2,
-                "next": "ghosted"
-            },
-            {
-                "id": 43,
-                "text": "Okay, ask me something then \ud83d\ude07",
-                "points": 6,
-                "next": "talk_consent"
-            },
-            {
-                "id": 44,
-                "text": "This is too much effort \ud83d\ude11",
-                "points": 0,
-                "next": "ghosted"
-            }
-        ]
-    },
-    "see_where_it_goes": {
-        "message": "Best way to be \ud83e\udde1 You okay with checking in before things get spicy?",
-        "options": [
-            {
-                "id": 45,
-                "text": "Always! Consent is \ud83d\udd11",
-                "points": 10,
-                "next": "talk_consent"
-            },
-            {
-                "id": 46,
-                "text": "Sure, if it makes you feel better \ud83d\ude0f",
-                "points": 4,
-                "next": "talk_consent"
-            },
-            {
-                "id": 47,
-                "text": "I guess\u2026 but sometimes it kills the mood.",
-                "points": 2,
-                "next": "ghosted"
-            },
-            {
-                "id": 48,
-                "text": "I don\u2019t do check-ins. We\u2019re adults.",
-                "points": 0,
-                "next": "ghosted"
-            }
-        ]
-    },
-    "cuddle_chats": {
-        "message": "A soft king \ud83d\ude0c That\u2019s kinda hot ngl. Wanna talk more about what you like and don\u2019t like?",
-        "options": [
-            {
-                "id": 49,
-                "text": "Yes please. Communication is \ud83d\udd25",
-                "points": 9,
-                "next": "talk_consent"
-            },
-            {
-                "id": 50,
-                "text": "Sure, but only if it gets us cuddling faster \ud83d\ude01",
-                "points": 4,
-                "next": "talk_consent"
-            },
-            {
-                "id": 51,
-                "text": "I just go with whatever happens tbh.",
-                "points": 3,
-                "next": "talk_consent"
-            },
-            {
-                "id": 52,
-                "text": "Bit much for cuddles, don\u2019t you think?",
-                "points": 0,
-                "next": "ghosted"
-            }
-        ]
-    },
-    "memes_path": {
-        "message": "Memes > Men \ud83d\ude02 But you might be the exception. Let\u2019s talk consent memes: Green flag or cringe?",
-        "options": [
-            {
-                "id": 53,
-                "text": "Green flag all day \ud83d\ude4c",
-                "points": 9,
-                "next": "talk_consent"
-            },
-            {
-                "id": 54,
-                "text": "Depends. Some are funny, some are preachy.",
-                "points": 6,
-                "next": "talk_consent"
-            },
-            {
-                "id": 55,
-                "text": "Cringe tbh. Can we just flirt instead?",
-                "points": 2,
-                "next": "ghosted"
-            },
-            {
-                "id": 56,
-                "text": "Memes about consent? That\u2019s a thing?",
-                "points": 1,
-                "next": "ghosted"
-            }
-        ]
-    }
+  "opening": {
+    "message": "Hey handsome 👋 just saw your profile… you look fun 😏. How’s your night going?",
+    "options": [
+      {
+        "id": 1,
+        "text": "Haha thanks 😊 just chilling, how about you?",
+        "points": 5,
+        "next": "smalltalk1"
+      },
+      {
+        "id": 2,
+        "text": "Straight to the point huh? I like that 😏",
+        "points": 4,
+        "next": "smalltalk1"
+      },
+      {
+        "id": 3,
+        "text": "Lol not sure how to answer that…",
+        "points": 1,
+        "next": "smalltalk1"
+      },
+      {
+        "id": 4,
+        "text": "Night’s good, just browsing. You?",
+        "points": 3,
+        "next": "smalltalk1"
+      }
+    ]
+  },
+  "smalltalk1": {
+    "message": "I’m just winding down after a long day. Honestly, scrolling here is kinda my guilty pleasure 😂. What do you usually come on here for?",
+    "options": [
+      {
+        "id": 5,
+        "text": "Mostly to chat, make friends, maybe more if it clicks ✨",
+        "points": 6,
+        "next": "smalltalk2"
+      },
+      {
+        "id": 6,
+        "text": "Tbh? Mostly hookups, not gonna lie.",
+        "points": 2,
+        "next": "smalltalk2"
+      },
+      {
+        "id": 7,
+        "text": "Just seeing who’s around, no expectations 😇",
+        "points": 4,
+        "next": "smalltalk2"
+      },
+      {
+        "id": 8,
+        "text": "Honestly, I’m not even sure yet 🤔",
+        "points": 3,
+        "next": "smalltalk2"
+      }
+    ]
+  },
+  "smalltalk2": {
+    "message": "Fair enough 😉. I feel like vibes matter more than labels anyway. Speaking of vibes, you seem chill. What do you find attractive in a guy?",
+    "options": [
+      {
+        "id": 9,
+        "text": "Confidence, kindness, and someone who asks before pushing things forward 👌",
+        "points": 8,
+        "next": "topic_intro"
+      },
+      {
+        "id": 10,
+        "text": "Good looks and a sense of humor 😍",
+        "points": 4,
+        "next": "topic_intro"
+      },
+      {
+        "id": 11,
+        "text": "Someone who just *gets it* without needing to talk too much.",
+        "points": 1,
+        "next": "topic_intro"
+      },
+      {
+        "id": 12,
+        "text": "I like honesty… and good chats that can lead somewhere 😉",
+        "points": 6,
+        "next": "topic_intro"
+      }
+    ]
+  },
+  "topic_intro": {
+    "message": "I hear that 😏. Speaking of moving forward… I like getting a little flirty on here. Is that okay with you?",
+    "options": [
+      {
+        "id": 13,
+        "text": "Yes, but I appreciate when you check in like that ❤️",
+        "points": 10,
+        "next": "consent1"
+      },
+      {
+        "id": 14,
+        "text": "Sure, no need to ask, I’m fine with it.",
+        "points": 3,
+        "next": "consent1"
+      },
+      {
+        "id": 15,
+        "text": "Hmm, maybe, depends on how it goes.",
+        "points": 5,
+        "next": "consent1"
+      },
+      {
+        "id": 16,
+        "text": "Not really into that right now, sorry.",
+        "points": 0,
+        "next": "decline1"
+      }
+    ]
+  },
+  "consent1": {
+    "message": "Cool 😌. Just so you know, I like when guys tell me directly what they’re into instead of guessing. How do you usually handle that?",
+    "options": [
+      {
+        "id": 17,
+        "text": "I ask and wait for a clear yes before anything. Keeps it fun and safe ✨",
+        "points": 10,
+        "next": "consent2"
+      },
+      {
+        "id": 18,
+        "text": "Tbh, I usually just go with the flow and see if they react.",
+        "points": 2,
+        "next": "consent2"
+      },
+      {
+        "id": 19,
+        "text": "I try to read between the lines but I know it’s risky.",
+        "points": 4,
+        "next": "consent2"
+      },
+      {
+        "id": 20,
+        "text": "I don’t think about it too much.",
+        "points": 0,
+        "next": "ghosted1"
+      }
+    ]
+  },
+  "consent2": {
+    "message": "I like that. Honestly, a clear yes is such a turn-on 😍. Btw, how do you feel about pics? Some people just send without asking.",
+    "options": [
+      {
+        "id": 21,
+        "text": "I only send if they ask first—or if I ask and get a yes 👍",
+        "points": 10,
+        "next": "consent3"
+      },
+      {
+        "id": 22,
+        "text": "I usually send right away. It’s normal here.",
+        "points": 1,
+        "next": "consent3"
+      },
+      {
+        "id": 23,
+        "text": "I ask, but if they don’t reply I might still send.",
+        "points": 2,
+        "next": "consent3"
+      },
+      {
+        "id": 24,
+        "text": "I don’t really like trading pics at all.",
+        "points": 3,
+        "next": "consent3"
+      }
+    ]
+  },
+  "consent3": {
+    "message": "Yeah, pics can be fun but only when both are into it 😌. How do you know when to keep checking in?",
+    "options": [
+      {
+        "id": 25,
+        "text": "I keep asking if it’s still good as we go. Consent’s not just one-time.",
+        "points": 10,
+        "next": "consent4"
+      },
+      {
+        "id": 26,
+        "text": "If they don’t say no, I assume it’s fine.",
+        "points": 1,
+        "next": "consent4"
+      },
+      {
+        "id": 27,
+        "text": "I ask once at the start and leave it at that.",
+        "points": 3,
+        "next": "consent4"
+      },
+      {
+        "id": 28,
+        "text": "I just mirror what they do.",
+        "points": 4,
+        "next": "consent4"
+      }
+    ]
+  },
+  "consent4": {
+    "message": "That’s hot. You seem really respectful 🙌. If we were to meet in person, how would you bring up boundaries?",
+    "options": [
+      {
+        "id": 29,
+        "text": "I’d talk about what’s cool and not cool before we meet. Makes things smoother 😎",
+        "points": 10,
+        "next": "consent5"
+      },
+      {
+        "id": 30,
+        "text": "I’d wait until things get physical.",
+        "points": 3,
+        "next": "consent5"
+      },
+      {
+        "id": 31,
+        "text": "I wouldn’t bring it up unless there’s a problem.",
+        "points": 0,
+        "next": "ghosted2"
+      },
+      {
+        "id": 32,
+        "text": "I’d hint at it but not too directly.",
+        "points": 4,
+        "next": "consent5"
+      }
+    ]
+  },
+  "consent5": {
+    "message": "Love that you’re upfront 💯. So if I said I wanted to stop in the middle, how would you react?",
+    "options": [
+      {
+        "id": 33,
+        "text": "I’d stop immediately, no questions asked ❤️",
+        "points": 10,
+        "next": "consent6"
+      },
+      {
+        "id": 34,
+        "text": "I’d try to convince you to keep going.",
+        "points": 0,
+        "next": "decline2"
+      },
+      {
+        "id": 35,
+        "text": "I’d pause and ask why before deciding.",
+        "points": 2,
+        "next": "consent6"
+      },
+      {
+        "id": 36,
+        "text": "I’d stop but probably feel annoyed.",
+        "points": 3,
+        "next": "consent6"
+      }
+    ]
+  },
+  "consent6": {
+    "message": "That’s reassuring 🙏. Consent doesn’t kill the mood, it keeps it sexy. Wanna talk about meeting up sometime?",
+    "options": [
+      {
+        "id": 37,
+        "text": "Yes, but only if we keep things clear and check in along the way 😌",
+        "points": 10,
+        "next": "meetup1"
+      },
+      {
+        "id": 38,
+        "text": "Sure, but let’s not overcomplicate it.",
+        "points": 3,
+        "next": "meetup1"
+      },
+      {
+        "id": 39,
+        "text": "Maybe, I’m not sure yet.",
+        "points": 2,
+        "next": "meetup1"
+      },
+      {
+        "id": 40,
+        "text": "Nah, I’m not really into meeting from apps.",
+        "points": 0,
+        "next": "end_online"
+      }
+    ]
+  },
+  "meetup1": {
+    "message": "Cool 😏. How do you feel about sharing details like where and when to meet?",
+    "options": [
+      {
+        "id": 41,
+        "text": "I’d agree on a public place first, then see if we vibe before moving private 👌",
+        "points": 10,
+        "next": "meetup2"
+      },
+      {
+        "id": 42,
+        "text": "Straight to my place or yours 😏",
+        "points": 1,
+        "next": "meetup2"
+      },
+      {
+        "id": 43,
+        "text": "I’d go with whatever you suggest.",
+        "points": 3,
+        "next": "meetup2"
+      },
+      {
+        "id": 44,
+        "text": "I’d rather not plan too much.",
+        "points": 2,
+        "next": "meetup2"
+      }
+    ]
+  },
+  "meetup2": {
+    "message": "That sounds smart 😇. Last thing—if either of us changes our mind last minute, how should we handle it?",
+    "options": [
+      {
+        "id": 45,
+        "text": "Totally fine, no pressure. A no is always respected ❤️",
+        "points": 10,
+        "next": "in_person_meeting"
+      },
+      {
+        "id": 46,
+        "text": "I’d be upset but I guess I’d accept it.",
+        "points": 3,
+        "next": "in_person_meeting"
+      },
+      {
+        "id": 47,
+        "text": "I’d be annoyed, honestly.",
+        "points": 1,
+        "next": "decline3"
+      },
+      {
+        "id": 48,
+        "text": "I wouldn’t really care either way.",
+        "points": 4,
+        "next": "in_person_meeting"
+      }
+    ]
+  },
+  "decline1": {
+    "message": "All good, thanks for being clear. Have a nice night ✨",
+    "options": []
+  },
+  "decline2": {
+    "message": "Hmm… that doesn’t really work for me. I think we’re not a match. Take care 👋",
+    "options": []
+  },
+  "decline3": {
+    "message": "Yeah… I don’t think this will work. Good luck out there ✨",
+    "options": []
+  },
+  "ghosted1": {
+    "message": "…",
+    "options": []
+  },
+  "ghosted2": {
+    "message": "Hey? 👀 …",
+    "options": []
+  },
+  "end_online": {
+    "message": "That’s cool. Let’s just keep chatting here then 😌",
+    "options": []
+  },
+  "in_person_meeting": {
+    "message": "Perfect 🙌. Let’s plan something real soon then 😏",
+    "options": []
+  }
 }

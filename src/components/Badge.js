@@ -3,8 +3,9 @@ import Confetti from 'react-confetti';
 import '../styles/Badge.css';
 import { usePoints } from './context/Points.js';
 import { AvatarContext } from './context/AvatarContext.js';
+import { useRounds } from './context/Rounds.js';    
 
-function Badge() {
+function Badge({onEnterRestart}) {
   const { points } = usePoints();
   const [badge, setBadge] = useState("White");
   const [text, setText] = useState("Maybe try again...");
@@ -14,28 +15,32 @@ function Badge() {
   });
   const [runConfetti, setRunConfetti] = useState(true);
   const {avatar}=useContext(AvatarContext);
+  const {rounds} = useRounds();
+  const [showSwipe, setShowSwipe]=useState(false);
 
   // Handle badge level
   useEffect(() => {
-    console.log(points);
     let newBadge = "White";
     let newText = "Maybe try again..."
 
-    if (points > 55) {
+    if (points > 95) {
       newBadge = "Rainbow";
       newText = "Your an expert at this"
-    } else if (points > 45) {
+    } else if (points > 70) {
       newBadge = "Gold";
-    } else if (points > 30) {
+    } else if (points > 45) {
       newBadge = "Silver";
-    } else if (points > 15) {
+    } else if (points > 20) {
       newBadge = "Bronze";
     }
-    
+     if(rounds<3){
+      setShowSwipe(true);
+  }
+
     setBadge(newBadge);
-  }, [points]); // Only run when points change
+  }, [points]); 
 
-
+ 
   const drawSquare = (ctx) => {
     ctx.fillRect(-5, -5, 10, 10);
   };
@@ -64,7 +69,10 @@ function Badge() {
         <img className='avatarBadge hair' src={`/images/avatar/hair/hair${avatar.hair.current}.png`}/>
         <img className='avatarBadge shirts' src={`/images/avatar/shirts/shirt${avatar.shirts.current}.png`}/>
         </div>
-        You have {points}/60 points!
+        You have {points}/60 points! <br/>
+        You played {rounds}/3 rounds.
+      {showSwipe && <button className='restartButton' onClick={onEnterRestart}> Restart </button>}
+      {!showSwipe&&<p>You used your tries</p>}
       </div>
     </div>
   );

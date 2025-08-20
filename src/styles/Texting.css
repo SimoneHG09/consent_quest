@@ -14,11 +14,12 @@
 }
 
 
-.changeScreenBubble {
+.pixelBubble .changeScreenBubble {
   cursor: pointer;
   padding: 10px 15px;
   font-size: 1.5rem;
   transition: all 0.2s ease;
+ border: 0px; 
 }
 
 .changeScreenBubble:hover {

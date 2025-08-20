@@ -6,12 +6,11 @@ import Quiz from "./Quiz";
 import { AvatarContext } from './context/AvatarContext.js';
 import { SwipeCharacter } from './context/SwipeCharacter';
 
-const Texting = ({ onBack }) => {
+const Texting = ({ onEnterQuiz }) => {
   const [currentNodeId, setCurrentNodeId] = useState('opening');
   const [conversation, setConversation] = useState([]);
   const [currentOptions, setCurrentOptions] = useState([]);
   const { addPoints } = usePoints();
-  const [showQuiz, setShowQuiz] = useState(false);
   const {avatar}=useContext(AvatarContext);
   const { character } = useContext(SwipeCharacter);
 
@@ -80,19 +79,15 @@ const Texting = ({ onBack }) => {
           
           setCurrentNodeId(option.next);
         } else {
-          onBack(); 
+          onEnterQuiz(); 
         }
       }
     }, 800);
   };
 
   const handleExclamationClick = () => {
-    setShowQuiz(true);
+    onEnterQuiz(); 
   };
-
-  if (showQuiz) {
-    return <Quiz onBack={() => setShowQuiz(false)} />;
-  }
 
   return (
     <div className="pixelTextingScreen">
@@ -114,7 +109,7 @@ const Texting = ({ onBack }) => {
             >
               {message.text === "Click to continue!" ? (
                 <button
-                  className="pixelBubble ChangeScreenBubble"
+                  className="pixelBubble changeScreenBubble"
                   onClick={handleExclamationClick}
                 >
                   Click to continue!
