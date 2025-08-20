@@ -13,7 +13,7 @@ function Avatar({ onEnterSwipe }) {
     function next(item) {
         setAvatar(prevState => {
             const nextNum = prevState[item].current + 1;
-            const newCurrent = nextNum < prevState[item].total ? nextNum : 0;
+            const newCurrent = nextNum < prevState[item].total ? nextNum : 1;
             return {
                 ...prevState,
                 [item]: {
@@ -27,7 +27,7 @@ function Avatar({ onEnterSwipe }) {
     function last(item) {
         setAvatar(prevState => {
             const lastNum = prevState[item].current - 1;
-            const newCurrent = lastNum >= 0 ? lastNum : prevState[item].total - 1;
+            const newCurrent = lastNum > 0 ? lastNum : prevState[item].total - 1;
             return {
                 ...prevState,
                 [item]: {

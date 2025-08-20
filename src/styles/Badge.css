@@ -23,11 +23,11 @@
 
 .avatarBadge {
   position: absolute; 
-  right:35%; 
+  right:41%; 
   top: 60%;
   transform: translateY(-50%); 
-  width: 400px; 
-  height: 400px;
+  width: 375px; 
+  height: 375px;
   z-index: 1; 
 }
 

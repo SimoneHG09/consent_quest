@@ -74,12 +74,12 @@ const handleSwipe = (direction) => {
           </div>
         </div>
       </Frame>
-      <div className="instructions">
+        <div className="instructions">
         {currentIndex === cards.length - 1 
           ? "Use the ← and → arrow keys or buttons to swipe."
           : "Swipe right to start texting."}
+      </div>    
       </div>
-    </div>
   );
 }
 

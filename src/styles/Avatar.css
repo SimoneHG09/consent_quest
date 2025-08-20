@@ -196,7 +196,7 @@
   z-index: 10;
 
   --btn-image: url("/public/images/avatar/arrow.png");
-  --btn-bottom: 300px;
+  --btn-bottom: 400px;
   --btn-right:50px;
   background-image: var(--btn-image);
   bottom: var(--btn-bottom);
@@ -206,33 +206,33 @@
 
 .arrowButton.hairLeft{
   --btn-image:url("/public/images/avatar/arrowLeft.png");
-  --btn-bottom: 380px;
+  --btn-bottom: 525px;
   --btn-right:600px;
 }
 
 .arrowButton.hairRight {
-  --btn-bottom: 380px;
+  --btn-bottom: 525px;
   --btn-right:50px;
 }
 
 .arrowButton.shirtsLeft{
   --btn-image:url("/public/images/avatar/arrowLeft.png");
-  --btn-bottom: 220px;
+  --btn-bottom: 375px;
   --btn-right:600px;
 }
 .arrowButton.shirtsRight {
-  --btn-bottom: 220px;
+  --btn-bottom: 375px;
   --btn-right:50px;
 }
 
 .arrowButton.facesLeft{
   --btn-image:url("/public/images/avatar/arrowLeft.png");
-  --btn-bottom: 300px;
+  --btn-bottom: 450px;
   --btn-right:600px;
 }
 
 .arrowButton.facesRight {
-  --btn-bottom: 300px;
+  --btn-bottom: 450px;
   --btn-right:50px;
 }
 
@@ -244,7 +244,7 @@
 .nextScreen{
   position: absolute;
   right: 225px;
-  bottom: 200px;
+  bottom: 270px;
   width: 100px;
   height: 50px;
   background-size: contain;
