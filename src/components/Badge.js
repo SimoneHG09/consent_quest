@@ -70,7 +70,7 @@ function Badge({onEnterRestart}) {
         <img className='avatarBadge shirts' src={`/images/avatar/shirts/shirt${avatar.shirts.current}.png`}/>
         </div>
         You have {points}/60 points! <br/>
-        You played {rounds}/3 rounds.
+        You played {rounds}/3 rounds. Use the next tries to experiement with the interface a bit.
       {showSwipe && <button className='restartButton' onClick={onEnterRestart}> Restart </button>}
       {!showSwipe&&<p>You used your tries</p>}
       </div>

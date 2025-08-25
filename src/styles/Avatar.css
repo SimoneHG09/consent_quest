@@ -206,33 +206,33 @@
 
 .arrowButton.hairLeft{
   --btn-image:url("/public/images/avatar/arrowLeft.png");
-  --btn-bottom: 525px;
+  --btn-bottom: 725px;
   --btn-right:600px;
 }
 
 .arrowButton.hairRight {
-  --btn-bottom: 525px;
+  --btn-bottom: 725px;
   --btn-right:50px;
 }
 
 .arrowButton.shirtsLeft{
   --btn-image:url("/public/images/avatar/arrowLeft.png");
-  --btn-bottom: 375px;
+  --btn-bottom: 575px;
   --btn-right:600px;
 }
 .arrowButton.shirtsRight {
-  --btn-bottom: 375px;
+  --btn-bottom: 575px;
   --btn-right:50px;
 }
 
 .arrowButton.facesLeft{
   --btn-image:url("/public/images/avatar/arrowLeft.png");
-  --btn-bottom: 450px;
+  --btn-bottom: 650px;
   --btn-right:600px;
 }
 
 .arrowButton.facesRight {
-  --btn-bottom: 450px;
+  --btn-bottom: 650px;
   --btn-right:50px;
 }
 
@@ -246,7 +246,7 @@
   right: 225px;
   bottom: 270px;
   width: 100px;
-  height: 50px;
+  height: 400px;
   background-size: contain;
   background-color: transparent;
   border: none;
