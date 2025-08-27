@@ -8,12 +8,6 @@ import { useRounds } from './context/Rounds.js';
 function Badge({onEnterRestart}) {
   const { points } = usePoints();
   const [badge, setBadge] = useState("White");
-  const [text, setText] = useState("Maybe try again...");
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-  const [runConfetti, setRunConfetti] = useState(true);
   const {avatar}=useContext(AvatarContext);
   const {rounds} = useRounds();
   const [showSwipe, setShowSwipe]=useState(false);
@@ -21,11 +15,9 @@ function Badge({onEnterRestart}) {
   // Handle badge level
   useEffect(() => {
     let newBadge = "White";
-    let newText = "Maybe try again..."
 
     if (points > 95) {
       newBadge = "Rainbow";
-      newText = "Your an expert at this"
     } else if (points > 70) {
       newBadge = "Gold";
     } else if (points > 45) {
@@ -38,7 +30,7 @@ function Badge({onEnterRestart}) {
   }
 
     setBadge(newBadge);
-  }, [points]); 
+  }, [points, rounds]); 
 
  
   const drawSquare = (ctx) => {
@@ -49,8 +41,6 @@ function Badge({onEnterRestart}) {
     <div className="badge-screen">
      
       <Confetti
-        width={windowSize.width}
-        height={windowSize.height}
         numberOfPieces={1000}
         colors={['#FC7753', '#9590A8', '#DBD56E', '#92E2DE', '#403D58']}
         gravity={0.15}
@@ -69,8 +59,9 @@ function Badge({onEnterRestart}) {
         <img className='avatarBadge hair' src={`/images/avatar/hair/hair${avatar.hair.current}.png`}/>
         <img className='avatarBadge shirts' src={`/images/avatar/shirts/shirt${avatar.shirts.current}.png`}/>
         </div>
-        You have {points}/60 points! <br/>
-        You played {rounds}/3 rounds. Use the next tries to experiement with the interface a bit.
+        You have {points}/100 points! <br/>
+        You played {rounds}/3 rounds. <br/>
+        Use the next tries to experiement with the interface a bit.
       {showSwipe && <button className='restartButton' onClick={onEnterRestart}> Restart </button>}
       {!showSwipe&&<p>You used your tries</p>}
       </div>

@@ -1,0 +1,651 @@
+{
+  "opening": {
+    "message": "Hey there! 😊 Your profile caught my eye—love your vibe. How’s your week been so far?",
+    "options": [
+      {
+        "id": 1,
+        "text": "Pretty good! Just got back from the gym. How about you?",
+        "points": 5,
+        "next": "small_talk_1"
+      },
+      {
+        "id": 2,
+        "text": "Not bad, just chilling. You into anything fun this weekend?",
+        "points": 3,
+        "next": "small_talk_2"
+      },
+      {
+        "id": 3,
+        "text": "Honestly, it’s been rough. Need a distraction, lol.",
+        "points": 2,
+        "next": "small_talk_3"
+      },
+      {
+        "id": 4,
+        "text": "Been better. You free tonight?",
+        "points": 0,
+        "next": "small_talk_4"
+      }
+    ]
+  },
+
+  "small_talk_1": {
+    "message": "Nice! I’m more of a yoga guy myself—keeps me flexible, if you know what I mean. 😉 So, what do you like to do for fun?",
+    "options": [
+      {
+        "id": 5,
+        "text": "I’m into hiking and photography. What about you?",
+        "points": 5,
+        "next": "easing_in_1"
+      },
+      {
+        "id": 6,
+        "text": "Mostly gaming and Netflix. You?",
+        "points": 3,
+        "next": "easing_in_2"
+      },
+      {
+        "id": 7,
+        "text": "I like to keep things spontaneous. You?",
+        "points": 2,
+        "next": "easing_in_3"
+      },
+      {
+        "id": 8,
+        "text": "Why don’t we skip the small talk and get to the point?",
+        "points": 0,
+        "next": "easing_in_4"
+      }
+    ]
+  },
+
+  "small_talk_2": {
+    "message": "I’m thinking of hitting a new club downtown. You ever been?",
+    "options": [
+      {
+        "id": 9,
+        "text": "I’ve heard good things! What kind of music do they play?",
+        "points": 5,
+        "next": "easing_in_1"
+      },
+      {
+        "id": 10,
+        "text": "Not my scene, but I’m open to trying new things.",
+        "points": 3,
+        "next": "easing_in_2"
+      },
+      {
+        "id": 11,
+        "text": "Clubs are overrated. Let’s talk about something else.",
+        "points": 2,
+        "next": "easing_in_3"
+      },
+      {
+        "id": 12,
+        "text": "I’d rather stay in. You down for that?",
+        "points": 0,
+        "next": "easing_in_4"
+      }
+    ]
+  },
+
+  "small_talk_3": {
+    "message": "Sorry to hear that. Sometimes a good chat can help. What’s on your mind?",
+    "options": [
+      {
+        "id": 13,
+        "text": "Just work stress. But I’d rather focus on something more fun right now.",
+        "points": 5,
+        "next": "easing_in_1"
+      },
+      {
+        "id": 14,
+        "text": "I’d rather not talk about it. Let’s change the subject.",
+        "points": 3,
+        "next": "easing_in_2"
+      },
+      {
+        "id": 15,
+        "text": "I’d rather hear about you.",
+        "points": 2,
+        "next": "easing_in_3"
+      },
+      {
+        "id": 16,
+        "text": "I’d rather not talk at all. Let’s meet up instead.",
+        "points": 0,
+        "next": "easing_in_4"
+      }
+    ]
+  },
+
+  "small_talk_4": {
+    "message": "Straight to the point, huh? I like that. What did you have in mind?",
+    "options": [
+      {
+        "id": 17,
+        "text": "Maybe grab a drink and see where the night takes us?",
+        "points": 3,
+        "next": "easing_in_2"
+      },
+      {
+        "id": 18,
+        "text": "I’m not sure yet. Let’s get to know each other first.",
+        "points": 5,
+        "next": "easing_in_1"
+      },
+      {
+        "id": 19,
+        "text": "I’m down for whatever. Surprise me.",
+        "points": 0,
+        "next": "easing_in_4"
+      },
+      {
+        "id": 20,
+        "text": "Actually, I’m not feeling it. Maybe another time.",
+        "points": 2,
+        "next": "end_ghosted"
+      }
+    ]
+  },
+
+  "easing_in_1": {
+    "message": "I love that energy! So, what’s your take on dating apps? Ever had any interesting experiences?",
+    "options": [
+      {
+        "id": 21,
+        "text": "Honestly, it’s a mixed bag. But I think communication is key—especially about boundaries.",
+        "points": 10,
+        "next": "consent_talk_1"
+      },
+      {
+        "id": 22,
+        "text": "Mostly good, but sometimes people move too fast for my taste.",
+        "points": 5,
+        "next": "consent_talk_2"
+      },
+      {
+        "id": 23,
+        "text": "I don’t overthink it. If there’s chemistry, why not go for it?",
+        "points": 2,
+        "next": "consent_talk_3"
+      },
+      {
+        "id": 24,
+        "text": "I don’t like talking about this stuff. Let’s keep it light.",
+        "points": 0,
+        "next": "consent_talk_4"
+      }
+    ]
+  },
+
+  "easing_in_2": {
+    "message": "Fair enough. So, how do you usually handle things when you’re chatting with someone new?",
+    "options": [
+      {
+        "id": 25,
+        "text": "I like to ask what they’re comfortable with early on.",
+        "points": 10,
+        "next": "consent_talk_1"
+      },
+      {
+        "id": 26,
+        "text": "I go with the flow and see how things develop.",
+        "points": 3,
+        "next": "consent_talk_2"
+      },
+      {
+        "id": 27,
+        "text": "I prefer to let the other person take the lead.",
+        "points": 2,
+        "next": "consent_talk_3"
+      },
+      {
+        "id": 28,
+        "text": "I don’t like talking about boundaries. It kills the mood.",
+        "points": 0,
+        "next": "consent_talk_4"
+      }
+    ]
+  },
+
+  "easing_in_3": {
+    "message": "Got it. So, what’s your approach when it comes to meeting up with someone from an app?",
+    "options": [
+      {
+        "id": 29,
+        "text": "I always make sure we’re on the same page before meeting.",
+        "points": 10,
+        "next": "consent_talk_1"
+      },
+      {
+        "id": 30,
+        "text": "I usually just go for it and figure it out in person.",
+        "points": 3,
+        "next": "consent_talk_2"
+      },
+      {
+        "id": 31,
+        "text": "I don’t think about it much. If it feels right, it is right.",
+        "points": 0,
+        "next": "consent_talk_4"
+      },
+      {
+        "id": 32,
+        "text": "I avoid meeting up unless I’m 100% sure.",
+        "points": 2,
+        "next": "consent_talk_3"
+      }
+    ]
+  },
+
+  "easing_in_4": {
+    "message": "Alright, let’s talk about what we’re both looking for then.",
+    "options": [
+      {
+        "id": 33,
+        "text": "I’m looking for someone who respects my boundaries and communicates openly.",
+        "points": 10,
+        "next": "consent_talk_1"
+      },
+      {
+        "id": 34,
+        "text": "I’m open to anything, as long as we’re both having fun.",
+        "points": 3,
+        "next": "consent_talk_2"
+      },
+      {
+        "id": 35,
+        "text": "I don’t like labels. Let’s just see what happens.",
+        "points": 0,
+        "next": "consent_talk_4"
+      },
+      {
+        "id": 36,
+        "text": "I’m not sure what I want. Let’s take it slow.",
+        "points": 2,
+        "next": "consent_talk_3"
+      }
+    ]
+  },
+
+  "consent_talk_1": {
+    "message": "I totally agree. Consent is so important, even online. How do you usually bring it up?",
+    "options": [
+      {
+        "id": 37,
+        "text": "I ask directly: ‘Are you comfortable with this?’ It’s the easiest way to avoid misunderstandings.",
+        "points": 10,
+        "next": "consent_deep_1"
+      },
+      {
+        "id": 38,
+        "text": "I try to read the vibe and go from there.",
+        "points": 5,
+        "next": "consent_deep_2"
+      },
+      {
+        "id": 39,
+        "text": "I wait for the other person to bring it up first.",
+        "points": 2,
+        "next": "consent_deep_3"
+      },
+      {
+        "id": 40,
+        "text": "I don’t usually talk about it. It’s awkward.",
+        "points": 0,
+        "next": "consent_deep_4"
+      }
+    ]
+  },
+
+  "consent_talk_2": {
+    "message": "Yeah, it can be tricky. Do you think it’s better to ask for consent explicitly or just assume based on the conversation?",
+    "options": [
+      {
+        "id": 41,
+        "text": "Explicit consent is always better. No room for doubt.",
+        "points": 10,
+        "next": "consent_deep_1"
+      },
+      {
+        "id": 42,
+        "text": "It depends on the situation. Sometimes it’s clear without asking.",
+        "points": 5,
+        "next": "consent_deep_2"
+      },
+      {
+        "id": 43,
+        "text": "I think if someone is on a dating app, they’re already consenting to whatever happens.",
+        "points": 0,
+        "next": "consent_deep_4"
+      },
+      {
+        "id": 44,
+        "text": "I don’t know. I’ve never really thought about it.",
+        "points": 2,
+        "next": "consent_deep_3"
+      }
+    ]
+  },
+
+  "consent_talk_3": {
+    "message": "I get that. But don’t you think it’s better to be safe than sorry?",
+    "options": [
+      {
+        "id": 45,
+        "text": "Absolutely. I’d rather ask and be sure than risk making someone uncomfortable.",
+        "points": 10,
+        "next": "consent_deep_1"
+      },
+      {
+        "id": 46,
+        "text": "I guess so, but it’s not always easy to bring up.",
+        "points": 5,
+        "next": "consent_deep_2"
+      },
+      {
+        "id": 47,
+        "text": "I think people overcomplicate it. If someone says ‘no,’ you’ll know.",
+        "points": 0,
+        "next": "consent_deep_4"
+      },
+      {
+        "id": 48,
+        "text": "I don’t want to ruin the moment by talking about it.",
+        "points": 2,
+        "next": "consent_deep_3"
+      }
+    ]
+  },
+
+  "consent_talk_4": {
+    "message": "I see. Well, I think it’s important to make sure everyone is comfortable. Don’t you?",
+    "options": [
+      {
+        "id": 49,
+        "text": "You’re right. I should be more mindful about it.",
+        "points": 5,
+        "next": "consent_deep_2"
+      },
+      {
+        "id": 50,
+        "text": "I don’t see why it’s such a big deal.",
+        "points": 0,
+        "next": "end_declined"
+      },
+      {
+        "id": 51,
+        "text": "I’ll think about it.",
+        "points": 2,
+        "next": "consent_deep_3"
+      },
+      {
+        "id": 52,
+        "text": "Let’s talk about something else.",
+        "points": 3,
+        "next": "end_online"
+      }
+    ]
+  },
+
+  "consent_deep_1": {
+    "message": "Exactly! So, if we were to meet up, how would you want to handle things?",
+    "options": [
+      {
+        "id": 53,
+        "text": "I’d want to talk about what we’re both comfortable with beforehand.",
+        "points": 10,
+        "next": "meetup_plan_1"
+      },
+      {
+        "id": 54,
+        "text": "I’d rather see how things go in person.",
+        "points": 5,
+        "next": "meetup_plan_2"
+      },
+      {
+        "id": 55,
+        "text": "I don’t like planning. Let’s just see what happens.",
+        "points": 0,
+        "next": "meetup_plan_4"
+      },
+      {
+        "id": 56,
+        "text": "I’m not sure I’m ready to meet yet.",
+        "points": 2,
+        "next": "end_online"
+      }
+    ]
+  },
+
+  "consent_deep_2": {
+    "message": "That makes sense. Do you think it’s okay to send pictures without asking first?",
+    "options": [
+      {
+        "id": 57,
+        "text": "No, you should always ask. Consent applies to pictures too.",
+        "points": 10,
+        "next": "meetup_plan_1"
+      },
+      {
+        "id": 58,
+        "text": "It depends on the context. Sometimes it’s fine.",
+        "points": 3,
+        "next": "meetup_plan_2"
+      },
+      {
+        "id": 59,
+        "text": "I don’t see the harm in it.",
+        "points": 0,
+        "next": "meetup_plan_4"
+      },
+      {
+        "id": 60,
+        "text": "I’d rather not talk about this anymore.",
+        "points": 2,
+        "next": "end_ghosted"
+      }
+    ]
+  },
+
+  "consent_deep_3": {
+    "message": "It’s okay to feel unsure. Do you want to keep chatting or take a break?",
+    "options": [
+      {
+        "id": 61,
+        "text": "Let’s keep chatting. I’m enjoying this.",
+        "points": 5,
+        "next": "meetup_plan_2"
+      },
+      {
+        "id": 62,
+        "text": "I think I need some time to think.",
+        "points": 2,
+        "next": "end_online"
+      },
+      {
+        "id": 63,
+        "text": "I’m not sure what I want.",
+        "points": 0,
+        "next": "end_ghosted"
+      },
+      {
+        "id": 64,
+        "text": "I’d rather meet up and talk in person.",
+        "points": 3,
+        "next": "meetup_plan_3"
+      }
+    ]
+  },
+
+  "consent_deep_4": {
+    "message": "I think we might have different views on this. Maybe we’re not a good match.",
+    "options": [
+      {
+        "id": 65,
+        "text": "You’re probably right. It was nice chatting, though.",
+        "points": 2,
+        "next": "end_online"
+      },
+      {
+        "id": 66,
+        "text": "I don’t want to argue. Let’s just meet up and see.",
+        "points": 0,
+        "next": "end_declined"
+      },
+      {
+        "id": 67,
+        "text": "I’m sorry if I upset you. Let’s change the subject.",
+        "points": 3,
+        "next": "meetup_plan_3"
+      },
+      {
+        "id": 68,
+        "text": "I don’t care. Let’s meet up anyway.",
+        "points": 0,
+        "next": "end_declined"
+      }
+    ]
+  },
+
+  "meetup_plan_1": {
+    "message": "I like how considerate you are. Want to grab coffee this weekend and talk more?",
+    "options": [
+      {
+        "id": 69,
+        "text": "That sounds great! Let’s set a time and place.",
+        "points": 10,
+        "next": "end_meetup"
+      },
+      {
+        "id": 70,
+        "text": "I’d prefer to meet somewhere more private.",
+        "points": 0,
+        "next": "end_declined"
+      },
+      {
+        "id": 71,
+        "text": "I’m not sure I’m ready yet. Can we keep chatting?",
+        "points": 2,
+        "next": "end_online"
+      },
+      {
+        "id": 72,
+        "text": "I’d rather not. It was nice talking, though.",
+        "points": 3,
+        "next": "end_ghosted"
+      }
+    ]
+  },
+
+  "meetup_plan_2": {
+    "message": "Cool. How about we meet at that new café downtown?",
+    "options": [
+      {
+        "id": 73,
+        "text": "Sounds good! What time?",
+        "points": 10,
+        "next": "end_meetup"
+      },
+      {
+        "id": 74,
+        "text": "I’d rather go to your place.",
+        "points": 0,
+        "next": "end_declined"
+      },
+      {
+        "id": 75,
+        "text": "I’m not sure. Let me think about it.",
+        "points": 2,
+        "next": "end_online"
+      },
+      {
+        "id": 76,
+        "text": "I don’t drink coffee. How about a bar instead?",
+        "points": 3,
+        "next": "end_meetup"
+      }
+    ]
+  },
+
+  "meetup_plan_3": {
+    "message": "Okay, let’s meet at the park near my place. Does that work for you?",
+    "options": [
+      {
+        "id": 77,
+        "text": "Sure, what time?",
+        "points": 5,
+        "next": "end_meetup"
+      },
+      {
+        "id": 78,
+        "text": "I’d rather not meet in public.",
+        "points": 0,
+        "next": "end_declined"
+      },
+      {
+        "id": 79,
+        "text": "I’m not comfortable with that.",
+        "points": 2,
+        "next": "end_online"
+      },
+      {
+        "id": 80,
+        "text": "I’ll let you know.",
+        "points": 3,
+        "next": "end_ghosted"
+      }
+    ]
+  },
+
+  "meetup_plan_4": {
+    "message": "I’m not sure we’re on the same page. Maybe we should just end things here.",
+    "options": [
+      {
+        "id": 81,
+        "text": "You’re right. It was nice chatting.",
+        "points": 2,
+        "next": "end_online"
+      },
+      {
+        "id": 82,
+        "text": "I don’t want to end things. Let’s try again.",
+        "points": 0,
+        "next": "end_declined"
+      },
+      {
+        "id": 83,
+        "text": "I’m sorry. Let’s meet up and talk it out.",
+        "points": 3,
+        "next": "end_meetup"
+      },
+      {
+        "id": 84,
+        "text": "I don’t care. Let’s meet up anyway.",
+        "points": 0,
+        "next": "end_declined"
+      }
+    ]
+  },
+
+  "end_meetup": {
+    "message": "Great! I’m looking forward to it. Let’s finalize the details soon. 😊",
+    "options": []
+  },
+
+  "end_online": {
+    "message": "No worries. It was nice chatting with you. Take care!",
+    "options": []
+  },
+
+  "end_ghosted": {
+    "message": "*No reply*",
+    "options": []
+  },
+
+  "end_declined": {
+    "message": "I don’t think this is going to work out. Good luck!",
+    "options": []
+  }
+}

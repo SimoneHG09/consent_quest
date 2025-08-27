@@ -1,378 +1,1851 @@
 {
   "opening": {
-    "message": "Hey handsome 👋 just saw your profile… you look fun 😏. How’s your night going?",
+    "message": "Hey there! Just saw your profile and had to say hi 😊 Love that pic from the beach - looks like you had an amazing time!",
     "options": [
       {
         "id": 1,
-        "text": "Haha thanks 😊 just chilling, how about you?",
-        "points": 5,
-        "next": "smalltalk1"
+        "text": "Thanks! Yeah, that was last weekend. Your profile caught my eye too - you seem really fun!",
+        "points": 8,
+        "next": "positive_response"
       },
       {
         "id": 2,
-        "text": "Straight to the point huh? I like that 😏",
-        "points": 4,
-        "next": "smalltalk1"
+        "text": "Hey yourself 😏 Skip the small talk - what are you looking for?",
+        "points": 3,
+        "next": "too_forward"
       },
       {
         "id": 3,
-        "text": "Lol not sure how to answer that…",
-        "points": 1,
-        "next": "smalltalk1"
+        "text": "Hi! Thanks for the compliment. How's your evening going?",
+        "points": 6,
+        "next": "neutral_response"
       },
       {
         "id": 4,
-        "text": "Night’s good, just browsing. You?",
-        "points": 3,
-        "next": "smalltalk1"
+        "text": "Thanks I guess. Not really in the mood to chat much tbh",
+        "points": 1,
+        "next": "disinterested"
       }
     ]
   },
-  "smalltalk1": {
-    "message": "I’m just winding down after a long day. Honestly, scrolling here is kinda my guilty pleasure 😂. What do you usually come on here for?",
+  "positive_response": {
+    "message": "Aw thanks! I try to keep things light and playful 😄 What's been keeping you busy lately? Besides looking gorgeous on beaches of course",
     "options": [
       {
         "id": 5,
-        "text": "Mostly to chat, make friends, maybe more if it clicks ✨",
-        "points": 6,
-        "next": "smalltalk2"
+        "text": "Haha you're sweet! Work's been crazy but I'm finally getting some free time. What about you?",
+        "points": 7,
+        "next": "building_rapport"
       },
       {
         "id": 6,
-        "text": "Tbh? Mostly hookups, not gonna lie.",
-        "points": 2,
-        "next": "smalltalk2"
+        "text": "Just the usual stuff. So are you actually looking to meet up or just chat?",
+        "points": 4,
+        "next": "rushing_meeting"
       },
       {
         "id": 7,
-        "text": "Just seeing who’s around, no expectations 😇",
-        "points": 4,
-        "next": "smalltalk2"
+        "text": "Been hitting the gym a lot actually. You look like you work out too - love a guy who takes care of himself",
+        "points": 6,
+        "next": "physical_focus"
       },
       {
         "id": 8,
-        "text": "Honestly, I’m not even sure yet 🤔",
-        "points": 3,
-        "next": "smalltalk2"
+        "text": "You know, just living life! Want to see more pics? I've got some good ones 😉",
+        "points": 2,
+        "next": "inappropriate_sharing"
       }
     ]
   },
-  "smalltalk2": {
-    "message": "Fair enough 😉. I feel like vibes matter more than labels anyway. Speaking of vibes, you seem chill. What do you find attractive in a guy?",
+  "too_forward": {
+    "message": "Whoa there! I mean, I appreciate directness but maybe we could chat a bit first? 😅 What's your story?",
     "options": [
       {
         "id": 9,
-        "text": "Confidence, kindness, and someone who asks before pushing things forward 👌",
-        "points": 8,
-        "next": "topic_intro"
+        "text": "Sorry, didn't mean to come on too strong. I'm just tired of endless small talk that goes nowhere",
+        "points": 6,
+        "next": "recovery_attempt"
       },
       {
         "id": 10,
-        "text": "Good looks and a sense of humor 😍",
-        "points": 4,
-        "next": "topic_intro"
+        "text": "Look, we both know why we're here. You interested or not?",
+        "points": 1,
+        "next": "aggressive_approach"
       },
       {
         "id": 11,
-        "text": "Someone who just *gets it* without needing to talk too much.",
-        "points": 1,
-        "next": "topic_intro"
+        "text": "Fair enough! I'm usually pretty chill, just had a long day. Tell me something interesting about yourself",
+        "points": 7,
+        "next": "course_correction"
       },
       {
         "id": 12,
-        "text": "I like honesty… and good chats that can lead somewhere 😉",
-        "points": 6,
-        "next": "topic_intro"
+        "text": "Right, my bad. I'm into guys who are confident and know what they want. That's you, right?",
+        "points": 3,
+        "next": "pushy_recovery"
       }
     ]
   },
-  "topic_intro": {
-    "message": "I hear that 😏. Speaking of moving forward… I like getting a little flirty on here. Is that okay with you?",
+  "neutral_response": {
+    "message": "Pretty good! Just winding down after work. I'm a graphic designer so I spend way too much time staring at screens 😴 What do you do?",
     "options": [
       {
         "id": 13,
-        "text": "Yes, but I appreciate when you check in like that ❤️",
-        "points": 10,
-        "next": "consent1"
+        "text": "That sounds creative! I work in marketing actually, so I probably see your work all the time. Love meeting fellow creatives",
+        "points": 7,
+        "next": "creative_connection"
       },
       {
         "id": 14,
-        "text": "Sure, no need to ask, I’m fine with it.",
-        "points": 3,
-        "next": "consent1"
+        "text": "Cool, cool. So you're probably good with your hands then? 😏",
+        "points": 2,
+        "next": "inappropriate_innuendo"
       },
       {
         "id": 15,
-        "text": "Hmm, maybe, depends on how it goes.",
-        "points": 5,
-        "next": "consent1"
+        "text": "I'm in finance - pretty boring compared to your job! Must be nice to do something artistic",
+        "points": 6,
+        "next": "modest_response"
       },
       {
         "id": 16,
-        "text": "Not really into that right now, sorry.",
-        "points": 0,
-        "next": "decline1"
+        "text": "Screens are the worst! I try to get outside as much as possible. You seem like an indoor type though",
+        "points": 4,
+        "next": "dismissive_comment"
       }
     ]
   },
-  "consent1": {
-    "message": "Cool 😌. Just so you know, I like when guys tell me directly what they’re into instead of guessing. How do you usually handle that?",
+  "disinterested": {
+    "message": "Oh no worries! Sometimes these apps can be overwhelming. I totally get not being in a chatty mood",
     "options": [
       {
         "id": 17,
-        "text": "I ask and wait for a clear yes before anything. Keeps it fun and safe ✨",
-        "points": 10,
-        "next": "consent2"
+        "text": "Thanks for understanding. Maybe we could chat another time when I'm feeling more social?",
+        "points": 5,
+        "next": "respectful_postpone"
       },
       {
         "id": 18,
-        "text": "Tbh, I usually just go with the flow and see if they react.",
-        "points": 2,
-        "next": "consent2"
+        "text": "Yeah whatever. If you're not interested just say so instead of wasting time",
+        "points": 0,
+        "next": "rude_dismissal"
       },
       {
         "id": 19,
-        "text": "I try to read between the lines but I know it’s risky.",
-        "points": 4,
-        "next": "consent2"
+        "text": "I appreciate you being honest. Hope your day gets better! Hit me up if you feel like talking later 😊",
+        "points": 8,
+        "next": "graceful_exit"
       },
       {
         "id": 20,
-        "text": "I don’t think about it too much.",
-        "points": 0,
-        "next": "ghosted1"
+        "text": "Come on, don't be like that. I can cheer you up if you give me a chance",
+        "points": 2,
+        "next": "ignoring_boundaries"
       }
     ]
   },
-  "consent2": {
-    "message": "I like that. Honestly, a clear yes is such a turn-on 😍. Btw, how do you feel about pics? Some people just send without asking.",
+  "building_rapport": {
+    "message": "Same here with work! I'm actually a nurse so it's been pretty intense lately. But hey, that's what makes the downtime so much sweeter, right? 😌",
     "options": [
       {
         "id": 21,
-        "text": "I only send if they ask first—or if I ask and get a yes 👍",
-        "points": 10,
-        "next": "consent3"
+        "text": "A nurse? That's amazing - you must see some crazy stuff. Thanks for what you do, seriously",
+        "points": 8,
+        "next": "appreciative_response"
       },
       {
         "id": 22,
-        "text": "I usually send right away. It’s normal here.",
-        "points": 1,
-        "next": "consent3"
+        "text": "Oh nice, so you know anatomy really well then 😈",
+        "points": 2,
+        "next": "crude_comment"
       },
       {
         "id": 23,
-        "text": "I ask, but if they don’t reply I might still send.",
-        "points": 2,
-        "next": "consent3"
+        "text": "Definitely! I always need time to decompress. What do you like to do to unwind?",
+        "points": 7,
+        "next": "deeper_conversation"
       },
       {
         "id": 24,
-        "text": "I don’t really like trading pics at all.",
+        "text": "Cool job. So are you free tonight? I know a great way to help you relax 😏",
         "points": 3,
-        "next": "consent3"
+        "next": "premature_advance"
       }
     ]
   },
-  "consent3": {
-    "message": "Yeah, pics can be fun but only when both are into it 😌. How do you know when to keep checking in?",
+  "rushing_meeting": {
+    "message": "Both actually! I like getting to know someone a bit first though. Makes everything more fun when you do meet up, you know?",
     "options": [
       {
         "id": 25,
-        "text": "I keep asking if it’s still good as we go. Consent’s not just one-time.",
-        "points": 10,
-        "next": "consent4"
+        "text": "That makes sense. I just don't want to waste either of our time if we're not compatible",
+        "points": 6,
+        "next": "pragmatic_approach"
       },
       {
         "id": 26,
-        "text": "If they don’t say no, I assume it’s fine.",
-        "points": 1,
-        "next": "consent4"
+        "text": "I guess... but we could figure out compatibility pretty quickly in person 😉",
+        "points": 4,
+        "next": "persistent_meetup"
       },
       {
         "id": 27,
-        "text": "I ask once at the start and leave it at that.",
-        "points": 3,
-        "next": "consent4"
+        "text": "You're absolutely right! I like building some anticipation. Tell me what you're into besides beaches",
+        "points": 8,
+        "next": "patient_approach"
       },
       {
         "id": 28,
-        "text": "I just mirror what they do.",
-        "points": 4,
-        "next": "consent4"
+        "text": "Fair enough. So what's your usual timeline for meeting up with guys from here?",
+        "points": 5,
+        "next": "direct_question"
       }
     ]
   },
-  "consent4": {
-    "message": "That’s hot. You seem really respectful 🙌. If we were to meet in person, how would you bring up boundaries?",
+  "physical_focus": {
+    "message": "Thanks! Yeah I try to stay active - mostly running and some weights. It's as much for mental health as anything else tbh",
     "options": [
       {
         "id": 29,
-        "text": "I’d talk about what’s cool and not cool before we meet. Makes things smoother 😎",
-        "points": 10,
-        "next": "consent5"
+        "text": "Mental health is so important! Exercise is my therapy too. What else helps you stay balanced?",
+        "points": 8,
+        "next": "wellness_conversation"
       },
       {
         "id": 30,
-        "text": "I’d wait until things get physical.",
+        "text": "I can tell you take care of yourself. I'd love to see more of what you're working with 😏",
         "points": 3,
-        "next": "consent5"
+        "next": "objectifying_comment"
       },
       {
         "id": 31,
-        "text": "I wouldn’t bring it up unless there’s a problem.",
-        "points": 0,
-        "next": "ghosted2"
+        "text": "Same here! There's something really attractive about a guy who prioritizes his health",
+        "points": 7,
+        "next": "health_appreciation"
       },
       {
         "id": 32,
-        "text": "I’d hint at it but not too directly.",
-        "points": 4,
-        "next": "consent5"
+        "text": "Nice! I bet you look amazing naked. Would love to find out for myself",
+        "points": 1,
+        "next": "explicit_comment"
       }
     ]
   },
-  "consent5": {
-    "message": "Love that you’re upfront 💯. So if I said I wanted to stop in the middle, how would you react?",
+  "inappropriate_sharing": {
+    "message": "Haha slow down there! I mean, I'm flattered but maybe we should get to know each other a little better first? 😅",
     "options": [
       {
         "id": 33,
-        "text": "I’d stop immediately, no questions asked ❤️",
-        "points": 10,
-        "next": "consent6"
+        "text": "You're totally right - got a bit carried away! What would you like to know about me?",
+        "points": 7,
+        "next": "appropriate_correction"
       },
       {
         "id": 34,
-        "text": "I’d try to convince you to keep going.",
-        "points": 0,
-        "next": "decline2"
+        "text": "Come on, don't be shy! I know you want to see them 😈",
+        "points": 1,
+        "next": "pushy_behavior"
       },
       {
         "id": 35,
-        "text": "I’d pause and ask why before deciding.",
-        "points": 2,
-        "next": "consent6"
+        "text": "Sorry, I just think you're really hot and got excited. Can we start over?",
+        "points": 5,
+        "next": "honest_apology"
       },
       {
         "id": 36,
-        "text": "I’d stop but probably feel annoyed.",
-        "points": 3,
-        "next": "consent6"
+        "text": "Alright, but just so you know, I'm pretty confident in what I've got to offer 😎",
+        "points": 4,
+        "next": "arrogant_response"
       }
     ]
   },
-  "consent6": {
-    "message": "That’s reassuring 🙏. Consent doesn’t kill the mood, it keeps it sexy. Wanna talk about meeting up sometime?",
+  "appreciative_response": {
+    "message": "Aw that's really sweet of you to say! It's tough sometimes but so rewarding. I love helping people feel better 😊 What draws you to marketing?",
     "options": [
       {
         "id": 37,
-        "text": "Yes, but only if we keep things clear and check in along the way 😌",
-        "points": 10,
-        "next": "meetup1"
+        "text": "I've always been fascinated by psychology and what motivates people. Plus I love creative problem solving",
+        "points": 8,
+        "next": "thoughtful_sharing"
       },
       {
         "id": 38,
-        "text": "Sure, but let’s not overcomplicate it.",
-        "points": 3,
-        "next": "meetup1"
+        "text": "Honestly? Good money and flexible hours. Leaves more time for... other activities 😏",
+        "points": 4,
+        "next": "materialistic_focus"
       },
       {
         "id": 39,
-        "text": "Maybe, I’m not sure yet.",
+        "text": "It's alright I guess. More interested in what you do to help people 'feel better' outside of work",
         "points": 2,
-        "next": "meetup1"
+        "next": "inappropriate_innuendo_2"
       },
       {
         "id": 40,
-        "text": "Nah, I’m not really into meeting from apps.",
-        "points": 0,
-        "next": "end_online"
+        "text": "I kind of fell into it, but I enjoy the variety. Every day is different, which keeps things interesting",
+        "points": 6,
+        "next": "casual_sharing"
       }
     ]
   },
-  "meetup1": {
-    "message": "Cool 😏. How do you feel about sharing details like where and when to meet?",
+  "deeper_conversation": {
+    "message": "Usually hit the gym, hang with friends, maybe catch a movie. Pretty standard stuff! Though I've been getting into cooking lately - it's surprisingly therapeutic 👨‍🍳",
     "options": [
       {
         "id": 41,
-        "text": "I’d agree on a public place first, then see if we vibe before moving private 👌",
-        "points": 10,
-        "next": "meetup2"
+        "text": "Cooking is amazing! I love trying new recipes. What's the best thing you've made recently?",
+        "points": 8,
+        "next": "cooking_interest"
       },
       {
         "id": 42,
-        "text": "Straight to my place or yours 😏",
-        "points": 1,
-        "next": "meetup2"
+        "text": "That's hot - a man who can cook 😍 I'd love to be your taste tester",
+        "points": 5,
+        "next": "flirty_cooking"
       },
       {
         "id": 43,
-        "text": "I’d go with whatever you suggest.",
+        "text": "Nice! I'm terrible in the kitchen but I make up for it in other areas 😉",
         "points": 3,
-        "next": "meetup2"
+        "next": "cooking_innuendo"
       },
       {
         "id": 44,
-        "text": "I’d rather not plan too much.",
-        "points": 2,
-        "next": "meetup2"
+        "text": "Cool. So what kind of guys are you usually into? Just want to know if I'm your type",
+        "points": 6,
+        "next": "direct_interest"
       }
     ]
   },
-  "meetup2": {
-    "message": "That sounds smart 😇. Last thing—if either of us changes our mind last minute, how should we handle it?",
+  "thoughtful_sharing": {
+    "message": "That's fascinating! I love meeting people who think deeply about their work. Psychology definitely helps in healthcare too - reading people is such an important skill",
     "options": [
       {
         "id": 45,
-        "text": "Totally fine, no pressure. A no is always respected ❤️",
-        "points": 10,
-        "next": "in_person_meeting"
+        "text": "Absolutely! I imagine you're great at making patients feel comfortable. That's such a valuable gift",
+        "points": 9,
+        "next": "deeper_connection"
       },
       {
         "id": 46,
-        "text": "I’d be upset but I guess I’d accept it.",
-        "points": 3,
-        "next": "in_person_meeting"
+        "text": "Definitely! Speaking of reading people... I'm getting the vibe that you might be into me 😏",
+        "points": 4,
+        "next": "premature_assumption"
       },
       {
         "id": 47,
-        "text": "I’d be annoyed, honestly.",
-        "points": 1,
-        "next": "decline3"
+        "text": "For sure! I bet that helps you figure out what guys want pretty quickly too",
+        "points": 3,
+        "next": "sexual_implication"
       },
       {
         "id": 48,
-        "text": "I wouldn’t really care either way.",
-        "points": 4,
-        "next": "in_person_meeting"
+        "text": "That's so true! It must be nice having a job that actually makes a difference in the world",
+        "points": 7,
+        "next": "meaningful_work"
       }
     ]
   },
-  "decline1": {
-    "message": "All good, thanks for being clear. Have a nice night ✨",
+  "cooking_interest": {
+    "message": "Last week I made this incredible Thai curry from scratch! Took forever but it was so worth it. I'm kind of obsessed now 😅 Do you cook much?",
+    "options": [
+      {
+        "id": 49,
+        "text": "Thai curry is my weakness! I'd love the recipe. I cook too but I'm always looking for new challenges",
+        "points": 8,
+        "next": "recipe_sharing"
+      },
+      {
+        "id": 50,
+        "text": "That sounds amazing! I'm more of a takeout guy but I'd definitely be your willing guinea pig 😉",
+        "points": 6,
+        "next": "guinea_pig_offer"
+      },
+      {
+        "id": 51,
+        "text": "Damn, Thai food is so good. Maybe you could cook for me sometime? I'll bring dessert 😏",
+        "points": 5,
+        "next": "cooking_date_hint"
+      },
+      {
+        "id": 52,
+        "text": "I can barely make toast without burning it! But I'm great at eating food if that counts",
+        "points": 7,
+        "next": "self_deprecating_humor"
+      }
+    ]
+  },
+  "deeper_connection": {
+    "message": "You're really thoughtful, you know that? It's refreshing to meet someone who actually cares about making people feel good in the right ways ❤️",
+    "options": [
+      {
+        "id": 53,
+        "text": "That means a lot coming from someone who literally saves lives! You seem pretty amazing yourself",
+        "points": 9,
+        "next": "mutual_appreciation"
+      },
+      {
+        "id": 54,
+        "text": "There are other ways I like making people feel good too 😈 Just saying...",
+        "points": 2,
+        "next": "sexual_redirect"
+      },
+      {
+        "id": 55,
+        "text": "Thanks! I try to be genuine. Life's too short to be anything else, you know?",
+        "points": 8,
+        "next": "authentic_response"
+      },
+      {
+        "id": 56,
+        "text": "Aw you're sweet! So... are you feeling good about the idea of meeting up sometime?",
+        "points": 6,
+        "next": "meeting_suggestion"
+      }
+    ]
+  },
+  "recipe_sharing": {
+    "message": "I'd totally share it! Fair warning though - it's got like 15 ingredients 😂 But seriously, we seem to have great chemistry already. Would you maybe want to grab coffee this weekend and swap cooking stories?",
+    "options": [
+      {
+        "id": 57,
+        "text": "I'd love that! Coffee sounds perfect. Are you free Saturday afternoon? Somewhere public to start?",
+        "points": 10,
+        "next": "coffee_acceptance"
+      },
+      {
+        "id": 58,
+        "text": "Coffee's nice but I was thinking more like dinner at your place... I could help you cook 😉",
+        "points": 4,
+        "next": "private_meeting_push"
+      },
+      {
+        "id": 59,
+        "text": "Absolutely! I know this great little café downtown. Very cozy and quiet",
+        "points": 8,
+        "next": "cafe_suggestion"
+      },
+      {
+        "id": 60,
+        "text": "Yeah maybe... but are you actually looking for something serious or just fun?",
+        "points": 5,
+        "next": "intentions_question"
+      }
+    ]
+  },
+  "mutual_appreciation": {
+    "message": "This is really nice, talking with you I mean. I feel like we actually get each other 😊 I don't want to assume anything, but would you be interested in meeting up? Maybe grab drinks sometime?",
+    "options": [
+      {
+        "id": 61,
+        "text": "I'd really like that! I'm free this weekend if you are. Somewhere comfortable for both of us?",
+        "points": 10,
+        "next": "enthusiastic_meetup"
+      },
+      {
+        "id": 62,
+        "text": "Definitely! But just to be clear - what kind of vibe are you thinking? Dating or more casual?",
+        "points": 8,
+        "next": "clarifying_intentions"
+      },
+      {
+        "id": 63,
+        "text": "I'm interested but I like to take things slow. Would that work for you?",
+        "points": 9,
+        "next": "paced_approach"
+      },
+      {
+        "id": 64,
+        "text": "For sure! Your place or mine? I'm pretty flexible about what we get up to 😏",
+        "points": 3,
+        "next": "immediate_intimacy"
+      }
+    ]
+  },
+  "coffee_acceptance": {
+    "message": "Perfect! Saturday afternoon works great. I know this lovely place called Blue Moon Café - very relaxed atmosphere. Does 2pm work? And yeah, public is smart for first meetings 😊",
+    "options": [
+      {
+        "id": 65,
+        "text": "2pm is perfect! Looking forward to it. Should we exchange numbers for coordination?",
+        "points": 10,
+        "next": "successful_planning"
+      },
+      {
+        "id": 66,
+        "text": "Sounds good! Just curious - what are you hoping happens after coffee? 😉",
+        "points": 5,
+        "next": "premature_expectations"
+      },
+      {
+        "id": 67,
+        "text": "Great! I'll see you there. Fair warning - I'm even more charming in person",
+        "points": 7,
+        "next": "confident_closing"
+      },
+      {
+        "id": 68,
+        "text": "Cool, but what if we really hit it off? Are you opposed to things moving faster?",
+        "points": 4,
+        "next": "pushing_boundaries"
+      }
+    ]
+  },
+  "enthusiastic_meetup": {
+    "message": "I love that approach! How about drinks at that new rooftop bar downtown? It's got great views and a nice relaxed vibe. We could always grab dinner after if we're both feeling it?",
+    "options": [
+      {
+        "id": 69,
+        "text": "That sounds amazing! I love that we can play it by ear and see how we feel. Very mature approach",
+        "points": 10,
+        "next": "mature_dating"
+      },
+      {
+        "id": 70,
+        "text": "Rooftop bar sounds perfect! And I like a guy who plans ahead for dinner 😉",
+        "points": 8,
+        "next": "positive_planning"
+      },
+      {
+        "id": 71,
+        "text": "Great choice! Should I pick you up or do you prefer meeting there?",
+        "points": 9,
+        "next": "logistics_question"
+      },
+      {
+        "id": 72,
+        "text": "Sounds fun but I should mention - I usually like to know where the night might end up 😏",
+        "points": 4,
+        "next": "sexual_expectations"
+      }
+    ]
+  },
+  "clarifying_intentions": {
+    "message": "I appreciate you asking! Honestly? I'm open to seeing where things go naturally. I like you and I'd love to get to know you better. No pressure on either of us - just good vibes and good company",
+    "options": [
+      {
+        "id": 73,
+        "text": "That's exactly what I was hoping you'd say! I like letting things develop organically too",
+        "points": 10,
+        "next": "perfect_match"
+      },
+      {
+        "id": 74,
+        "text": "I like that attitude. So if we're both feeling it, you'd be open to more than just talking?",
+        "points": 6,
+        "next": "physical_possibility"
+      },
+      {
+        "id": 75,
+        "text": "Good answer! I'm attracted to you but I don't want to rush into anything either",
+        "points": 9,
+        "next": "balanced_approach"
+      },
+      {
+        "id": 76,
+        "text": "Cool, so basically you're down for whatever happens? I like that in a guy",
+        "points": 3,
+        "next": "misunderstanding_consent"
+      }
+    ]
+  },
+  "paced_approach": {
+    "message": "Absolutely! I really respect that and honestly prefer it too. Getting to know someone makes everything better when you do get closer, you know? No rush at all 😊",
+    "options": [
+      {
+        "id": 77,
+        "text": "Exactly! Thank you for understanding. It's rare to find someone who gets that",
+        "points": 10,
+        "next": "mutual_respect"
+      },
+      {
+        "id": 78,
+        "text": "That's really sweet. Just so we're clear - how slow are we talking? 😅",
+        "points": 7,
+        "next": "pace_clarification"
+      },
+      {
+        "id": 79,
+        "text": "I'm glad we're on the same page! Looking forward to building something genuine with you",
+        "points": 9,
+        "next": "genuine_connection"
+      },
+      {
+        "id": 80,
+        "text": "Good to know! Though I have to admit, the anticipation might kill me 😏",
+        "points": 5,
+        "next": "playful_impatience"
+      }
+    ]
+  },
+  "successful_planning": {
+    "message": "Definitely! Here's my number: [fake number]. Text me so I have yours too. I'm really looking forward to meeting you properly! 😊",
+    "options": [
+      {
+        "id": 81,
+        "text": "Perfect! Just texted you. Can't wait for Saturday - this is going to be great!",
+        "points": 10,
+        "next": "successful_conclusion"
+      },
+      {
+        "id": 82,
+        "text": "Awesome! Should I send you a pic so you can spot me easily? 😉",
+        "points": 6,
+        "next": "photo_suggestion"
+      },
+      {
+        "id": 83,
+        "text": "Great! Looking forward to it too. Any chance you could send a quick selfie? Want to make sure I recognize you",
+        "points": 7,
+        "next": "recognition_request"
+      },
+      {
+        "id": 84,
+        "text": "Cool! Maybe we should exchange some pics to build anticipation? 😏",
+        "points": 3,
+        "next": "inappropriate_photo_request"
+      }
+    ]
+  },
+  "mature_dating": {
+    "message": "Right? I think the best connections happen when there's no pressure and you just let things unfold naturally. Saturday around 7? I'll make a reservation just in case we want that dinner too!",
+    "options": [
+      {
+        "id": 85,
+        "text": "7 works perfectly! I love how thoughtful you are about planning. See you then!",
+        "points": 10,
+        "next": "ideal_ending"
+      },
+      {
+        "id": 86,
+        "text": "Sounds perfect! Really excited to see where this goes with you",
+        "points": 9,
+        "next": "excited_conclusion"
+      },
+      {
+        "id": 87,
+        "text": "Great planning! I'll try to contain my excitement until Saturday 😄",
+        "points": 8,
+        "next": "playful_conclusion"
+      },
+      {
+        "id": 88,
+        "text": "Love it! And hey, worst case scenario we have great conversation and drinks. Best case... well, we'll see 😉",
+        "points": 7,
+        "next": "open_ended_conclusion"
+      }
+    ]
+  },
+  "perfect_match": {
+    "message": "I'm so glad we found each other on here! Feels like we really click, you know? This weekend can't come fast enough! 😊",
+    "options": [
+      {
+        "id": 89,
+        "text": "I feel exactly the same way! This is going to be the start of something really good",
+        "points": 10,
+        "next": "mutual_excitement"
+      },
+      {
+        "id": 90,
+        "text": "Same here! I have such a good feeling about us. Can't wait to meet you in person!",
+        "points": 9,
+        "next": "positive_anticipation"
+      },
+      {
+        "id": 91,
+        "text": "The chemistry is definitely there! Looking forward to exploring it further this weekend",
+        "points": 8,
+        "next": "chemistry_acknowledgment"
+      },
+      {
+        "id": 92,
+        "text": "Yeah, I think we're going to have a lot of fun together... in many different ways 😏",
+        "points": 5,
+        "next": "suggestive_ending"
+      }
+    ]
+  },
+  "mutual_respect": {
+    "message": "It really is! I think when two people respect each other's boundaries and timing, it creates something so much more meaningful. Thank you for being so genuine with me ❤️",
+    "options": [
+      {
+        "id": 93,
+        "text": "Thank you for being so understanding and patient. I can't wait to get to know you better!",
+        "points": 10,
+        "next": "respectful_conclusion"
+      },
+      {
+        "id": 94,
+        "text": "You're amazing. I feel so comfortable with you already - that's really special",
+        "points": 9,
+        "next": "comfort_acknowledgment"
+      },
+      {
+        "id": 95,
+        "text": "Exactly! This is how it should be. Looking forward to building something real with you",
+        "points": 10,
+        "next": "building_real_connection"
+      },
+      {
+        "id": 96,
+        "text": "Aw you're going to make me blush! But seriously, thank you for being so sweet about everything",
+        "points": 8,
+        "next": "sweet_acknowledgment"
+      }
+    ]
+  },
+  "aggressive_approach": {
+    "message": "Wow, okay... I think we want different things here. Good luck finding what you're looking for!",
+    "options": [
+      {
+        "id": 97,
+        "text": "Wait, I'm sorry - I came on way too strong. Can we start over?",
+        "points": 2,
+        "next": "too_late_apology"
+      },
+      {
+        "id": 98,
+        "text": "Your loss man. Plenty of guys who appreciate directness",
+        "points": 0,
+        "next": "defensive_ending"
+      },
+      {
+        "id": 99,
+        "text": "Sorry, I don't mean to be pushy. I just don't like games",
+        "points": 1,
+        "next": "excuse_making"
+      },
+      {
+        "id": 100,
+        "text": "Fine, whatever. You seemed cooler in your pics anyway",
+        "points": 0,
+        "next": "insulting_exit"
+      }
+    ]
+  },
+  "pushy_behavior": {
+    "message": "I'm going to pass. Not really comfortable with how pushy you're being. Take care!",
+    "options": [
+      {
+        "id": 101,
+        "text": "Wait, I'm really sorry! I got carried away. Could we please start fresh?",
+        "points": 1,
+        "next": "desperate_apology"
+      },
+      {
+        "id": 102,
+        "text": "Come on don't be like that! I was just being playful",
+        "points": 0,
+        "next": "dismissive_response"
+      },
+      {
+        "id": 103,
+        "text": "You're right, I was being inappropriate. I apologize and I'll respect your decision",
+        "points": 3,
+        "next": "respectful_apology"
+      },
+      {
+        "id": 104,
+        "text": "Seriously? You're on a hookup app and acting all innocent?",
+        "points": 0,
+        "next": "blame_shifting"
+      }
+    ]
+  },
+  "rude_dismissal": {
+    "message": "[No response - you've been blocked]",
     "options": []
   },
-  "decline2": {
-    "message": "Hmm… that doesn’t really work for me. I think we’re not a match. Take care 👋",
+  "graceful_exit": {
+    "message": "You're incredibly sweet ❤️ I really appreciate your kindness. Maybe when I'm feeling more social we could chat again?",
+    "options": [
+      {
+        "id": 105,
+        "text": "Of course! Take care of yourself. I'll be here when you're ready to chat 😊",
+        "points": 10,
+        "next": "respectful_wait"
+      },
+      {
+        "id": 106,
+        "text": "Absolutely! No pressure at all. Hope things get better for you soon",
+        "points": 9,
+        "next": "supportive_response"
+      },
+      {
+        "id": 107,
+        "text": "For sure! You seem really cool so definitely hit me up when you're feeling it",
+        "points": 8,
+        "next": "casual_future"
+      },
+      {
+        "id": 108,
+        "text": "Sure thing! Just don't wait too long - I might not be available forever 😉",
+        "points": 6,
+        "next": "playful_pressure"
+      }
+    ]
+  },
+  "ignoring_boundaries": {
+    "message": "I appreciate the thought but I really just need some space right now. Thanks for understanding!",
+    "options": [
+      {
+        "id": 109,
+        "text": "Of course! I totally get it. Take all the time you need",
+        "points": 8,
+        "next": "boundary_respect"
+      },
+      {
+        "id": 110,
+        "text": "But maybe talking would actually help? I'm a good listener",
+        "points": 2,
+        "next": "persistent_ignoring"
+      },
+      {
+        "id": 111,
+        "text": "I understand. Hope you feel better soon!",
+        "points": 7,
+        "next": "simple_support"
+      },
+      {
+        "id": 112,
+        "text": "Come on, everyone needs cheering up sometimes. What's the worst that could happen?",
+        "points": 1,
+        "next": "boundary_violation"
+      }
+    ]
+  },
+  "crude_comment": {
+    "message": "Ugh, really? That's what you got from me saying I'm a nurse? 🙄 I'm gonna pass on this conversation",
+    "options": [
+      {
+        "id": 113,
+        "text": "Oh god, I'm so sorry! That was completely inappropriate. I have so much respect for healthcare workers",
+        "points": 3,
+        "next": "genuine_apology"
+      },
+      {
+        "id": 114,
+        "text": "Relax, it was just a joke! Don't be so sensitive",
+        "points": 0,
+        "next": "dismissive_defense"
+      },
+      {
+        "id": 115,
+        "text": "Sorry, that came out wrong. I was trying to be flirty but clearly missed the mark",
+        "points": 2,
+        "next": "weak_excuse"
+      },
+      {
+        "id": 116,
+        "text": "Whatever, your loss. I was giving you a compliment",
+        "points": 0,
+        "next": "defensive_exit"
+      }
+    ]
+  },
+  "premature_advance": {
+    "message": "Whoa there! Moving a bit fast aren't we? 😅 I barely know you yet",
+    "options": [
+      {
+        "id": 117,
+        "text": "You're absolutely right - I got ahead of myself. Let's get to know each other better first!",
+        "points": 6,
+        "next": "course_correction_2"
+      },
+      {
+        "id": 118,
+        "text": "Fair enough! But the offer stands for when you're ready 😉",
+        "points": 4,
+        "next": "persistent_offer"
+      },
+      {
+        "id": 119,
+        "text": "Sorry! I just find you really attractive and got excited. Tell me more about yourself?",
+        "points": 5,
+        "next": "redirect_attempt"
+      },
+      {
+        "id": 120,
+        "text": "Come on, we're both adults here. What's wrong with being direct about what we want?",
+        "points": 2,
+        "next": "justifying_behavior"
+      }
+    ]
+  },
+  "patient_approach": {
+    "message": "I love that attitude! 😊 Besides beaches, I'm really into hiking, trying new restaurants, and I've been learning guitar lately. What about you - what gets you excited?",
+    "options": [
+      {
+        "id": 121,
+        "text": "Guitar is so cool! I've always wanted to learn an instrument. I love hiking too - we should definitely explore some trails together",
+        "points": 9,
+        "next": "shared_interests"
+      },
+      {
+        "id": 122,
+        "text": "Music is sexy! I'd love to hear you play sometime. Maybe we could have a private concert? 😏",
+        "points": 5,
+        "next": "sexualizing_hobby"
+      },
+      {
+        "id": 123,
+        "text": "Hiking and music - you're like the perfect outdoorsy artistic type! I'm more of a city guy but I love that energy",
+        "points": 7,
+        "next": "complementary_interests"
+      },
+      {
+        "id": 124,
+        "text": "That's all really cool, but what gets you excited in... other ways? 😉",
+        "points": 3,
+        "next": "sexual_redirect_2"
+      }
+    ]
+  },
+  "wellness_conversation": {
+    "message": "Right? I also love reading, meditation when I can manage it, and honestly just good conversations with interesting people. Like this one! 😊",
+    "options": [
+      {
+        "id": 125,
+        "text": "This is a really good conversation! I love meeting someone who thinks about wellness holistically",
+        "points": 9,
+        "next": "holistic_appreciation"
+      },
+      {
+        "id": 126,
+        "text": "Meditation is great! I bet you're very... focused when you need to be 😏",
+        "points": 4,
+        "next": "inappropriate_meditation"
+      },
+      {
+        "id": 127,
+        "text": "I'm really enjoying talking with you too! What kind of books are you into?",
+        "points": 8,
+        "next": "book_interest"
+      },
+      {
+        "id": 128,
+        "text": "Good conversations are definitely important. Speaking of which, what's your take on physical chemistry?",
+        "points": 5,
+        "next": "chemistry_question"
+      }
+    ]
+  },
+  "appropriate_correction": {
+    "message": "Thanks for being cool about it! I'm actually really interested in getting to know the person behind that gorgeous smile. What makes you tick?",
+    "options": [
+      {
+        "id": 129,
+        "text": "That's really sweet! I love deep conversations. I'm passionate about travel, good food, and making genuine connections",
+        "points": 9,
+        "next": "meaningful_sharing"
+      },
+      {
+        "id": 130,
+        "text": "Aw thanks! I'm pretty simple - work hard, play hard, and always up for new experiences 😉",
+        "points": 6,
+        "next": "play_hard_hint"
+      },
+      {
+        "id": 131,
+        "text": "I appreciate you asking! I value honesty, humor, and people who can keep up with my energy",
+        "points": 7,
+        "next": "energy_mention"
+      },
+      {
+        "id": 132,
+        "text": "Well, right now you're making me tick if you know what I mean 😏",
+        "points": 3,
+        "next": "deflecting_with_flirting"
+      }
+    ]
+  },
+  "shared_interests": {
+    "message": "That would be amazing! I know some incredible trails with the most gorgeous views. And yeah, guitar is tricky but so rewarding when you finally nail a song 🎸",
+    "options": [
+      {
+        "id": 133,
+        "text": "I'd love to check out those trails with you! And maybe you could teach me a few chords sometime?",
+        "points": 10,
+        "next": "activity_planning"
+      },
+      {
+        "id": 134,
+        "text": "Sounds perfect! I love the idea of getting sweaty together on a hike 😉",
+        "points": 4,
+        "next": "innuendo_hiking"
+      },
+      {
+        "id": 135,
+        "text": "That sounds like the perfect way to spend time together! I'm really looking forward to getting to know you better",
+        "points": 9,
+        "next": "genuine_interest"
+      },
+      {
+        "id": 136,
+        "text": "Great! When can we make this happen? I'm free most evenings and weekends",
+        "points": 8,
+        "next": "availability_sharing"
+      }
+    ]
+  },
+  "meaningful_sharing": {
+    "message": "I love that! Travel broadens the mind so much. Where's the most amazing place you've been? I'm always adding to my bucket list ✈️",
+    "options": [
+      {
+        "id": 137,
+        "text": "Thailand was incredible - the culture, food, and people were just amazing. What about you? Any dream destinations?",
+        "points": 9,
+        "next": "travel_exchange"
+      },
+      {
+        "id": 138,
+        "text": "Iceland was breathtaking! Nothing like the Northern Lights. I'd love to travel with someone special someday",
+        "points": 8,
+        "next": "romantic_travel"
+      },
+      {
+        "id": 139,
+        "text": "Japan was life-changing - so different from anything I'd experienced. Are you planning any trips soon?",
+        "points": 8,
+        "next": "japan_experience"
+      },
+      {
+        "id": 140,
+        "text": "Well, the most amazing place I've been lately is right here talking to you 😉",
+        "points": 5,
+        "next": "cheesy_line"
+      }
+    ]
+  },
+  "activity_planning": {
+    "message": "I would absolutely love that! There's something really special about sharing the things you're passionate about with someone new. Maybe we could plan a little hiking and music session this weekend?",
+    "options": [
+      {
+        "id": 141,
+        "text": "That sounds perfect! I'd love to experience both sides of what makes you happy. Should we exchange numbers to coordinate?",
+        "points": 10,
+        "next": "perfect_date_planning"
+      },
+      {
+        "id": 142,
+        "text": "I'm so in! Just promise me you won't judge my terrible singing when you start playing 😅",
+        "points": 9,
+        "next": "playful_insecurity"
+      },
+      {
+        "id": 143,
+        "text": "Sounds amazing! I love how thoughtful you are about creating special experiences",
+        "points": 9,
+        "next": "appreciation_response"
+      },
+      {
+        "id": 144,
+        "text": "Perfect! And who knows what other activities we might get up to afterward 😉",
+        "points": 5,
+        "next": "suggestive_addition"
+      }
+    ]
+  },
+  "travel_exchange": {
+    "message": "Thailand is on my list for sure! I went to Peru last year and it completely changed my perspective on life. There's something about experiencing different cultures that makes you grow as a person, you know?",
+    "options": [
+      {
+        "id": 145,
+        "text": "Peru must have been incredible! I completely agree - travel really does change you. I'd love to hear more about your experience there",
+        "points": 10,
+        "next": "deep_travel_talk"
+      },
+      {
+        "id": 146,
+        "text": "That's amazing! I love guys who are well-traveled and open-minded. Makes for much better... experiences 😉",
+        "points": 4,
+        "next": "travel_innuendo"
+      },
+      {
+        "id": 147,
+        "text": "Absolutely! Peru sounds amazing. I think we'd have incredible adventures together, both traveling and at home",
+        "points": 8,
+        "next": "adventure_together"
+      },
+      {
+        "id": 148,
+        "text": "That's so cool! Maybe we could plan a trip together sometime if things go well between us",
+        "points": 7,
+        "next": "future_trip_hint"
+      }
+    ]
+  },
+  "perfect_date_planning": {
+    "message": "Definitely! Here's my number: [fake number]. I'm thinking Saturday morning for the hike, then we could grab lunch and I'll bring my guitar to the park afterward? Does that sound good to you? 😊",
+    "options": [
+      {
+        "id": 149,
+        "text": "That sounds absolutely perfect! I love how thoughtful you are about planning. Can't wait for Saturday!",
+        "points": 10,
+        "next": "ideal_first_date"
+      },
+      {
+        "id": 150,
+        "text": "Amazing! I'll text you now. Really excited to spend the whole day getting to know you better",
+        "points": 9,
+        "next": "excited_day_together"
+      },
+      {
+        "id": 151,
+        "text": "Perfect! That's like the ideal first date. You really know how to make a great impression!",
+        "points": 9,
+        "next": "impressed_response"
+      },
+      {
+        "id": 152,
+        "text": "Sounds great! And if we're really vibing, maybe the day doesn't have to end there 😉",
+        "points": 6,
+        "next": "day_extension_hint"
+      }
+    ]
+  },
+  "deep_travel_talk": {
+    "message": "It really was! Hiking Machu Picchu was spiritual, but honestly the conversations with locals in small villages changed me most. There's so much wisdom in different ways of living. I feel like we could have amazing conversations about these kinds of experiences!",
+    "options": [
+      {
+        "id": 153,
+        "text": "That gives me chills! I love that you connect with people on such a deep level. I'd love to hear all your stories",
+        "points": 10,
+        "next": "deep_connection_appreciation"
+      },
+      {
+        "id": 154,
+        "text": "That's beautiful! I can tell you're someone who really pays attention to life. That's so attractive in a person",
+        "points": 9,
+        "next": "attracted_to_depth"
+      },
+      {
+        "id": 155,
+        "text": "Wow, you have such a beautiful perspective on the world. I feel like I could listen to you talk for hours",
+        "points": 9,
+        "next": "captivated_response"
+      },
+      {
+        "id": 156,
+        "text": "That's amazing! I bet you have incredible stories. We should definitely meet up soon so you can tell me more in person",
+        "points": 8,
+        "next": "story_meetup"
+      }
+    ]
+  },
+  "deep_connection_appreciation": {
+    "message": "You're so sweet! I'd absolutely love to share those stories with you. There's something really special about meeting someone who appreciates that deeper side of travel and life. Want to meet up this weekend and continue this conversation over coffee?",
+    "options": [
+      {
+        "id": 157,
+        "text": "I would love that more than anything! When and where works best for you?",
+        "points": 10,
+        "next": "enthusiastic_coffee_yes"
+      },
+      {
+        "id": 158,
+        "text": "Absolutely! I have a feeling we're going to have incredible chemistry in person too 😊",
+        "points": 9,
+        "next": "chemistry_anticipation"
+      },
+      {
+        "id": 159,
+        "text": "Yes! I'm really excited to get to know the real you. Coffee sounds perfect for deep conversation",
+        "points": 9,
+        "next": "coffee_deep_talk"
+      },
+      {
+        "id": 160,
+        "text": "Definitely! Though I have to warn you, I might be even more interested in you after hearing those stories 😉",
+        "points": 7,
+        "next": "increased_interest"
+      }
+    ]
+  },
+  "enthusiastic_coffee_yes": {
+    "message": "How about Saturday afternoon at 3? I know this perfect little place called Corner Café - quiet enough for good conversation but cozy too. I'm really looking forward to this! ☕",
+    "options": [
+      {
+        "id": 161,
+        "text": "3pm Saturday is perfect! I'll be there. This is going to be such a wonderful way to spend the afternoon",
+        "points": 10,
+        "next": "perfect_coffee_date"
+      },
+      {
+        "id": 162,
+        "text": "Sounds ideal! Should I bring anything? I'm thinking maybe some questions to keep our conversation flowing 😊",
+        "points": 9,
+        "next": "thoughtful_preparation"
+      },
+      {
+        "id": 163,
+        "text": "Perfect! I love that you picked somewhere conducive to really talking. Looking forward to it!",
+        "points": 9,
+        "next": "appreciating_choice"
+      },
+      {
+        "id": 164,
+        "text": "Great! Just so you know, I'm probably going to be a little nervous - you seem pretty amazing",
+        "points": 8,
+        "next": "nervous_admission"
+      }
+    ]
+  },
+  "too_late_apology": {
+    "message": "I appreciate the apology, but I think we're looking for different things. Take care!",
     "options": []
   },
-  "decline3": {
-    "message": "Yeah… I don’t think this will work. Good luck out there ✨",
+  "defensive_ending": {
+    "message": "[No response - conversation ended]",
     "options": []
   },
-  "ghosted1": {
-    "message": "…",
+  "excuse_making": {
+    "message": "[No response - you've been unmatched]",
     "options": []
   },
-  "ghosted2": {
-    "message": "Hey? 👀 …",
+  "insulting_exit": {
+    "message": "[No response - you've been blocked]",
     "options": []
   },
-  "end_online": {
-    "message": "That’s cool. Let’s just keep chatting here then 😌",
+  "desperate_apology": {
+    "message": "[No response - you've been blocked]",
     "options": []
   },
-  "in_person_meeting": {
-    "message": "Perfect 🙌. Let’s plan something real soon then 😏",
+  "dismissive_response": {
+    "message": "[No response - you've been unmatched]",
+    "options": []
+  },
+  "respectful_apology": {
+    "message": "I appreciate that. Good luck out there!",
+    "options": []
+  },
+  "blame_shifting": {
+    "message": "[No response - you've been blocked and reported]",
+    "options": []
+  },
+  "respectful_wait": {
+    "message": "You're such a sweetheart ❤️ I'll definitely reach out when I'm feeling more up for chatting. Thanks for being so understanding!",
+    "options": []
+  },
+  "supportive_response": {
+    "message": "Thank you so much! It really means a lot to meet someone so kind and patient. I'll be in touch soon 😊",
+    "options": []
+  },
+  "casual_future": {
+    "message": "I definitely will! Thanks for being so cool about everything. Talk soon! 😊",
+    "options": []
+  },
+  "playful_pressure": {
+    "message": "Haha, no pressure at all! 😅 But seriously, take your time. Good things are worth waiting for",
+    "options": []
+  },
+  "boundary_respect": {
+    "message": "You're really sweet. Thank you for respecting what I need right now. That means a lot ❤️",
+    "options": []
+  },
+  "persistent_ignoring": {
+    "message": "[No response - you've been unmatched]",
+    "options": []
+  },
+  "simple_support": {
+    "message": "Thanks! That's really kind of you to say 😊",
+    "options": []
+  },
+  "boundary_violation": {
+    "message": "[No response - you've been blocked]",
+    "options": []
+  },
+  "genuine_apology": {
+    "message": "I can tell you're genuinely sorry, but that really put me off. I'm going to pass on this one. Thanks for understanding",
+    "options": []
+  },
+  "dismissive_defense": {
+    "message": "[No response - you've been blocked]",
+    "options": []
+  },
+  "weak_excuse": {
+    "message": "Maybe work on your flirting technique... Good luck out there!",
+    "options": []
+  },
+  "defensive_exit": {
+    "message": "[No response - conversation ended]",
+    "options": []
+  },
+  "perfect_coffee_date": {
+    "message": "I can't wait! This is going to be such a lovely afternoon. See you Saturday! 😊",
+    "options": []
+  },
+  "thoughtful_preparation": {
+    "message": "Just bring yourself! Though I love that you're thinking about making it special. You're going to be great company 😊",
+    "options": []
+  },
+  "appreciating_choice": {
+    "message": "I'm really looking forward to it too! I have a feeling this is going to be the start of something wonderful ❤️",
+    "options": []
+  },
+  "nervous_admission": {
+    "message": "That's so sweet! Don't be nervous - I'm just excited to meet the person behind these amazing messages. It's going to be great! 😊",
+    "options": []
+  },
+  "ideal_first_date": {
+    "message": "Aw thank you! I'm so excited for our adventure. This is going to be such a perfect day! ☀️",
+    "options": []
+  },
+  "excited_day_together": {
+    "message": "Me too! I love that we're going to get to experience so many different things together. Saturday can't come fast enough! 😊",
+    "options": []
+  },
+  "impressed_response": {
+    "message": "You're too kind! I just want to make sure we have the best time possible. Really looking forward to it! 😊",
+    "options": []
+  },
+  "day_extension_hint": {
+    "message": "I love your enthusiasm! Let's see how the day goes and just enjoy each other's company. I have a feeling it's going to be amazing 😊",
+    "options": []
+  },
+  "successful_conclusion": {
+    "message": "This is going to be great! I'm so glad we matched. See you Saturday! ☕😊",
+    "options": []
+  },
+  "ideal_ending": {
+    "message": "You're absolutely wonderful! I can't wait to meet you properly. This is going to be such an amazing evening! 🥂",
+    "options": []
+  },
+  "mutual_excitement": {
+    "message": "I think so too! Here's to new beginnings and great connections! Can't wait for our date! ❤️",
+    "options": []
+  },
+  "respectful_conclusion": {
+    "message": "You're incredible! I feel so lucky to have found someone who gets it. This is going to be something really special ❤️",
+    "options": []
+  },
+  "building_real_connection": {
+    "message": "Absolutely! Here's to building something genuine and beautiful together. I'm so excited for what's ahead! ❤️",
+    "options": []
+  },
+  "recovery_attempt": {
+    "message": "Thanks for the apology. Let's try this again - tell me about your day? 😊",
+    "options": []
+  },
+  "course_correction": {
+    "message": "No worries! Something interesting: I'm a big fan of sci-fi movies. What's your favorite genre?",
+    "options": []
+  },
+  "pushy_recovery": {
+    "message": "Hmm, still feeling a bit pushy. Let's slow it down. What do you enjoy doing for fun?",
+    "options": []
+  },
+  "creative_connection": {
+    "message": "Thanks! Marketing and graphic design do go hand in hand. What kind of projects do you work on?",
+    "options": []
+  },
+  "inappropriate_innuendo": {
+    "message": "That's a bit much too soon. Not sure this is going to work. Take care!",
+    "options": []
+  },
+  "modest_response": {
+    "message": "Finance isn't boring! It takes a sharp mind. Tell me more about what you do.",
+    "options": []
+  },
+  "dismissive_comment": {
+    "message": "That's a bit judgmental. I actually love outdoor stuff too. But maybe we're not a match.",
+    "options": []
+  },
+  "pragmatic_approach": {
+    "message": "I understand that. Let's chat a bit and see if we click then?",
+    "options": []
+  },
+  "persistent_meetup": {
+    "message": "I prefer chatting first. If that's not your style, no hard feelings.",
+    "options": []
+  },
+  "direct_question": {
+    "message": "It depends on the connection. No fixed timeline - when it feels right.",
+    "options": []
+  },
+  "objectifying_comment": {
+    "message": "That's a little objectifying. I'd rather talk about more than looks.",
+    "options": []
+  },
+  "health_appreciation": {
+    "message": "Thanks! Health is key. What kind of workouts do you enjoy most?",
+    "options": []
+  },
+  "explicit_comment": {
+    "message": "Too explicit too soon. I'm out. Bye!",
+    "options": []
+  },
+  "honest_apology": {
+    "message": "Apology accepted. Let's start fresh - what's your favorite movie?",
+    "options": []
+  },
+  "arrogant_response": {
+    "message": "Confidence is good, arrogance not so much. Take care!",
+    "options": []
+  },
+  "materialistic_focus": {
+    "message": "Fair enough! Flexibility is nice. What kind of activities do you mean?",
+    "options": []
+  },
+  "inappropriate_innuendo_2": {
+    "message": "That's inappropriate. I think we're done here.",
+    "options": []
+  },
+  "casual_sharing": {
+    "message": "Variety is great! My job has that too. What's the most interesting project you've had?",
+    "options": []
+  },
+  "flirty_cooking": {
+    "message": "Haha, maybe someday! First, tell me your go-to dish.",
+    "options": []
+  },
+  "cooking_innuendo": {
+    "message": "Let's keep it clean for now. What else do you like to do?",
+    "options": []
+  },
+  "direct_interest": {
+    "message": "I like kind, fun guys who respect boundaries. Sound like you?",
+    "options": []
+  },
+  "premature_assumption": {
+    "message": "Don't assume too much. Let's keep talking and see.",
+    "options": []
+  },
+  "sexual_implication": {
+    "message": "That's not what I meant. I think this conversation is over.",
+    "options": []
+  },
+  "meaningful_work": {
+    "message": "It is rewarding! Your job sounds interesting too. Tell me more.",
+    "options": []
+  },
+  "guinea_pig_offer": {
+    "message": "Haha, maybe! What kind of food do you like best?",
+    "options": []
+  },
+  "cooking_date_hint": {
+    "message": "That could be fun, but let's chat more first 😊",
+    "options": []
+  },
+  "self_deprecating_humor": {
+    "message": "Eating counts! Everyone needs that skill. What's your favorite cuisine?",
+    "options": []
+  },
+  "sexual_redirect": {
+    "message": "Let's keep things light for now. Not ready for that talk.",
+    "options": []
+  },
+  "meeting_suggestion": {
+    "message": "I'm feeling good about it too! Let's plan something casual.",
+    "options": []
+  },
+  "private_meeting_push": {
+    "message": "Private too soon. Let's start with public coffee.",
+    "options": []
+  },
+  "cafe_suggestion": {
+    "message": "Sounds cozy! Saturday at 2pm? Can't wait 😊",
+    "options": []
+  },
+  "intentions_question": {
+    "message": "Open to seeing where it goes. No pressure. You?",
+    "options": []
+  },
+  "immediate_intimacy": {
+    "message": "That's too fast for me. Good luck!",
+    "options": []
+  },
+  "premature_expectations": {
+    "message": "Let's see how coffee goes first. No expectations.",
+    "options": []
+  },
+  "confident_closing": {
+    "message": "Haha, I'll be the judge of that! See you Saturday 😊",
+    "options": []
+  },
+  "pushing_boundaries": {
+    "message": "I prefer letting things happen naturally. If that's not okay, maybe not.",
+    "options": []
+  },
+  "positive_planning": {
+    "message": "Glad you like it! See you Saturday at 7 😊",
+    "options": []
+  },
+  "logistics_question": {
+    "message": "Meeting there is better for first time. Safe and easy 😊",
+    "options": []
+  },
+  "sexual_expectations": {
+    "message": "I don't like setting expectations like that upfront. Take care!",
+    "options": []
+  },
+  "physical_possibility": {
+    "message": "If we're both comfortable, sure. But no assumptions.",
+    "options": []
+  },
+  "balanced_approach": {
+    "message": "Me too! Let's take our time and enjoy getting to know each other.",
+    "options": []
+  },
+  "misunderstanding_consent": {
+    "message": "No, consent is important. No means no, always.",
+    "options": []
+  },
+  "pace_clarification": {
+    "message": "As slow as needed to feel right for both. Sound good?",
+    "options": []
+  },
+  "genuine_connection": {
+    "message": "Me too! Let's build it step by step 😊",
+    "options": []
+  },
+  "playful_impatience": {
+    "message": "Haha, patience is key! It'll be worth it.",
+    "options": []
+  },
+  "photo_suggestion": {
+    "message": "Sure, send one if you want! But I think I'll recognize you 😊",
+    "options": []
+  },
+  "recognition_request": {
+    "message": "Here's a recent one. See you soon!",
+    "options": []
+  },
+  "inappropriate_photo_request": {
+    "message": "Let's keep pics PG for now. Thanks.",
+    "options": []
+  },
+  "excited_conclusion": {
+    "message": "Me too! This is going to be great 😊",
+    "options": []
+  },
+  "playful_conclusion": {
+    "message": "Haha, me too! See you soon.",
+    "options": []
+  },
+  "open_ended_conclusion": {
+    "message": "Exactly! Let's see what happens naturally 😊",
+    "options": []
+  },
+  "positive_anticipation": {
+    "message": "Same! Can't wait 😊",
+    "options": []
+  },
+  "chemistry_acknowledgment": {
+    "message": "Yes, the chemistry is real! Excited for the weekend.",
+    "options": []
+  },
+  "suggestive_ending": {
+    "message": "Let's keep it clean until we meet. See you!",
+    "options": []
+  },
+  "comfort_acknowledgment": {
+    "message": "Aw, that's sweet! Feeling the same way ❤️",
+    "options": []
+  },
+  "sweet_acknowledgment": {
+    "message": "You're welcome! Talk soon 😊",
+    "options": []
+  },
+  "respectful_postpone": {
+    "message": "Thanks! I'll look forward to that. Take care 😊",
+    "options": []
+  },
+  "course_correction_2": {
+    "message": "Thanks! Appreciate that. What's your favorite hobby?",
+    "options": []
+  },
+  "persistent_offer": {
+    "message": "Noted, but let's build connection first.",
+    "options": []
+  },
+  "redirect_attempt": {
+    "message": "Thanks for the apology. I'm into movies - you?",
+    "options": []
+  },
+  "justifying_behavior": {
+    "message": "Direct is fine, but respect timing. Bye!",
+    "options": []
+  },
+  "sexualizing_hobby": {
+    "message": "Let's not sexualize everything. What else?",
+    "options": []
+  },
+  "complementary_interests": {
+    "message": "City life has its charms too! Tell me more.",
+    "options": []
+  },
+  "sexual_redirect_2": {
+    "message": "Too soon for that. Good luck!",
+    "options": []
+  },
+  "holistic_appreciation": {
+    "message": "Thanks! Wellness is everything. What's your routine?",
+    "options": []
+  },
+  "inappropriate_meditation": {
+    "message": "That's not appropriate. Take care.",
+    "options": []
+  },
+  "book_interest": {
+    "message": "Mostly fiction and self-help. Favorites?",
+    "options": []
+  },
+  "chemistry_question": {
+    "message": "Important, but let's build emotional first.",
+    "options": []
+  },
+  "play_hard_hint": {
+    "message": "Sounds fun! What kind of experiences?",
+    "options": []
+  },
+  "energy_mention": {
+    "message": "I can keep up! What's your energy like?",
+    "options": []
+  },
+  "deflecting_with_flirting": {
+    "message": "Haha, smooth. But tell me for real.",
+    "options": []
+  },
+  "innuendo_hiking": {
+    "message": "Let's keep it PG. Trails sound good though.",
+    "options": []
+  },
+  "genuine_interest": {
+    "message": "Me too! Let's plan something soon 😊",
+    "options": []
+  },
+  "availability_sharing": {
+    "message": "How about this weekend? Free Saturday?",
+    "options": []
+  },
+  "romantic_travel": {
+    "message": "That sounds romantic! Northern Lights are magical.",
+    "options": []
+  },
+  "japan_experience": {
+    "message": "Japan is amazing! Planning one soon too.",
+    "options": []
+  },
+  "cheesy_line": {
+    "message": "Haha, cheesy but cute! What's next on your list?",
+    "options": []
+  },
+  "playful_insecurity": {
+    "message": "No judging! It'll be fun no matter what 😊",
+    "options": []
+  },
+  "appreciation_response": {
+    "message": "Thanks! I love planning meaningful time together.",
+    "options": []
+  },
+  "suggestive_addition": {
+    "message": "Let's see how the day goes first 😊",
+    "options": []
+  },
+  "travel_innuendo": {
+    "message": "Keep it clean! What else about travel?",
+    "options": []
+  },
+  "adventure_together": {
+    "message": "Sounds fun! Let's start with local adventures.",
+    "options": []
+  },
+  "future_trip_hint": {
+    "message": "Maybe! Let's meet first and see 😊",
+    "options": []
+  },
+  "attracted_to_depth": {
+    "message": "Thanks! Depth is attractive to me too.",
+    "options": []
+  },
+  "captivated_response": {
+    "message": "Aw, you're sweet! I could talk to you for hours too.",
+    "options": []
+  },
+  "story_meetup": {
+    "message": "Yes! Coffee this weekend to share stories?",
+    "options": []
+  },
+  "chemistry_anticipation": {
+    "message": "I think so too! See you soon 😊",
+    "options": []
+  },
+  "coffee_deep_talk": {
+    "message": "Perfect for deep talks! Saturday?",
+    "options": []
+  },
+  "increased_interest": {
+    "message": "Haha, we'll see! Looking forward to it.",
+    "options": []
+  },
+  "authentic_response": {
+    "message": "I completely agree! Being genuine is the best way to connect with someone. It's clear you're the real deal, and I really like that about you 😊",
+    "options": [
+      {
+        "id": 165,
+        "text": "Thanks! I feel the same about you. This conversation has been so refreshing",
+        "points": 9,
+        "next": "refreshing_conversation"
+      },
+      {
+        "id": 166,
+        "text": "Good! Because I'm genuinely interested in getting to know all of you 😉",
+        "points": 3,
+        "next": "subtle_innuendo"
+      },
+      {
+        "id": 167,
+        "text": "Absolutely. So what do you say we take this authenticity to the next level and meet up?",
+        "points": 7,
+        "next": "authentic_meeting"
+      },
+      {
+        "id": 168,
+        "text": "That's sweet. Life's too short - let's make plans!",
+        "points": 6,
+        "next": "short_life_meeting"
+      }
+    ]
+  },
+  "refreshing_conversation": {
+    "message": "It really has! It's rare to find someone so easy to talk to. What do you think about continuing this in person sometime? No pressure, just if it feels right.",
+    "options": [
+      {
+        "id": 169,
+        "text": "I'd love that! It does feel right to me. What did you have in mind?",
+        "points": 9,
+        "next": "meeting_interest"
+      },
+      {
+        "id": 170,
+        "text": "Sounds good, but let's keep chatting here a bit more first",
+        "points": 8,
+        "next": "continued_chat"
+      },
+      {
+        "id": 171,
+        "text": "Yes! Let's do it soon. Your place?",
+        "points": 3,
+        "next": "too_eager_private"
+      },
+      {
+        "id": 172,
+        "text": "Definitely. I'm feeling a good connection here",
+        "points": 9,
+        "next": "connection_confirm"
+      }
+    ]
+  },
+  "meeting_interest": {
+    "message": "Awesome! How about a casual drink at a bar? Something low-key where we can talk more. Does that sound good?",
+    "options": [
+      {
+        "id": 173,
+        "text": "That sounds perfect! Low-key is ideal for a first meetup. When are you free?",
+        "points": 7,
+        "next": "scheduling"
+      },
+      {
+        "id": 174,
+        "text": "Yes! And if it goes well, we can always head somewhere more private later 😉",
+        "points": 4,
+        "next": "suggestive_planning"
+      },
+      {
+        "id": 175,
+        "text": "Great idea! I appreciate you suggesting something public and casual",
+        "points": 8,
+        "next": "safety_appreciation"
+      },
+      {
+        "id": 176,
+        "text": "Bar is fine, but I'm more of a coffee guy. Would that work?",
+        "points": 6,
+        "next": "alternative_suggestion"
+      }
+    ]
+  },
+  "scheduling": {
+    "message": "I'm free this Friday evening or Saturday. What works for you? And yeah, I think keeping it casual at first is smart 😊",
+    "options": [
+      {
+        "id": 177,
+        "text": "Saturday works great! Let's exchange numbers to finalize details",
+        "points": 7,
+        "next": "number_exchange"
+      },
+      {
+        "id": 178,
+        "text": "Friday! Can't wait. What's your address just in case? 😏",
+        "points": 2,
+        "next": "address_ask_early"
+      },
+      {
+        "id": 179,
+        "text": "Either day is good - you pick! I'm excited either way",
+        "points": 8,
+        "next": "flexible_scheduling"
+      },
+      {
+        "id": 180,
+        "text": "Perfect! This is going to be fun",
+        "points": 7,
+        "next": "excited_scheduling"
+      }
+    ]
+  },
+  "number_exchange": {
+    "message": "Saturday it is! Here's my number: [fake number]. Text me yours. I'm really looking forward to this! 😊",
+    "options": []
+  },
+  "subtle_innuendo": {
+    "message": "Let's keep it genuine without the innuendo for now. Take care!",
+    "options": []
+  },
+  "authentic_meeting": {
+    "message": "Sounds good! Let's plan something casual when we're both ready.",
+    "options": []
+  },
+  "short_life_meeting": {
+    "message": "Agreed! How about coffee this weekend?",
+    "options": []
+  },
+  "continued_chat": {
+    "message": "Of course! No rush at all. What else should we talk about? Tell me about your favorite hobby 😊",
+    "options": []
+  },
+  "too_eager_private": {
+    "message": "Too eager for private. Let's stick to public first.",
+    "options": []
+  },
+  "connection_confirm": {
+    "message": "Me too! Let's keep building it 😊",
+    "options": []
+  },
+  "suggestive_planning": {
+    "message": "No assumptions please. Let's just enjoy the drink.",
+    "options": []
+  },
+  "safety_appreciation": {
+    "message": "Glad you appreciate it! Safety first 😊",
+    "options": []
+  },
+  "alternative_suggestion": {
+    "message": "Coffee works too! Let's do that instead.",
+    "options": []
+  },
+  "address_ask_early": {
+    "message": "Way too early for addresses. Bye!",
+    "options": []
+  },
+  "flexible_scheduling": {
+    "message": "Saturday it is! See you then 😊",
+    "options": []
+  },
+  "excited_scheduling": {
+    "message": "Yes it is! Can't wait.",
     "options": []
   }
 }

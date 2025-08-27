@@ -1,29 +1,32 @@
 {
   "1": {
-    "text": "Is it enough to ask for consent just once at the beginning of an interaction?",
+    "text": "Is it generally acceptable to assume someone is comfortable with receiving explicit photos just because they matched with you on a dating app?",
     "correct": "n",
     "points": 5,
     "next": 2,
-    "explanation": "Consent should be continuous and checked in on throughout the interaction, not just once."
+    "explanation": "Consent should never be assumed, even on dating apps. It’s important to ask and receive explicit, enthusiastic agreement before sending or requesting explicit content."
   },
+
   "2": {
-    "text": "If someone doesn’t reply to your request before sending a picture, is that considered consent?",
-    "correct": "n",
+    "text": "Should consent be discussed or renegotiated when meeting someone in person for the first time?",
+    "correct": "y",
     "points": 5,
     "next": 3,
-    "explanation": "Silence or non-response does not equal consent. A clear 'yes' is needed."
+    "explanation": "Consent is an ongoing process. It’s important to check in with each other in person, as comfort levels and boundaries may change."
   },
+
   "3": {
-    "text": "Can consent be withdrawn at any time, even after an activity has started?",
-    "correct": "y",
+    "text": "Is it sufficient to rely on implicit signals (like someone not saying 'no') to determine if they are comfortable with a situation?",
+    "correct": "n",
     "points": 5,
     "next": 4,
-    "explanation": "Yes, anyone can change their mind at any time, and that choice must be respected immediately."
+    "explanation": "Implicit signals can be ambiguous and lead to misunderstandings. Consent should be clear, voluntary, and enthusiastic, not just the absence of a 'no.'"
   },
+
   "4": {
-    "text": "Is it important to talk about boundaries before meeting someone in person?",
+    "text": "Is it important to ask for and receive explicit consent before engaging in any sexual activity, even if you think the other person is interested?",
     "correct": "y",
     "points": 5,
-    "explanation": "Yes, discussing boundaries beforehand sets expectations and makes the interaction safer and more enjoyable."
+    "explanation": "Explicit consent ensures that both parties are comfortable and enthusiastic about what’s happening. It’s a key part of respectful and safe interactions."
   }
 }
